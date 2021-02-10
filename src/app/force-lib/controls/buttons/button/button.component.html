@@ -1,0 +1,39 @@
+<div class="container">
+    <button class="button"
+        [id]="idControl"
+        aria-label="name"
+        [ngClass]="{'icon': isTypeIcon,
+                    'primary': color === 'primary',
+                    'light': color === 'light',
+                    'outline': color === 'outline',
+                    'warn': color === 'warn',
+                    'content': lenght === 'content',
+                    'full': lenght === 'full',
+                    'xxlarge': lenght === 'xxlarge',
+                    'xlarge': lenght === 'xlarge',
+                    'large': lenght === 'large',
+                    'medium': lenght === 'medium',
+                    'normal': lenght === 'normal',
+                    'small': lenght === 'small',
+                    'tiny': lenght === 'tiny',
+                    'withoutborder': haveBorder === false,
+                    'disabled': isInvalid}" 
+        type="button"
+        [disabled]="isInvalid"
+        (click)="clicked(idControl)">
+        <div class="inline">
+            <div *ngIf="icon" class="image">
+                <i class="{{icon}}"></i>
+                <span *ngIf="!isTypeIcon">&nbsp;</span>
+            </div>
+            <span *ngIf="!isTypeIcon">{{text}}</span>
+        </div>
+    </button>
+    <div *ngIf="badge" 
+        class="badge"
+        [ngClass]="{'primary': color === 'primary',
+                    'light': color === 'light',
+                    'warn': color === 'warn'}" >
+        {{badge}}
+    </div>
+</div>

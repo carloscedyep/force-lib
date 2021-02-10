@@ -1,0 +1,21 @@
+<div class="container">
+    <div  
+        required 
+        class="chip"
+        [ngClass]="{'right': aling === 'right',
+                    'large': lenght === 'large',
+                    'medium': lenght === 'medium',
+                    'small': lenght === 'small',
+                    'tiny': lenght === 'tiny',
+                    'primary': color === 'primary',
+                    'light': color === 'light',
+                    'warn': color === 'warn'}">
+        {{text}}
+    </div>
+    <div *ngIf="badge" class="badge"
+        [ngClass]="{'primary': color === 'primary',
+        'light': color === 'light',
+        'warn': color === 'warn'}" >
+        {{badge}}
+    </div>
+</div>

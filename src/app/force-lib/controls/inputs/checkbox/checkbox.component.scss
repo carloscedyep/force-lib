@@ -1,0 +1,116 @@
+@import '../../../styles/styles.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.input {
+    font-size: 20px;
+    font-family: $font-normal;
+    font-weight: 2px;
+    //style
+    cursor: pointer;
+    border-radius: 6px;
+    //size
+    width: 20px;
+    height: 20px;
+    //padding and margin
+    padding: 0px; 
+
+    &:hover{
+        color: $color
+    }
+
+    &.true{
+        background-color: $backcolor;
+        color: $color;
+
+        &:hover{
+            color: $color;
+        }
+    }
+
+    &.primary{
+        &:hover{
+            color: $color;
+        }
+    
+        &.true{
+            background-color: $color-primary;
+            color: $backcolor-primary;
+    
+            &:hover{
+                color: $backcolor-primary;
+            }
+        }
+    }
+
+    &.light{
+        &:hover{
+            color: $color;
+        }
+    
+        &.true{
+            background-color: $color-primary;
+            color: $border-light-hover;
+    
+            &:hover{
+                color: $border-light-hover;
+            }
+        }
+    }
+
+    &.warn{
+        &:hover{
+            color: $color;
+        }
+    
+        &.true{
+            background-color: $color-warn;
+            color: $backcolor-warn;
+    
+            &:hover{
+                color: $backcolor-warn;
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.firstLabel{
+    font-size: 14px;
+    font-family: $font-normal;
+    padding-right: 0.3rem;
+    text-align: right;
+    cursor: pointer;
+}
+
+.lastLabel {
+    font-size: 14px;
+    font-family: $font-normal;
+    padding-left: 0.3rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.inline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: $padding-tiny;
+    //height: 100%;
+}

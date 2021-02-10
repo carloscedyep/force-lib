@@ -3,6 +3,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@force/controls/*":["app/force-lib/controls/*"],
+      "@force/models/*":["app/force-lib/models/*"],
+      "@force/directives/*":["app/force-lib/directives/*"],
+      "@force/services/*":["app/force-lib/services/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

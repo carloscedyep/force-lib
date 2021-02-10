@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/uicons-regular-rounded.css",
+              "src/assets/css/uicons-solid-rounded.css"
             ],
             "scripts": []
           },

@@ -1,0 +1,31 @@
+<div [ngClass]="{'darkTheme':darkTheme,
+                'lightTheme':!darkTheme}">
+<div class="header">
+    <div class="row ycenter xspace w-full pl-small pr-small">
+        <div class="row-item">
+            <div class="row ycenter">
+                <img src="assets/logo.svg" alt="logo" style="width: 2rem;height: 2rem;">
+                &nbsp;&nbsp;&nbsp;FORCE LIB
+            </div>
+        </div>
+        <div class="row-item">
+            <div class="row xend ybaseline">
+                &nbsp;&nbsp;v.1.0.0
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="pl-null">
+        <force-navbar [items]="navbar" class="w-full"></force-navbar>
+    </div>        
+</div>
+<div class="container">
+    <div class="context">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<!-- <div class="footer">
+    Created by &#169; FORCE 2021
+</div> -->
+</div>

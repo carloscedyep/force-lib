@@ -1,0 +1,36 @@
+<div id="container" 
+    class="container" 
+    *ngFor="let item of items">
+        <div 
+            class="label"
+            expanded="true"
+            [ngClass]="{'icon':item.childrens.length > 0,
+                        'noicon':item.childrens.length == 0}"
+            [id]="'label'+item.id" 
+            (click)="openMenu(item.id);"
+            *ngIf="item.routeLink.length > 0" 
+            [routerLink]="item.routeLink">
+                &nbsp;&nbsp;&nbsp;{{item.text}}
+                <div *ngIf="item.childrens.length > 0">
+                    <i class="fi-rr-angle-small-right hideicon"></i>
+                </div>
+        </div>
+        <div
+            class="label"
+            expanded="true"
+            [ngClass]="{'icon':item.childrens.length > 0,
+                        'noicon':item.childrens.length == 0}"
+            [id]="'label'+item.id" 
+            (click)="openMenu(item.id);"
+            *ngIf="item.routeLink.length === 0">
+                &nbsp;&nbsp;&nbsp;{{item.text}}
+                <div *ngIf="item.childrens.length > 0" class="arrow">
+                    <i class="fi-rr-angle-small-right"></i>
+                </div>
+        </div>
+        <div 
+            [id]="item.id" 
+            class="body">
+                <force-navbar [items]="item.childrens" [parentId]="item.id"></force-navbar>
+        </div>
+</div>

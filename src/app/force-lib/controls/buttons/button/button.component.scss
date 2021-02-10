@@ -1,0 +1,233 @@
+@import '../../../styles/styles.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+button{
+  margin: 0px;
+  padding: 0px;
+}
+
+.button {
+  //font
+  font-size: 14px;
+  font-family: $font-normal;
+  font-weight: 2px;
+  //style
+  border: 1px solid $border;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: 180ms box-shadow ease-in-out;
+  display: block;
+  cursor: pointer;
+  //padding and margin
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+  //size
+  height: $height;
+  background-color: inherit;
+  color: inherit;
+
+  &:hover,
+  &:active {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px $border-hover-shadow;
+    outline: 3px solid transparent;
+  }
+
+  &:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px $border-hover-shadow;
+    outline: 3px solid transparent;
+  }
+
+  &.outline{
+    background-color: inherit;
+    color: inherit;
+    
+    &:hover,
+    &:active {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-hover-shadow;
+      outline: 3px solid transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-hover-shadow;
+      outline: 3px solid transparent;
+    }
+  }
+
+  &.primary{
+    background-color: $backcolor-primary;
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-primary-hover-shadow;
+      outline: 3px solid transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-primary-hover-shadow;
+      outline: 3px solid transparent;
+    }
+  }
+
+  &.light{
+    background-color: $backcolor-light;
+    color: $color-light;
+
+    &:hover,
+    &:active {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-light-hover-shadow;
+      outline: 3px solid transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-light-hover-shadow;
+      outline: 3px solid transparent;
+    }
+  }
+
+  &.warn{
+    background-color: $backcolor-warn;
+    color: $color-warn;
+
+    &:hover,
+    &:active {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-warn-hover-shadow;
+      outline: 3px solid transparent;
+    }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-warn-hover-shadow;
+      outline: 3px solid transparent;
+    }
+  }
+
+  &.disabled{
+    background-color: $backcolor-light;
+    color: $color-light;
+
+    &:hover,
+    &:active {
+      box-shadow: 0 0 0 0 $border-warn-hover-shadow;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0 $border-warn-hover-shadow;
+    }
+  }
+
+  &.content{
+    width: auto;
+
+    &.icon{
+      border-radius: 50%;
+      width: $height;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+  }
+
+  &.full{
+    width: $width-full;
+  }
+
+  &.xxlarge{
+    width: $width-xxlarge;
+  }
+
+  &.xlarge{
+    width: $width-xlarge;
+  }
+
+  &.large{
+    width: $width-large;
+  }
+
+  &.medium{
+    width: $width-medium;
+  }
+
+  &.normal{
+    width: $width-normal;
+  }
+
+  &.small{
+    width: $width-small;
+  }
+
+  &.tiny{
+    width: $width-tiny;
+  }
+
+    &.withoutborder{
+      border: 0px;
+    }
+  }
+
+.image{
+  padding-top: 0.25rem;
+}
+
+.inline{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: $padding-tiny;
+  position: relative;
+}
+
+.badge{
+  font-size: 12px;
+  font-family: $font-normal;
+  font-weight: 2px;
+  position: absolute;
+  top:0;
+  right: $padding-tiny/4;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $border;
+  border-radius: 6rem;
+  padding: 2px 4px 2px 4px;
+  background-color: $backcolor;
+  color: $color;
+  margin:0;
+
+  &.primary{
+    background-color: $border-hover-alert-done;
+    color: $color-primary;
+    border: 1px solid $border-hover-alert-done;
+  }
+
+  &.light{
+    background-color: $border-hover-alert-done;
+    color: $color-primary;
+    border: 1px solid $border-hover-alert-done;
+  }
+
+  &.warn{
+    background-color: $border-hover-alert-done;
+    color: $color-warn;
+    border: 1px solid $border-hover-alert-done;
+  }
+}
