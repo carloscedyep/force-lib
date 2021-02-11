@@ -1,0 +1,532 @@
+<div>
+    <div class="row ycenter px">
+        <div class="bigtitle">
+            Datepicker&nbsp;
+        </div>
+        <div>
+            <force-chip text="control" color="primary" lenght="tiny"></force-chip>
+        </div>
+    </div>
+    <div class="row pl pr">
+        <force-separator class="w-full"></force-separator>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo">
+            Simple campo de texto, no se recomienda el uso para campos numéricos, telefónicos o email, para esos campos revisar los controles específicos.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            El control tiene las siguientes entradas.
+        </div>
+    </div>
+    <div class="row px">
+        <div class="parrafo pl-large">
+            <div class="pb-small">
+                <span class="bold">color </span><span class="primary">(string)</span>: color del borde (<span class="primary">primary, light</span> y <span class="primary">warn</span>). Por defecto es <span class="primary">light</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">hint </span><span class="primary">(string)</span>: cadena de texto que indica si el input tiene un estado inválido.
+            </div>
+            <div class="pb-small">
+                <span class="bold">id </span><span class="primary">(string)</span>: identificador del control.
+            </div>
+            <div class="pb-small">
+                <span class="bold">isFixed </span><span class="primary">(boolean)</span>: indica si el control está dentro de un contenedor de posicionamiento fijo. Por defecto es <span class="primary">false</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">isInvalid </span><span class="primary">(boolean)</span>: indica si el control del texto es inválido. Por defecto es <span class="primary">false</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">label </span><span class="primary">(string)</span>: etiqueta del input.
+            </div>
+            <div class="pb-small">
+                <span class="bold">lenght </span><span class="primary">(string)</span>: indica el tamaño del input (<span class="primary">full, xxlarge, xlarge, large, medium, norma, small</span> y <span class="primary">tiny</span>). Por defecto es <span class="primary">normal</span>
+            </div>
+            <div class="pb-small">
+                <span class="bold">placeholder </span><span class="primary">(string)</span>: texto que se mostrará en el input cuando está vacio.
+            </div>
+            <div class="pb-small">
+                <span class="bold">textAlign </span><span class="primary">(string)</span>: alineación del input (<span class="primary">left</span>: a la izquierda, <span class="primary">center</span>: al centro, <span class="primary">right</span>: a la derecha). Por defecto es <span class="primary">left</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">value </span><span class="primary">(string)</span>: valor a mostrar en el input.
+            </div>
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Básico
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-datepicker idControl="input1" placeholder="placeholder" idControl="inputnormal"></force-datepicker>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input1" placeholder="placeholder"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Con label
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-datepicker idControl="input2" placeholder = "placeholder" label="label del input" idControl="inputlabel"></force-datepicker>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input2" placeholder = "placeholder" label="label del input"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Tamaños
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row column ystart w-full">
+                            <div class="row-item w-full">
+                                <force-datepicker idControl="input3" placeholder="full" lenght="full"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input4" placeholder="xxlarge" lenght="xxlarge"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input5" placeholder="xlarge" lenght="xlarge"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input6" placeholder="large" lenght="large"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input7" placeholder="medium" lenght="medium"></force-datepicker>
+                            </div>
+                            <div class="rowv">
+                                <force-datepicker idControl="input8" placeholder="normal" lenght="normal"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input9" placeholder="small" lenght="small"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input10" placeholder="tiny" lenght="tiny"></force-datepicker>
+                            </div>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item w-full"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input3" placeholder="full" lenght="full"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input4" placeholder="xxlarge" lenght="xxlarge"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input5" placeholder="xlarge" lenght="xlarge"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input6" placeholder="large" lenght="large"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input7" placeholder="medium" lenght="medium"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input8" placeholder="normal" lenght="normal"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input9" placeholder="small" lenght="small"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input10" placeholder="tiny" lenght="tiny"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Alineación
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <div class="row-item">
+                                <force-datepicker idControl="input11" placeholder = "left" textAlign="left"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input12" placeholder = "center" textAlign="center"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input13" placeholder = "right" textAlign="right"></force-datepicker>
+                            </div> 
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input11" placeholder = "left" textAlign="left"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input12" placeholder = "center" textAlign="center"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input13" placeholder = "right" textAlign="right"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Color
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <div class="row-item">
+                                <force-datepicker idControl="input14" placeholder = "primary" color="primary"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input15" placeholder = "light" color="light"></force-datepicker>
+                            </div>
+                            <div class="row-item">
+                                <force-datepicker idControl="input16" placeholder = "warn" color="warn"></force-datepicker>
+                            </div> 
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input14" placeholder = "primary" color="primary"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input15" placeholder = "light" color="light"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input16" placeholder = "warn" color="warn"&#62;&#60;/force-datepicker&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Valor por defecto
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <force-datepicker idControl="input20" label="con valor por defecto" [value]="date"></force-datepicker>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input20" label="con valor por defecto" [value]="date"&#62;&#60;/force-datepicker&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  date: Date = new Date(2021,2,15);</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Hint
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <force-datepicker idControl="input22" placeholder = "inpunt con hint" type = 'password' hint = "este es el hint" [isInvalid]="true"></force-datepicker>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-datepicker idControl="input22" placeholder="inpunt con hint" type = 'password' hint="este es el hint" [isInvalid]="true"&#62;&#60;/force-datepicker&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div><br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Con formulario
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <form [formGroup]="datepickerFormGroup">
+                            <force-datepicker idControl="input23" 
+                                placeholder = "input requerido"
+                                label="input requerido"
+                                hint = "se debe ingresar un valor"
+                                formControlName="date"
+                                [isInvalid]="datepickerFormGroup.controls.date.invalid"></force-datepicker>
+                        </form>
+                    </div>
+                    <div class="row w-full">
+                        <force-separator class="w-full"></force-separator>
+                    </div>
+                    <div class="row column ystart">
+                        <div class="row-item">
+                            <span class="primary">form values: </span>
+                            {{datepickerFormGroup.value | json}} 
+                        </div>
+                        <div class="row-item">
+                            <span class="primary">form state: </span>
+                            {{datepickerFormGroup.valid | json}}
+                        </div>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;form [formGroup]="datepickerFormGroup"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-datepicker idControl="input23" placeholder="input requerido" label="input requerido" formControlName="date"</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>          hint="se debe ingresar un valor" [isInvalid]="datepickerFormGroup.controls.date.invalid"&#62;&#60;/force-datepicker&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/form&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; FormBuilder, Validators &#125; from '&#64;angular/forms';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-datepicket-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './datepicker-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./datepicker-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class DatepickerPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  datepickerFormGroup = this.formBuilder.group( &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      date: [null, Validators.required]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  &#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor(private formBuilder: FormBuilder) &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+</div>
+

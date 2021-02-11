@@ -1,8 +1,8 @@
 <div class="container">
     <div class="inline" (click)="checked()">
-        <div *ngIf="prefixText" class="firstLabel">
+        <label [for]="idControl" *ngIf="prefixText" class="firstLabel">
             {{prefixText}}
-        </div>
+        </label>
         <i *ngIf="!value" class="input solid fi-rr-square"></i>
         <i *ngIf="value" 
             [ngClass]="{'primary': color === 'primary',
@@ -11,10 +11,10 @@
             class="input true fi-sr-checkbox"></i>
         <input type="checkbox" class="hidden"
             [value]="value"
-            [id]="id"
+            [id]="idControl"
             (input)="onChange($event.target.value)">
-        <div *ngIf="sufixText" class="lastLabel">
+        <label [for]="idControl" *ngIf="sufixText" class="lastLabel">
             {{sufixText}}
-        </div>
+        </label>
     </div>
 </div>

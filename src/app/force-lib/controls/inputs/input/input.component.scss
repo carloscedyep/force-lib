@@ -1,0 +1,220 @@
+@import '../../../styles/styles.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.input {
+    //Fonts
+    font-size: $font-size;
+    font-family: $font-normal;
+    //Color
+    background-color: inherit;
+    color: inherit;
+    //Size
+    height: $height;
+    width: $width-full;
+    //Margin y Padding
+    margin: 0;
+    padding-left:$padding-small;
+    padding-right:$padding-small;
+    //Style
+    appearance: none;
+    border: 1px solid $border;
+    border-radius: 6px;
+    //Transition
+    transition: 180ms box-shadow ease-in-out;
+
+    &:hover{
+        border: 1px solid transparent;
+        box-shadow: 0 0 0 2px $border-hover-shadow;
+        outline: 3px solid transparent;
+    }
+
+    &:focus {
+        border: 1px solid transparent;
+        box-shadow: 0 0 0 2px $border-hover-shadow;
+        outline: 3px solid transparent;
+    }
+
+    &.primary{
+        &:hover{
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.light{
+        &:hover{
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.warn{
+        &:hover{
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border: 1px solid transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.left{
+        text-align: start;
+    }
+
+    &.right{
+        text-align: end;
+    }
+
+    &.center{
+        text-align: center;
+    }
+
+    &.isufix{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    &.iprefix{
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.label {
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    padding-bottom: $padding-tiny;
+    //Fonts
+    
+    //Color
+
+    //Size
+
+    //Margin y Padding
+
+    //Style
+
+    //Transition
+}
+
+.prefix, .sufix{
+    //Fonts
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    //Color
+
+    //Size
+    height: $height;
+    //Margin y Padding
+    padding-left: $padding-small;
+    padding-right: $padding-small;
+    //Style
+    display: flex;
+    align-items: center;
+    border: 1px solid $border;
+    //Transition
+}
+
+.prefix{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+}
+.sufix{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 0px;
+}
+
+.hint{
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    padding-left: 0.3rem;
+    color: $color-error;
+}
+
+.hidden{
+    display: none ;
+}
+
+.inline{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container{
+    //Fonts
+    
+    //Color
+
+    //Size
+
+    //Margin y Padding
+    padding: $padding-tiny;
+    //Style
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    //Transition
+
+    &.full{
+        width: $width-full;
+    }
+
+    &.xxlarge{
+        width: $width-xxlarge;
+    }
+
+    &.xlarge{
+        width: $width-xlarge;
+    }
+
+    &.large{
+        width: $width-large;
+    }
+
+    &.medium{
+        width: $width-medium;
+    }
+
+    &.normal{
+        width: $width-normal;
+    }
+
+    &.small{
+        width: $width-small;
+    }
+
+    &.tiny{
+        width: $width-tiny;
+    }
+}

@@ -1,0 +1,416 @@
+<div>
+    <div class="row ycenter px">
+        <div class="bigtitle">
+            Button group&nbsp;
+        </div>
+        <div>
+            <force-chip text="control" color="primary" lenght="tiny"></force-chip>
+        </div>
+    </div>
+    <div class="row pl pr">
+        <force-separator class="w-full"></force-separator>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo">
+            Grupo de botones customizable que emite un evento de click.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            El control tiene las siguientes entradas.
+        </div>
+    </div>
+    <div class="row px">
+        <div class="parrafo pl-large">
+            <div class="pb-small">
+                <span class="bold">color </span><span class="primary">(string)</span>: color del botón (<span class="primary">primary, light, warn</span> y <span class="primary">outline</span>). Por defecto es <span class="primary">primary</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">lenght </span><span class="primary">(string)</span>: indica el tamaño del input (<span class="primary">content, full, xxlarge, xlarge, large, medium, normal, small</span> y <span class="primary">tiny</span>). Por defecto es <span class="primary">content</span>
+            </div>
+            <div class="pb-small">
+                <span class="bold">items </span><span class="primary">(srray)</span>: array con los botones que se desean mostrar. Este array debe tener los siguientes parámetros:
+            </div>
+            <div class="pl-large">
+                <div class="pb-small">
+                    <span class="bold">idControl </span><span class="primary">(string)</span>: identificador del botón.
+                </div>
+                <div class="pb-small">
+                    <span class="bold">icon </span><span class="primary">(string)</span>: ícono a mostrar en el botón.
+                </div>
+                <div class="pb-small">
+                    <span class="bold">text </span><span class="primary">(string)</span>: texto a mostrar en el botón.
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Básico
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1'},
+                                        {idControl:'button2',text:'botón 2'},
+                                        {idControl:'button3',text:'botón 3'}]"></force-button-group>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button1',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button2',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button3',text:'botón 3'&#125;]&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Tamaños
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row w-full">
+                            <div class="row-item">
+                                <force-button-group [items]="[{idControl:'button4',text:'botón 1'},
+                                                    {idControl:'button5',text:'botón 2'},
+                                                    {idControl:'button6',text:'botón 3'}]" lenght="full"></force-button-group>
+                            </div>
+                        </div>
+                        <div class="row column ystart w-full">   
+                            <force-button-group [items]="[{idControl:'button7',text:'botón 1'},
+                                                {idControl:'button8',text:'botón 2'},
+                                                {idControl:'button9',text:'botón 3'}]" lenght="xxlarge"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button10',text:'botón 1'},
+                                                {idControl:'button11',text:'botón 2'},
+                                                {idControl:'button12',text:'botón 3'}]"lenght="xlarge"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button13',text:'botón 1'},
+                                                {idControl:'button14',text:'botón 2'},
+                                                {idControl:'button15',text:'botón 3'}]"lenght="large"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button16',text:'botón 1'},
+                                                {idControl:'button17',text:'botón 2'},
+                                                {idControl:'button18',text:'botón 3'}]"lenght="medium"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button19',text:'botón 1'},
+                                                {idControl:'button20',text:'botón 2'},
+                                                {idControl:'button21',text:'botón 3'}]"lenght="normal"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button22',text:'botón 1'},
+                                                {idControl:'button23',text:'botón 2'},
+                                                {idControl:'button24',text:'botón 3'}]"lenght="small"></force-button-group>
+                            <force-button-group [items]="[{idControl:'button25',text:'botón 1'},
+                                                {idControl:'button26',text:'botón 2'},
+                                                {idControl:'button27',text:'botón 3'}]"lenght="tiny"></force-button-group>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button4',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button5',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button6',text:'botón 3'&#125;] lenght="full"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button7',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button8',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button9',text:'botón 3'&#125;] lenght="xxlarge"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button4" text="xlarge" lenght="xlarge"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button5" text="large" lenght="large"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button6" text="medium" lenght="medium"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button7" text="normal" lenght="normal"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button8" text="small" lenght="small"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button9" text="tiny" lenght="tiny"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Color
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row column ystart">
+                            <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1'},
+                                    {idControl:'button2',text:'botón 2'},
+                                    {idControl:'button3',text:'botón 3'}]" color="primary"></force-button-group>
+                            <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1'},
+                                    {idControl:'button2',text:'botón 2'},
+                                    {idControl:'button3',text:'botón 3'}]" color="light"></force-button-group>
+                            <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1'},
+                                        {idControl:'button2',text:'botón 2'},
+                                        {idControl:'button3',text:'botón 3'}]" color="warn"></force-button-group>
+                            <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1'},
+                                        {idControl:'button2',text:'botón 2'},
+                                        {idControl:'button3',text:'botón 3'}]" color="outline"></force-button-group>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button-group idControl="button10" text = "primary" color="primary"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button-group idControl="button11" text = "light" color="light"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button-group idControl="button12" text = "warn" color="warn"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button-group idControl="button13" text = "outline" color="outline"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Icono
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row">
+                        <force-button-group 
+                                [items]="[{idControl:'button1',text:'botón 1',icon:'fi-rr-bell-ring'},
+                                    {idControl:'button2',text:'botón 2',icon:'fi-rr-bulb'},
+                                    {idControl:'button3',text:'botón 3',icon:'fi-rr-cross-circle'}]"></force-button-group>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button16" text="botón con ícono" icon="fi-rr-add"&#62;&#60;/force-button-group&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Solo icono
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row">
+                        <force-button-group 
+                                [items]="[{idControl:'button1',icon:'fi-rr-bell-ring'},
+                                    {idControl:'button2',icon:'fi-rr-bulb'},
+                                    {idControl:'button3',icon:'fi-rr-cross-circle'}]"></force-button-group>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button16" text="botón con ícono" icon="fi-rr-add"&#62;&#60;/force-button-group&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Evento click
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row">
+                        <force-button-group [items]="[{idControl:'button1',text:'botón 1'},
+                            {idControl:'button2',text:'botón 2'},
+                            {idControl:'button3',text:'botón 3'}]"
+                            (clickEvent)="clickBoton($event)"></force-button-group>
+                    </div>
+                    <div class="row w-full">
+                        <force-separator class="w-full"></force-separator>
+                    </div>
+                    <div class="row">
+                        {{buttonName}}
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button21" text="botón con evento" (clickEvent)="clickCount=clickCount+1"&#62;&#60;/force-button-group&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+</div>

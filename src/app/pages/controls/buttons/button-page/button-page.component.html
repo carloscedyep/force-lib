@@ -20,13 +20,13 @@
             El control tiene las siguientes entradas.
         </div>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo pl-large pb-small">
+    <div class="row px">
+        <div class="parrafo pl-large">
             <div class="pb-small">
                 <span class="bold">badge </span><span class="primary">(string)</span>: cadena de texto que se muestra como una notificación.
             </div>
             <div class="pb-small">
-                <span class="bold">color </span><span class="primary">(string)</span>: color del borde (<span class="primary">primary, light, warn</span> y <span class="primary">outline</span>). Por defecto es <span class="primary">primary</span>.
+                <span class="bold">color </span><span class="primary">(string)</span>: color del botón (<span class="primary">primary, light, warn</span> y <span class="primary">outline</span>). Por defecto es <span class="primary">primary</span>.
             </div>
             <div class="pb-small">
                 <span class="bold">haveBorder </span><span class="primary">(boolean)</span>: indica si el botón tiene borde. Por defecto es <span class="primary">true</span>.
@@ -38,7 +38,7 @@
                 <span class="bold">idControl </span><span class="primary">(string)</span>: identificador del botón.
             </div>
             <div class="pb-small">
-                <span class="bold">isInvalid </span><span class="primary">(boolean)</span>: indica si el control del botón es inválido.
+                <span class="bold">isInvalid </span><span class="primary">(boolean)</span>: indica si el estado del botón es inválido. Por defecto es <span class="primary">false</span>.
             </div>
             <div class="pb-small">
                 <span class="bold">isReadonly </span><span class="primary">(boolean)</span>: indica si el botón es de solo lectura. Por defecto es <span class="primary">false</span>.
@@ -59,6 +59,7 @@
             Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
         </div>
     </div>
+    <br>
     <div class="row px pb-tiny">
         <div class="title">
             Básico
@@ -259,9 +260,13 @@
             <force-tab-item>
                 <force-tab-label>Resultado</force-tab-label>
                 <force-tab-body>
-                    <div class="row column ystart">
-                        <force-button idControl="button18" text="botón con borde" color="outline"></force-button>
-                        <force-button idControl="button19" text="botón sin borde" color="outline" [haveBorder]="false"></force-button>
+                    <div class="row">
+                        <div class="row-item">
+                            <force-button idControl="button14" text="botón con borde" color="outline"></force-button>
+                        </div>
+                        <div class="row-item">
+                            <force-button idControl="button15" text="botón sin borde" color="outline" [haveBorder]="false"></force-button>
+                        </div>
                     </div>
                 </force-tab-body>
             </force-tab-item>
@@ -270,9 +275,12 @@
                 <force-tab-body>
                     <div class="codigo">
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button17" text="input con prefix" prefix="prefix"&#62;&#60;/force-button&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button18" text="input con sufix" sufix="sufix"&#62;&#60;/force-button&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button19" text="input con prefix y sufix" prefix="prefix" sufix="sufix"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button14" text="botón con borde" color="outline"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button15" text="botón sin borde" color="outline"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
                 </force-tab-body>
@@ -307,8 +315,8 @@
             <force-tab-item>
                 <force-tab-label>Resultado</force-tab-label>
                 <force-tab-body>
-                    <div class="row column ystart">
-                        <force-button idControl="button20" text="botón con ícono" icon="fi-rr-add"></force-button>
+                    <div class="row">
+                        <force-button idControl="button16" text="botón con ícono" icon="fi-rr-add"></force-button>
                     </div>
                 </force-tab-body>
             </force-tab-item>
@@ -316,9 +324,8 @@
                 <force-tab-label>HTML</force-tab-label>
                 <force-tab-body>
                     <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button20" text="input con valor por defecto" label="con valor por defecto" value="valor por defecto"&#62;&#60;/force-button&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button21" text="input readonly" label="readonly" value="valor por defecto" [isReadonly]="true"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button16" text="botón con ícono" icon="fi-rr-add"&#62;&#60;/force-button&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
                 </force-tab-body>
@@ -358,8 +365,8 @@
             <force-tab-item>
                 <force-tab-label>Resultado</force-tab-label>
                 <force-tab-body>
-                    <div class="row column ystart">
-                        <force-button idControl="button21" text="botón con ícono" icon="fi-rr-add" [isTypeIcon]="true"></force-button>
+                    <div class="row">
+                        <force-button idControl="button17" text="botón con ícono" icon="fi-rr-add" [isTypeIcon]="true"></force-button>
                     </div>
                 </force-tab-body>
             </force-tab-item>
@@ -367,8 +374,8 @@
                 <force-tab-label>HTML</force-tab-label>
                 <force-tab-body>
                     <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button22" text="inpunt con hint" type = 'password' hint="este es el hint" [isInvalid]="true"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button17" text="botón con ícono" icon="fi-rr-add" [isTypeIcon]="true"&#62;&#60;/force-button&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
                 </force-tab-body>
@@ -404,13 +411,13 @@
                 <force-tab-body>
                     <div class="row">
                         <div class="row-item">
-                            <force-button idControl="button22" text="botón con badge" badge="30"></force-button>
+                            <force-button idControl="button18" text="botón con badge" badge="30"></force-button>
                         </div>
                         <div class="row-item">
-                            <force-button idControl="button25" text="con badge" badge="30"></force-button>
+                            <force-button idControl="button19" text="botón con badge" color="outline" [haveBorder]="false" badge="345"></force-button>
                         </div>
                         <div class="row-item">
-                            <force-button idControl="button26" text="botón de nombre largo con badge" badge="30"></force-button>
+                            <force-button idControl="button20" color="warn" icon="fi-rr-asterisk" [isTypeIcon]="true" badge="8"></force-button>
                         </div>
                     </div>
                 </force-tab-body>
@@ -419,9 +426,16 @@
                 <force-tab-label>HTML</force-tab-label>
                 <force-tab-body>
                     <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button20" text="input con valor por defecto" label="con valor por defecto" value="valor por defecto"&#62;&#60;/force-button&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button21" text="input readonly" label="readonly" value="valor por defecto" [isReadonly]="true"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row "&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button18" text="botón con badge" badge="30"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button19" text="botón con badge" color="outline" [haveBorder]="false" badge="345"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button20" color="warn" icon="fi-rr-asterisk" [isTypeIcon]="true" badge="8"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
                 </force-tab-body>
@@ -455,14 +469,14 @@
             <force-tab-item>
                 <force-tab-label>Resultado</force-tab-label>
                 <force-tab-body>
-                    <div class="row column ystart">
-                        <force-button idControl="button23" text="botón con evento" (clickEvent)="clickCount=clickCount+1"></force-button>
+                    <div class="row">
+                        <force-button idControl="button21" text="botón con evento" (clickEvent)="clickCount=clickCount+1"></force-button>
                     </div>
                     <div class="row w-full">
                         <force-separator></force-separator>
                     </div>
                     <div class="row">
-                        <span class="primary">contador de clicks:</span> {{clickCount}}
+                        <span class="primary">contador de clicks:&nbsp;</span>{{clickCount}}
                     </div>
                 </force-tab-body>
             </force-tab-item>
@@ -470,9 +484,8 @@
                 <force-tab-label>HTML</force-tab-label>
                 <force-tab-body>
                     <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button20" text="input con valor por defecto" label="con valor por defecto" value="valor por defecto"&#62;&#60;/force-button&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button21" text="input readonly" label="readonly" value="valor por defecto" [isReadonly]="true"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button21" text="botón con evento" (clickEvent)="clickCount=clickCount+1"&#62;&#60;/force-button&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
                 </force-tab-body>
@@ -506,12 +519,10 @@
             <force-tab-item>
                 <force-tab-label>Resultado</force-tab-label>
                 <force-tab-body>
-                    <div class="row column ystart">
+                    <div class="row">
                         <form [formGroup]="buttonFormGroup">
-                            <force-checkbox sufixText="check" formControlName="check"></force-checkbox>
-                            <force-button idControl="button24" 
-                                text = "boton check"
-                                [isInvalid]="buttonFormGroup.invalid"></force-button>
+                            <force-checkbox idControl="checkbox1" sufixText="check" formControlName="check"></force-checkbox>
+                            <force-button idControl="button22" text = "boton check" [isInvalid]="buttonFormGroup.invalid"></force-button>
                         </form>
                     </div>
                     <div class="row w-full">
@@ -534,9 +545,9 @@
                 <force-tab-body>
                     <div class="codigo">
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;form [formGroup]="inputFormGroup"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button24" text="input requerido" label="input requerido" formControlName="input"</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>          hint="se debe ingresar un valor" [isInvalid]="inputFormGroup.controls.input.invalid"&#62;&#60;/force-button&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;form [formGroup]="buttonFormGroup"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-checkbox idControl="checkbox1" sufixText="check" formControlName="check"&#62;&#60;/force-checkbox&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-button idControl="button22" text = "boton check" [isInvalid]="buttonFormGroup.invalid"&#62;&#60;/force-button&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/form&#62;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
                     </div>
@@ -554,8 +565,8 @@
                         <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-page.component.scss']</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonPageComponent implements OnInit &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  inputFormGroup = this.formBuilder.group( &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      input: ['', Validators.required]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  buttonFormGroup = this.formBuilder.group( &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      check: [false, [Validators.required,Validators.requiredTrue]]</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>  &#125;)</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor(private formBuilder: FormBuilder) &#123; &#125;</pre></span>
                         <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>

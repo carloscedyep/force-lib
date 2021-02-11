@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="button" *ngFor="let item of buttonItems$ | async">
+        <div [id]="'button' + item.idControl" class="label" (click)="abrirMenu(item.idControl)">
+            <ng-container *ngIf="item.buttonComponent">
+                <ng-container *ngTemplateOutlet="item.buttonComponent.buttonContent">
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="!item.buttonComponent">
+                {{ item.idControl }}
+            </ng-container>
+        </div>
+        <div tabindex="0" [id]="'menu'+item.idControl" class="menu">
+            <ng-container>
+                <ng-container *ngTemplateOutlet="item.bodyComponent.bodyContent">
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>

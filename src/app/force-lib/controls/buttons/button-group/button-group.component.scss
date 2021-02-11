@@ -10,6 +10,7 @@
 button{
   margin: 0px;
   padding: 0px;
+  appearance: none;
 }
 
 .button {
@@ -19,16 +20,16 @@ button{
   font-weight: 2px;
   //style
   border: 1px solid $border;
-  border-radius: 6px;
+  border-right: 0px;
   background-color: transparent;
   transition: 180ms box-shadow ease-in-out;
-  display: block;
+  //display: block;
   cursor: pointer;
   //padding and margin
   padding-left: $padding-small;
   padding-right: $padding-small;
   //size
-  height: $height;
+  min-height: $height;
   width: 100%;
   background-color: inherit;
   color: inherit;
@@ -38,12 +39,14 @@ button{
     border-color: transparent;
     box-shadow: 0 0 0 2px $border-hover-shadow;
     outline: 3px solid transparent;
+    z-index: 2;
   }
 
   &:focus {
     border-color: transparent;
     box-shadow: 0 0 0 2px $border-hover-shadow;
     outline: 3px solid transparent;
+    z-index: 2;
   }
 
   &.outline{
@@ -132,16 +135,20 @@ button{
     }
   }
 
-  &.icon{
-    width: $height;
-    border-radius: 50%;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
+    &.content{
+        width: auto;
+    }
 
-  &.withoutborder{
-    border: 0px;
-  }
+    &:first-child{
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    &:last-child{
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-right: 1px solid $border;
+    }
 }
 
 .image{
@@ -161,41 +168,48 @@ button{
   padding: $padding-tiny;
   position: relative;
 
-  &.content{
-    width: auto;
-  }
+    &.content{
+        width: auto;
 
-  &.full{
-    width: $width-full;
-  }
+        &.icon{
+            border-radius: 50%;
+            width: $height;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+    }
 
-  &.xxlarge{
-    width: $width-xxlarge;
-  }
+    &.full{
+        width: $width-full;
+    }
 
-  &.xlarge{
-    width: $width-xlarge;
-  }
+    &.xxlarge{
+        width: $width-xxlarge;
+    }
 
-  &.large{
-    width: $width-large;
-  }
+    &.xlarge{
+        width: $width-xlarge;
+    }
 
-  &.medium{
-    width: $width-medium;
-  }
+    &.large{
+        width: $width-large;
+    }
 
-  &.normal{
-    width: $width-normal;
-  }
+    &.medium{
+        width: $width-medium;
+    }
 
-  &.small{
-    width: $width-small;
-  }
+    &.normal{
+        width: $width-normal;
+    }
 
-  &.tiny{
-    width: $width-tiny;
-  }
+    &.small{
+        width: $width-small;
+    }
+
+    &.tiny{
+        width: $width-tiny;
+    }
 }
 
 .badge{

@@ -1,0 +1,200 @@
+<div>
+    <div class="row ycenter px">
+        <div class="bigtitle">
+            Dropdown&nbsp;
+        </div>
+        <div>
+            <force-chip text="container" color="primary" lenght="tiny"></force-chip>
+        </div>
+    </div>
+    <div class="row pl pr">
+        <force-separator class="w-full"></force-separator>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo">
+            Simple frame emergente.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            El control tiene las siguientes entradas.
+        </div>
+    </div>
+    <div class="row px">
+        <div class="parrafo pl-large">
+            <div class="pb-small">
+                <span class="bold">isFixed </span><span class="primary">(boolean)</span>: indica si el control está dentro de un contenedor de posicionamiento fijo. Por defecto es <span class="primary">false</span>.
+            </div>
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            El control es editable.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Básico
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-dropdown>
+                                <force-dropdown-item [idControl]="'dropdown1'">
+                                    <force-dropdown-label>
+                                        Dropdown
+                                    </force-dropdown-label>
+                                    <force-dropdown-body>
+                                        <div style="width: 400px;">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </div>
+                                    </force-dropdown-body>
+                                </force-dropdown-item>
+                            </force-dropdown>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button1',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button2',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button3',text:'botón 3'&#125;]&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Customizado
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row w-full">
+                            <force-dropdown>
+                                <force-dropdown-item [idControl]="'dropdown1'">
+                                    <force-dropdown-label>
+                                        <force-button idControl="buttondropdown1" text="boton dropdown" icon="fi-rr-user" color="primary"></force-button>
+                                    </force-dropdown-label>
+                                    <force-dropdown-body>
+                                        <div style="width: 400px;">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </div>
+                                    </force-dropdown-body>
+                                </force-dropdown-item>
+                            </force-dropdown>
+                            <force-dropdown>
+                                <force-dropdown-item [idControl]="'dropdown2'">
+                                    <force-dropdown-label>
+                                        <force-button idControl="buttondropdown2" icon="fi-rr-menu-dots-vertical" [isTypeIcon]="true" color="outline"></force-button>
+                                    </force-dropdown-label>
+                                    <force-dropdown-body>
+                                        <div style="width: 400px;">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </div>
+                                    </force-dropdown-body>
+                                </force-dropdown-item>
+                            </force-dropdown>
+                            <force-dropdown>
+                                <force-dropdown-item [idControl]="'dropdown3'">
+                                    <force-dropdown-label>
+                                        <force-button idControl="buttondropdown2" text="con menu customizado" color="warn"></force-button>
+                                    </force-dropdown-label>
+                                    <force-dropdown-body>
+                                        <div class="row column ystart">
+                                            <force-input idControl="input1" label="usuario" lenght="normal"></force-input>
+                                            <force-input idControl="input2" label="contraseña" lenght="normal" type="password"></force-input>
+                                            <force-input idControl="input3" label="confirmar contraseña" lenght="normal"></force-input>
+                                            <force-button idControl="buton1" text="Registrar" icon="fi-rr-check" lenght="normal"></force-button>
+                                        </div>
+                                    </force-dropdown-body>
+                                </force-dropdown-item>
+                            </force-dropdown>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button4',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button5',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button6',text:'botón 3'&#125;] lenght="full"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group [items]=&#34;[&#123;idControl:'button7',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button8',text:'botón 2'&#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>                                 &#123;idControl:'button9',text:'botón 3'&#125;] lenght="xxlarge"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button4" text="xlarge" lenght="xlarge"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button5" text="large" lenght="large"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button6" text="medium" lenght="medium"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button7" text="normal" lenght="normal"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button8" text="small" lenght="small"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button-group idControl="button9" text="tiny" lenght="tiny"&#62;&#60;/force-button-group&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-group-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-group-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-group-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonGroupPageComponent implements OnInit &#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,19 @@ import { TabLabelComponent } from './force-lib/controls/containers/tabs/tab-labe
 import { TabBodyComponent } from './force-lib/controls/containers/tabs/tab-body/tab-body.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CheckboxComponent } from './force-lib/controls/inputs/checkbox/checkbox.component';
+import { InputPageComponent } from './pages/controls/inputs/input-page/input-page.component';
+import { InputComponent } from './force-lib/controls/inputs/input/input.component';
+import { CheckboxPageComponent } from './pages/controls/inputs/checkbox-page/checkbox-page.component';
+import { DatepickerPageComponent } from './pages/controls/inputs/datepicker-page/datepicker-page.component';
+import { DatepickerComponent } from './force-lib/controls/inputs/datepicker/datepicker.component';
+import { CalendarComponent } from './force-lib/controls/commons/calendar/calendar.component';
+import { ButtongroupPageComponent } from './pages/controls/buttons/buttongroup-page/buttongroup-page.component';
+import { ButtonGroupComponent } from './force-lib/controls/buttons/button-group/button-group.component';
+import { DropdownBodyComponent } from './force-lib/controls/containers/dropdown/dropdown-body/dropdown-body.component';
+import { DropdownItemComponent } from './force-lib/controls/containers/dropdown/dropdown-item/dropdown-item.component';
+import { DropdownLabelComponent } from './force-lib/controls/containers/dropdown/dropdown-label/dropdown-label.component';
+import { DropdownComponent } from './force-lib/controls/containers/dropdown/dropdown/dropdown.component';
+import { DropdownPageComponent } from './pages/controls/containers/dropdown-page/dropdown-page.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +48,20 @@ import { CheckboxComponent } from './force-lib/controls/inputs/checkbox/checkbox
     TabItemComponent,
     TabLabelComponent,
     TabBodyComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    InputPageComponent,
+    InputComponent,
+    CheckboxPageComponent,
+    DatepickerPageComponent,
+    DatepickerComponent,
+    CalendarComponent,
+    ButtongroupPageComponent,
+    ButtonGroupComponent,
+    DropdownComponent,
+    DropdownItemComponent,
+    DropdownLabelComponent,
+    DropdownBodyComponent,
+    DropdownPageComponent,
   ],
   imports: [
     BrowserModule,

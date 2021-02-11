@@ -1,0 +1,310 @@
+@import '../../../styles/styles.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.input {
+    //Fonts
+    font-size: $font-size;
+    font-family: $font-normal;
+    //Color
+    background-color: inherit;
+    color: inherit;
+    //Size
+    height: 2.25rem;
+    width: $width-full;
+    //Margin y Padding
+    padding-left:1em;
+    padding-right:1em;
+    //Style
+    border: 1px solid $border;
+    border-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0px;
+    //Transition
+    transition: 180ms box-shadow ease-in-out;
+
+    &:hover{
+        border-color: transparent;
+        box-shadow: 0 0 0 2px $border-hover-shadow;
+        outline: 3px solid transparent;
+    }
+
+    &:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 2px $border-hover-shadow;
+        outline: 3px solid transparent;
+    }
+
+    &.primary{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.light{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.warn{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.left{
+        text-align: start;
+    }
+
+    &.right{
+        text-align: end;
+    }
+
+    &.center{
+        text-align: center;
+    }
+}
+
+.hint{
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    padding-left: 0.3rem;
+    color: $color-error;
+}
+
+.label {
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    padding-bottom: $padding-tiny;
+    //Fonts
+    
+    //Color
+
+    //Size
+
+    //Margin y Padding
+
+    //Style
+
+    //Transition
+}
+
+.button{
+    //Fonts
+    font-size: $font-size-small;
+    font-family: $font-normal;
+    //Color
+    background-color: inherit;
+    color: inherit;
+    //Size
+    height: $height;
+    width: $width-tiny / 4;
+    //Margin y Padding
+    margin: 0;
+    //Style
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    border: 1px solid $border;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 0px;
+    cursor: pointer;
+    //Transition
+    
+    &:hover{
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $border-hover-shadow;
+      outline: 3px solid transparent;
+    }
+
+    &:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 2px $border-hover-shadow;
+        outline: 3px solid transparent;
+    }
+
+    &.primary{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-primary;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.light{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $border-light-hover-shadow;
+            outline: 3px solid transparent;
+        }
+    }
+
+    &.warn{
+        &:hover{
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+
+        &:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px $backcolor-warn;
+            outline: 3px solid transparent;
+        }
+    }
+}
+
+.hidden{
+    display: none ;
+}
+
+.inline{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container{
+    //Fonts
+    
+    //Color
+
+    //Size
+
+    //Margin y Padding
+    padding: $padding-tiny;
+    //Style
+    //position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    //Transition
+
+    &.full{
+        width: $width-full;
+    }
+
+    &.xxlarge{
+        width: $width-xxlarge;
+    }
+
+    &.xlarge{
+        width: $width-xlarge;
+    }
+
+    &.large{
+        width: $width-large;
+    }
+
+    &.medium{
+        width: $width-medium;
+    }
+
+    &.normal{
+        width: $width-normal;
+    }
+
+    &.small{
+        width: $width-small;
+    }
+
+    &.tiny{
+        width: $width-tiny;
+    }
+}
+
+.menu{
+  //display: none;
+  position: absolute;
+  top:-10000%;
+  left: -10000%;
+  opacity: 0;
+  transition: opacity .3s ease-out;
+  outline: none;
+  //margin-left: $padding-tiny;
+  padding: 0;
+  
+  
+  &[expanded=true]{
+      //display: flex;
+      opacity: 1;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      z-index: 2;
+      overflow-y: auto;
+      padding: $padding-small;
+      background-color: $color-primary;
+      box-shadow: 0 0 0 2px $border-menu-shadow;
+      color: $color;
+      border: 1px solid $border;
+      border-radius: 6px;
+      //min-width: $width-normal + ($width-tiny / 2);
+  }
+}
+
+.icon{
+  width: $width-tiny / 2;
+  height: $height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectIcon{
+  &[selected=true] .icon{
+    display: flex;
+  }
+
+  &[selected=false] .icon{
+    display: none;
+  }
+}

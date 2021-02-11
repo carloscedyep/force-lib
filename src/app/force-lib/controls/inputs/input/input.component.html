@@ -1,0 +1,46 @@
+<div class="container"
+    [ngClass]="{'full': lenght === 'full',
+    'xxlarge': lenght === 'xxlarge',
+    'xlarge': lenght === 'xlarge',
+    'large': lenght === 'large',
+    'medium': lenght === 'medium',
+    'normal': lenght === 'normal',
+    'small': lenght === 'small',
+    'tiny': lenght === 'tiny'}">
+    <label class="label" [for]="idControl" *ngIf="label != undefined || (isInvalid && hint != undefined && hint.length > 0)">
+        {{label}} 
+        <span class="hint" 
+            *ngIf="isInvalid && hint != undefined && hint.length > 0">
+                *{{hint}}
+        </span>
+    </label>
+
+    <div class="inline w-full">
+        <div class="prefix" 
+            [ngClass]="{'hidden':prefix === undefined || prefix === ''}">
+            {{prefix}}
+        </div>
+        <input [id]="idControl"
+            class="input px-small"
+            [type]="type" 
+            [placeholder]="placeholder" 
+            [readonly]="isReadonly" 
+            [value]="value"
+            [ngClass]="{'left': textAlign === 'left',
+                        'right': textAlign === 'right',
+                        'center': textAlign === 'center',
+                    
+                        'primary': color === 'primary',
+                        'light': color === 'light',
+                        'warn': color === 'warn',
+
+                        'iprefix':prefix,
+                        'isufix':sufix,
+
+                        'invalid':isInvalid}" 
+            (input)="onChange($event.target.value)">
+        <div class="sufix" *ngIf="sufix" >
+            {{sufix}}
+        </div>
+    </div>
+</div>

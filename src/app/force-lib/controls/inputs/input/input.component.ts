@@ -1,30 +1,51 @@
 import { Component, Input, OnInit, Optional, Self } from '@angular/core';
-import { ControlValueAccessor, NgControl } from '@angular/forms';
+import { NgControl } from '@angular/forms';
 
 @Component({
-  selector: 'force-checkbox',
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  selector: 'force-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss']
 })
-export class CheckboxComponent implements OnInit, ControlValueAccessor {
+export class InputComponent implements OnInit {
 
   @Input()
   idControl: string = '';
 
   @Input()
-  value: boolean = false;
+  placeholder: string = '';
 
   @Input()
-  prefixText: string = '';
+  label: string = '';
 
   @Input()
-  sufixText: string = '';
+  type: string = 'text';
+
+  @Input()
+  value: string = '';
+
+  @Input()
+  textAlign: string = 'left';
+
+  @Input()
+  lenght: string = 'normal';
 
   @Input()
   color: string = 'light';
-  
+
+  @Input()
+  prefix: string = '';
+
+  @Input()
+  sufix: string = '';
+
+  @Input()
+  hint: string = '';
+
   @Input()
   isReadonly: boolean = false;
+
+  @Input()
+  isInvalid: boolean = false;
 
   constructor(@Self()
               @Optional()
@@ -35,16 +56,9 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
               }
 
   ngOnInit(): void {
-    if (this.value != undefined){
+    if (this.value != undefined && this.value.length > 0){
       this.value = this.value;
     }
-  }
-
-  checked(){
-    if (!this.isReadonly){
-      this.value = !this.value;
-      this.onChange(this.value)
-    }  
   }
 
   writeValue(value: any) {
