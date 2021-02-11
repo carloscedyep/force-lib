@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -14,9 +14,18 @@ export class ButtonPageComponent implements OnInit {
     check: [false, [Validators.required,Validators.requiredTrue]]
   })
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private elRef: ElementRef) { }
 
   ngOnInit(): void {
+  }
+
+  copy(id: string){
+    const textarea = this.elRef.nativeElement.querySelector('#'+id)
+    textarea.select();
+    document.execCommand('copy')
+    textarea.setSelectionRange(0, 0);
+    console.log(textarea.value)
   }
 
 }

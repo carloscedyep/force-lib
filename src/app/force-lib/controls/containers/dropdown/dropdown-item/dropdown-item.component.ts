@@ -10,9 +10,6 @@ import { DropdownLabelComponent } from '../dropdown-label/dropdown-label.compone
 })
 export class DropdownItemComponent implements OnInit {
 
-  @Input()
-  idControl: string;
-
   @ContentChild(DropdownLabelComponent)
   buttonComponent: DropdownLabelComponent;
 

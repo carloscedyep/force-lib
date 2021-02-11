@@ -10,12 +10,14 @@
         </div>
         <div class="row-item">
             <div class="row xend ybaseline">
+                <force-button *ngIf="darkTheme" idControl="darkTheme" icon="fi-rr-spinner-alt" [isTypeIcon]="true" color="primary" [haveBorder]="false" (clickEvent)="changeTheme()"></force-button>
+                <force-button *ngIf="!darkTheme" idControl="lightTheme" icon="fi-rr-opacity" [isTypeIcon]="true" color="primary" [haveBorder]="false" (clickEvent)="changeTheme()"></force-button>
                 &nbsp;&nbsp;v.1.0.0
             </div>
         </div>
     </div>
 </div>
-<div class="menu">
+<div class="navbar">
     <div class="pl-null">
         <force-navbar [items]="navbar" class="w-full"></force-navbar>
     </div>        

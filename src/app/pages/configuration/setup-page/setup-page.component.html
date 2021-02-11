@@ -9,12 +9,12 @@
     </div>
     <div class="row px pb-small">
         <div class="parrafo ">
-            Para utilizar esta librería se tiene que copiar la carpeta <a style="text-decoration: none;" href="../../../../assets/force-lib.rar" download="force-lib.rar"><span class="background primary">force-lib</span></a> dentro de la carpeta <span class="background">scr</span> de tu proyecto.
+            Para utilizar esta librería se tiene que copiar la carpeta <force-link text="force-lib" link="../../../../assets/force-lib.rar" target="_blank"></force-link>dentro de la carpeta <span class="background">scr</span> de tu proyecto.
         </div>
     </div>
     <div class="row px pb-small">
         <div class="parrafo ">
-            También se debe copiar los archivos <a style="text-decoration: none;" href="../../../../assets/iconos.rar" download="iconos.rar"><span class="background primary">iconos</span></a> dentro de la carpeta <span class="background">assets</span> de tu proyecto.
+            También se debe copiar los archivos <force-link text="iconos" link="../../../../assets/iconos.rar" target="_blank"></force-link>dentro de la carpeta <span class="background">assets</span> de tu proyecto.
         </div>
     </div>
     <div class="row px pb-small">
@@ -23,14 +23,21 @@
         </div>
     </div>
     <div class="row px pb-small">
-        <div class="row column ystart codigo">
-            <span class="row ycenter"><span class="rowNumber"></span><pre>...</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>"styles": [</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   ...</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "src/assets/css/uicons-regular-rounded.css",</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "src/assets/css/uicons-solid-rounded.css"</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>],</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>...</pre></span>
+        <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+                <span class="primary">angular.json</span>
+                <force-button idControl="buttoncope1" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea1')"></force-button>
+            </div>
+            <div class="codigo">
+                <textarea id="textarea1" rows="7" readonly>
+...
+"styles": [
+    ...
+    "src/assets/css/uicons-regular-rounded.css",
+    "src/assets/css/uicons-solid-rounded.css"
+],
+...</textarea>
+            </div>
         </div>
     </div>
     <div class="row px pb-small">
@@ -39,8 +46,15 @@
         </div>
     </div>
     <div class="row px pb-small">
-        <div class="row column ystart codigo">
-            <span class="row ycenter"><span class="rowNumber"></span><pre>@import 'app/force-lib/styles/styles.scss';</pre></span>
+        <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+                <span class="primary">styles.scss</span>
+                <force-button idControl="buttoncope2" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea2')"></force-button>
+            </div>
+            <div class="codigo">
+                <textarea id="textarea2" rows="1" readonly>
+@import 'app/force-lib/styles/styles.scss';</textarea>
+            </div>
         </div>
     </div>
     <div class="row px pb-small">
@@ -49,16 +63,23 @@
         </div>
     </div>
     <div class="row px pb-small">
-        <div class="row column ystart codigo">
-            <span class="row ycenter"><span class="rowNumber"></span><pre>...</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>"paths": &#123;</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   ...</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "&#64;force/controls/*":["app/force-lib/controls/*"],</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "&#64;force/models/*":["app/force-lib/models/*"],</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "&#64;force/directives/*":["app/force-lib/directives/*"],</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>   "&#64;force/services/*":["app/force-lib/services/*"]</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;,</pre></span>
-            <span class="row ycenter"><span class="rowNumber"></span><pre>...</pre></span>
+        <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+                <span class="primary">styles.scss</span>
+                <force-button idControl="buttoncope3" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea3')"></force-button>
+            </div>
+            <div class="codigo">
+                <textarea id="textarea3" rows="9" readonly>
+...
+"paths":{
+    ...
+    "@force/controls*":["app/force-lib/controls*""],
+    "@force/models/*":["app/force-lib/models/*"],
+    "@;force/directives/*":["app/force-lib/directives/*"],
+    "@force/services/*":["app/force-lib/services/*"]
+}
+...</textarea>
+            </div>
         </div>
     </div>
     <div class="row px pb-small">

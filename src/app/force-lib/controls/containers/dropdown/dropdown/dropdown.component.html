@@ -1,15 +1,15 @@
 <div class="container">
     <div class="button" *ngFor="let item of buttonItems$ | async">
-        <div [id]="'button' + item.idControl" class="label" (click)="abrirMenu(item.idControl)">
+        <div [id]="'button' + idControl" class="label" (click)="abrirMenu(idControl)">
             <ng-container *ngIf="item.buttonComponent">
                 <ng-container *ngTemplateOutlet="item.buttonComponent.buttonContent">
                 </ng-container>
             </ng-container>
             <ng-container *ngIf="!item.buttonComponent">
-                {{ item.idControl }}
+                {{ idControl }}
             </ng-container>
         </div>
-        <div tabindex="0" [id]="'menu'+item.idControl" class="menu">
+        <div tabindex="0" [id]="'menu'+idControl" class="menu" expanded="false">
             <ng-container>
                 <ng-container *ngTemplateOutlet="item.bodyComponent.bodyContent">
                 </ng-container>

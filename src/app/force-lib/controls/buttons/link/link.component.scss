@@ -1,0 +1,24 @@
+@import '../../../styles/styles.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.link {
+    background-color: inherit;
+    color: $backcolor-primary;
+    height: $height;
+    //padding: $padding-tiny;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color .3s ease-out, color .3s ease-out;
+
+    // &:hover,&:focus{
+    //     background-color: $backcolor-primary;
+    //     color: $color-primary;
+    //     transition: background-color .3s ease-out, color .3s ease-out;
+    // }
+}

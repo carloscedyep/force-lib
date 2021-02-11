@@ -49,7 +49,7 @@
         top: 100%;
         left: 0%;
         z-index: 2;
-        padding: 1rem;
+        //padding: 1rem;
         background-color: $color-primary;
         box-shadow: 0 0 0 2px $border-menu-shadow;
         color: $color;
@@ -57,6 +57,11 @@
         border-radius: 6px;
         min-width: $width-tiny;
         min-height: $width-tiny;
+        max-width: $width-large;
+        max-height: $width-large;
+        height: auto;
+        width: auto;
+        overflow-y: auto;
     }
 
     &[expanded=false]{

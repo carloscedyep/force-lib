@@ -56,7 +56,7 @@
     </div>
     <div class="row px pb-small">
         <div class="parrafo pb-1rem">
-            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
+            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <force-link text="este link" link="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank"></force-link>.
         </div>
     </div>
     <br>
@@ -79,27 +79,40 @@
                 <force-tab-item>
                     <force-tab-label>HTML</force-tab-label>
                     <force-tab-body>
-                        <div class="codigo">
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-button idControl="button1" &#62;&#60;/force-button&#62;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        <div class="codigoContainer">
+                            <div class="row xspace ycenter codigo">
+                                <span class="primary">Básico</span>
+                                <force-button idControl="buttoncopy1" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea1')"></force-button>
+                            </div>
+                            <div class="codigo">
+                                <textarea id="textarea1" rows="3" readonly>&#60;div class="row"&#62;
+    &#60;force-button idControl="button1" &#62;&#60;/force-button&#62;
+&#60;/div&#62; | code</textarea>
+                            </div>
                         </div>
                     </force-tab-body>
                 </force-tab-item>
                 <force-tab-item>
                     <force-tab-label>TypeScript</force-tab-label>
                     <force-tab-body>
-                        <div class="codigo">
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-button-page',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './button-page.component.html',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./button-page.component.scss']</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class ButtonPageComponent implements OnInit &#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        <div class="codigoContainer">
+                            <div class="row xspace ycenter codigo">
+                                <span class="primary">Básico</span>
+                                <force-button idControl="buttoncopy1" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea1')"></force-button>
+                            </div>
+                            <div class="codigo">
+                                <textarea id="textarea1" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+    selector: 'app-button-page',
+    templateUrl: './button-page.component.html',
+    styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+    constructor() &#123; &#125;
+    ngOnInit(): void &#123; &#125;
+&#125;</textarea>
+                            </div>
                         </div>
                     </force-tab-body>
                 </force-tab-item>

@@ -1,0 +1,13 @@
+@import '../../../../styles/styles.scss';
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    padding: $padding-medium;
+    border-radius: 6px;
+}

@@ -1,5 +1,4 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Navbar } from 'src/app/force-lib/models/navbar';
 
 @Component({
@@ -12,11 +11,11 @@ export class NavbarComponent implements OnInit {
   @Input()
   items: Navbar[];
 
+
   @Input()
   parentId: any = '';
   
-  constructor(private elRef: ElementRef,
-              private router: Router) { }
+  constructor(private elRef: ElementRef) {}
 
   ngOnInit(): void {
   }

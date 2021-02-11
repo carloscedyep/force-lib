@@ -23,18 +23,19 @@
     <div class="row px">
         <div class="parrafo pl-large">
             <div class="pb-small">
+                <span class="bold">idControl </span><span class="primary">(string)</span>: identificador del dropdown.
+            </div>
+            <div class="pb-small">
                 <span class="bold">isFixed </span><span class="primary">(boolean)</span>: indica si el control está dentro de un contenedor de posicionamiento fijo. Por defecto es <span class="primary">false</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">showHover </span><span class="primary">(boolean)</span>: indica si el menú se muestra al pasar le cursor sobre el componente, tener en cuenta que este comportamiento no oculta el menú de otro dropdown. Por defecto <span class="primary">false</span>.
             </div>
         </div>
     </div>
     <div class="row px pb-small">
         <div class="parrafo pb-1rem">
-            El control es editable.
-        </div>
-    </div>
-    <div class="row px pb-small">
-        <div class="parrafo pb-1rem">
-            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
+            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank"><i class="fi-rr-globe"></i> este link</a>.
         </div>
     </div>
     <br>
@@ -50,8 +51,8 @@
                     <force-tab-label>Resultado</force-tab-label>
                     <force-tab-body>
                         <div class="row">
-                            <force-dropdown>
-                                <force-dropdown-item [idControl]="'dropdown1'">
+                            <force-dropdown [idControl]="'dropdown1'">
+                                <force-dropdown-item>
                                     <force-dropdown-label>
                                         Dropdown
                                     </force-dropdown-label>
@@ -110,8 +111,8 @@
                     <force-tab-label>Resultado</force-tab-label>
                     <force-tab-body>
                         <div class="row w-full">
-                            <force-dropdown>
-                                <force-dropdown-item [idControl]="'dropdown1'">
+                            <force-dropdown [idControl]="'dropdown2'">
+                                <force-dropdown-item>
                                     <force-dropdown-label>
                                         <force-button idControl="buttondropdown1" text="boton dropdown" icon="fi-rr-user" color="primary"></force-button>
                                     </force-dropdown-label>
@@ -122,8 +123,8 @@
                                     </force-dropdown-body>
                                 </force-dropdown-item>
                             </force-dropdown>
-                            <force-dropdown>
-                                <force-dropdown-item [idControl]="'dropdown2'">
+                            <force-dropdown [idControl]="'dropdown3'">
+                                <force-dropdown-item>
                                     <force-dropdown-label>
                                         <force-button idControl="buttondropdown2" icon="fi-rr-menu-dots-vertical" [isTypeIcon]="true" color="outline"></force-button>
                                     </force-dropdown-label>
@@ -134,8 +135,8 @@
                                     </force-dropdown-body>
                                 </force-dropdown-item>
                             </force-dropdown>
-                            <force-dropdown>
-                                <force-dropdown-item [idControl]="'dropdown3'">
+                            <force-dropdown [idControl]="'dropdown4'">
+                                <force-dropdown-item>
                                     <force-dropdown-label>
                                         <force-button idControl="buttondropdown2" text="con menu customizado" color="warn"></force-button>
                                     </force-dropdown-label>
@@ -145,6 +146,21 @@
                                             <force-input idControl="input2" label="contraseña" lenght="normal" type="password"></force-input>
                                             <force-input idControl="input3" label="confirmar contraseña" lenght="normal"></force-input>
                                             <force-button idControl="buton1" text="Registrar" icon="fi-rr-check" lenght="normal"></force-button>
+                                        </div>
+                                    </force-dropdown-body>
+                                </force-dropdown-item>
+                            </force-dropdown>
+                            <force-dropdown [showHover]="true" [idControl]="'dropdown5'">
+                                <force-dropdown-item>
+                                    <force-dropdown-label>
+                                        <div class="menu content flat">Menu</div>
+                                    </force-dropdown-label>
+                                    <force-dropdown-body>
+                                        <div class="row column ystart">
+                                            <div class="menu small">menu item 1</div>
+                                            <div class="menu small">menu item 2</div>
+                                            <div class="menu small">menu item 3</div>
+                                            <div class="menu small">menu item 4</div>
                                         </div>
                                     </force-dropdown-body>
                                 </force-dropdown-item>

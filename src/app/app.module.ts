@@ -31,11 +31,18 @@ import { DropdownItemComponent } from './force-lib/controls/containers/dropdown/
 import { DropdownLabelComponent } from './force-lib/controls/containers/dropdown/dropdown-label/dropdown-label.component';
 import { DropdownComponent } from './force-lib/controls/containers/dropdown/dropdown/dropdown.component';
 import { DropdownPageComponent } from './pages/controls/containers/dropdown-page/dropdown-page.component';
+import { LinkComponent } from './force-lib/controls/buttons/link/link.component';
+import { CodeItemComponent } from './force-lib/controls/containers/code/code-item/code-item.component';
+import { CodeLabelComponent } from './force-lib/controls/containers/code/code-label/code-label.component';
+import { CodeBodyComponent } from './force-lib/controls/containers/code/code-body/code-body.component';
+import { CodeComponent } from './force-lib/controls/containers/code/code/code.component';
+import { CodePipe } from './force-lib/pipes/code.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatePipe,
+    CodePipe,    
     DigitDirective,
     NavbarComponent,
     IndiceComponent,
@@ -62,6 +69,11 @@ import { DropdownPageComponent } from './pages/controls/containers/dropdown-page
     DropdownLabelComponent,
     DropdownBodyComponent,
     DropdownPageComponent,
+    LinkComponent,
+    CodeComponent,
+    CodeItemComponent,
+    CodeLabelComponent,
+    CodeBodyComponent,
   ],
   imports: [
     BrowserModule,
