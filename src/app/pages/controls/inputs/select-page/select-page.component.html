@@ -1,0 +1,630 @@
+<div>
+    <div class="row ycenter px">
+        <div class="bigtitle">
+            Select&nbsp;
+        </div>
+        <div>
+            <force-chip text="control" color="primary" lenght="tiny"></force-chip>
+        </div>
+    </div>
+    <div class="row pl pr">
+        <force-separator class="w-full"></force-separator>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo">
+            Campo con items seleccionables, agrupados en un array de cualquier tipo, asegurandose de que tengan dos atributos: <span class="primary">value</span> y <span class="primary">text</span>.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pb-1rem">
+            El control tiene las siguientes entradas.
+        </div>
+    </div>
+    <div class="row px pb-small">
+        <div class="parrafo pl-large pb-small">
+            <div class="pb-small">
+                <span class="bold">id </span><span class="primary">(string)</span>: identificador del control.
+            </div>
+            <div class="pb-small">
+                <span class="bold">placeholder </span><span class="primary">(string)</span>: texto que se mostrará en el select cuando está vacio.
+            </div>
+            <div class="pb-small">
+                <span class="bold">isReadonly </span><span class="primary">(boolean)</span>: indica si el select es de solo lectura. Por defecto es <span class="primary">false</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">value </span><span class="primary">(string)</span>: valor a mostrar en el select.
+            </div>
+            <div class="pb-small">
+                <span class="bold">textAlign </span><span class="primary">(string)</span>: alineación del select (<span class="primary">left</span>: a la izquierda, <span class="primary">center</span>: al centro, <span class="primary">right</span>: a la derecha). Por defecto es <span class="primary">left</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">label </span><span class="primary">(string)</span>: etiqueta del select.
+            </div>
+            <div class="pb-small">
+                <span class="bold">lenght </span><span class="primary">(string)</span>: indica el tamaño del select (<span class="primary">full, xxlarge, xlarge, large, medium, norma, small</span> y <span class="primary">tiny</span>). Por defecto es <span class="primary">normal</span>
+            </div>
+            <div class="pb-small">
+                <span class="bold">color </span><span class="primary">(string)</span>: color del borde (<span class="primary">primary, light</span> y <span class="primary">warn</span>). Por defecto es <span class="primary">light</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">isInvalid </span><span class="primary">(boolean)</span>: indica si el control del select es inválido.
+            </div>
+            <div class="pb-small">
+                <span class="bold">haveFilter </span><span class="primary">(boolean)</span>: indica si se muestra el filtro. Por defecto es <span class="primary">falso</span>.
+            </div>
+            <div class="pb-small">
+                <span class="bold">hint </span><span class="primary">(string)</span>: cadena de select que indica si el input tiene un estado inválido.
+            </div>
+            <div class="pb-small">
+                <span class="bold">fixed </span><span class="primary">(boolean)</span>: indica si el select está dentro de un container <span class="primary">fixed</span>, para que el menu a mostrar sea ubicado correctamente.
+            </div>
+            <div class="pb-small">
+                <span class="bold">items </span><span class="primary">(array)</span>: items que se mostrarán en el select.
+            </div>
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Básico
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-select id="select1" placeholder="placeholder" [items]="selectItems"></force-select>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input1" placeholder="placeholder" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Con label
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-select id="input2" placeholder = "placeholder" label="label del input" [items]="selectItems"></force-select>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input2" placeholder = "placeholder" label="label del input" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Con filtro
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row">
+                            <force-select id="input2" placeholder = "placeholder" label="label del input" [haveFilter]="true" [items]="selectItems"></force-select>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input2" placeholder = "placeholder" label="label del input" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Tamaños
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row column ystart w-full">
+                            <div class="row-item w-full">
+                                <force-select id="input3" placeholder="full" lenght="full" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input4" placeholder="xxlarge" lenght="xxlarge" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input5" placeholder="xlarge" lenght="xlarge" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input6" placeholder="large" lenght="large" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input7" placeholder="medium" lenght="medium" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="rowv">
+                                <force-select id="input8" placeholder="normal" lenght="normal" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input9" placeholder="small" lenght="small" [items]="selectItems"></force-select>
+                            </div>
+                            <div class="row-item">
+                                <force-select id="input10" placeholder="tiny" lenght="tiny" [items]="selectItems"></force-select>
+                            </div>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart w-full&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item w-full"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input3" placeholder="full" lenght="full" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input4" placeholder="xxlarge" lenght="xxlarge" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input5" placeholder="xlarge" lenght="xlarge" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input6" placeholder="large" lenght="large" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input7" placeholder="medium" lenght="medium" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input8" placeholder="normal" lenght="normal" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input9" placeholder="small" lenght="small" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input10" placeholder="tiny" lenght="tiny" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Alineación
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row column">
+                            <force-select id="input11" placeholder = "left" textAlign="left" [items]="selectItems"></force-select>
+                            <force-select id="input12" placeholder = "center" textAlign="center" [items]="selectItems"></force-select>
+                            <force-select id="input13" placeholder = "right" textAlign="right" [items]="selectItems"></force-select>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input11" placeholder = "left" textAlign="left" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input12" placeholder = "center" textAlign="center" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input13" placeholder = "right" textAlign="right" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Color
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <div class="row-item">
+            <force-tabs>
+                <force-tab-item>
+                    <force-tab-label>Resultado</force-tab-label>
+                    <force-tab-body>
+                        <div class="row column">
+                            <force-select id="input14" placeholder = "primary" color="primary" [items]="selectItems"></force-select>
+                            <force-select id="input15" placeholder = "light" color="light" [items]="selectItems"></force-select>
+                            <force-select id="input16" placeholder = "warn" color="warn" [items]="selectItems"></force-select>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>HTML</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column"&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input14" placeholder = "primary" color="primary" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input15" placeholder = "light" color="light" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input16" placeholder = "warn" color="warn" [items]="selectItems"&#62;&#60;/force-select&#62;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+                <force-tab-item>
+                    <force-tab-label>TypeScript</force-tab-label>
+                    <force-tab-body>
+                        <div class="codigo">
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                        </div>
+                    </force-tab-body>
+                </force-tab-item>
+            </force-tabs>
+        </div>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Valor por defecto y readonly
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <force-select id="input20" placeholder="input con valor por defecto" label="con valor por defecto" [items]="selectItems" [value]="'3'"></force-select>
+                        <force-select id="input21" placeholder="input readonly" label="readonly" value="valor por defecto" [items]="selectItems" [value]="'4'" [isReadonly]="true"></force-select>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input20" placeholder="input con valor por defecto" label="con valor por defecto"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   [items]="selectItems" [value]="'3'"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input21" placeholder="input readonly" label="readonly" value="valor por defecto"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   [items]="selectItems" [value]="'4'" [isReadonly]="true"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+    <br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Hint
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <force-select id="input22" placeholder="inpunt con hint" hint="este es el hint" [items]="selectItems" [isInvalid]="true"></force-select>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-select id="input22" placeholder="inpunt con hint" hint="este es el hint" [items]="selectItems" [isInvalid]="true"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div><br>
+    <div class="row px pb-tiny">
+        <div class="title">
+            Con formulario
+        </div>
+    </div>
+    <div class="row px pb-tiny">
+        <force-tabs class="w-full">
+            <force-tab-item>
+                <force-tab-label>Resultado</force-tab-label>
+                <force-tab-body>
+                    <div class="row column ystart">
+                        <form [formGroup]="selectFormGroup">
+                            <force-select id="input23" 
+                                placeholder = "input requerido"
+                                label="input requerido"
+                                hint = "se debe ingresar un valor"
+                                formControlName="selectedValue"
+                                [items]="selectItems"
+                                [isInvalid]="selectFormGroup.controls.selectedValue.invalid"></force-select>
+                        </form>
+                    </div>
+                    <div class="row w-full">
+                        <force-separator class="w-full"></force-separator>
+                    </div>
+                    <div class="row column ystart">
+                        <div class="row-item">
+                            <span class="primary">form values: </span>
+                            {{selectFormGroup.value | json}} 
+                        </div>
+                        <div class="row-item">
+                            <span class="primary">form state: </span>
+                            {{selectFormGroup.valid | json}}
+                        </div>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>HTML</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;form [formGroup]="inputFormGroup"&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-select id="input23" placeholder="input requerido" label="input requerido" formControlName="input" [items]="selectItems"</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>          hint="se debe ingresar un valor" [isInvalid]="inputFormGroup.controls.input.invalid"&#62;&#60;/force-select&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/form&#62;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+            <force-tab-item>
+                <force-tab-label>TypeScript</force-tab-label>
+                <force-tab-body>
+                    <div class="codigo">
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; FormBuilder, Validators &#125; from '&#64;angular/forms';</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-select-page',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './select-page.component.html',</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./select-page.component.scss']</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selectItems: any[] = [</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '1', text: 'item 1' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '2', text: 'item 2' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '3', text: 'item 3' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '4', text: 'item 4' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '5', text: 'item 5' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#123; value: '6', text: 'item 6' &#125;,</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  selectFormGroup = this.formBuilder.group( &#123;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>      selectedValue: ['', Validators.required]</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  &#125;)</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor(private formBuilder: FormBuilder) &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
+                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
+                    </div>
+                </force-tab-body>
+            </force-tab-item>
+        </force-tabs>
+    </div>
+</div>

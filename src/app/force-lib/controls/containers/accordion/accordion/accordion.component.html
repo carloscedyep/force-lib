@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="accordion" *ngFor="let item of buttonItems$ | async">
+        <div id="label{{item.label}}" class="label" (click)="abrirbody(item.label)">
+            <ng-container *ngIf="item.buttonComponent">
+                <ng-container *ngTemplateOutlet="item.buttonComponent.buttonContent">
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="!item.buttonComponent">
+                {{ item.label }}
+            </ng-container>
+        </div>
+        <div id="{{item.label}}" class="body">
+            <div class="bodycontainer">
+                <ng-container>
+                    <ng-container *ngTemplateOutlet="item.bodyComponent.bodyContent">
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

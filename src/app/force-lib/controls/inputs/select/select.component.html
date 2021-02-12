@@ -1,0 +1,75 @@
+<div class="container"
+  [ngClass]="{'full': lenght === 'full',
+  'xxlarge': lenght === 'xxlarge',
+  'xlarge': lenght === 'xlarge',
+  'large': lenght === 'large',
+  'medium': lenght === 'medium',
+  'normal': lenght === 'normal',
+  'small': lenght === 'small',
+  'tiny': lenght === 'tiny'}">
+  <div class="label" *ngIf="label != undefined || (isInvalid && hint != undefined && hint.length > 0)">
+      {{label}} 
+      <span class="hint" 
+          *ngIf="isInvalid && hint != undefined && hint.length > 0">
+              *{{hint}}
+      </span>
+  </div>
+  <div class="inline w-full">
+    <label [for]="'text'+idControl"></label>
+    <input [id]="'text'+idControl"
+        class="input px-small"
+        [placeholder]="placeholder" 
+        [readonly]="true" 
+        [value]="text"
+        [ngClass]="{'left': textAlign === 'left',
+                    'right': textAlign === 'right',
+                    'center': textAlign === 'center',
+                    'full': lenght === 'full',
+
+                    'primary': color === 'primary',
+                    'light': color === 'light',
+                    'warn': color === 'warn',
+
+                    'invalid':isInvalid}">
+    <label [for]="'selectedValue'+idControl"></label>
+    <input class="hidden"
+      [id]="'selectedValue'+idControl"
+      [value]="value"
+      (input)="onChange($event.target.value)">
+    <button [id]="'button'+idControl" 
+      class="button"
+      [ngClass]="{'primary': color === 'primary',
+                  'light': color === 'light',
+                  'warn': color === 'warn'}"
+      (click)="abrirMenu()">
+        <i class="fi-rr-angle-small-down"></i>
+    </button>
+  </div>
+</div>
+<div tabindex="0" [id]="'menu'+idControl" class="menu"
+    [ngClass]="{'full': lenght === 'full',
+    'xxlarge': lenght === 'xxlarge',
+    'xlarge': lenght === 'xlarge',
+    'large': lenght === 'large',
+    'medium': lenght === 'medium',
+    'normal': lenght === 'normal',
+    'small': lenght === 'small',
+    'tiny': lenght === 'tiny'}">
+    <div class="row w-full" *ngIf="haveFilter">
+        <div class="row-item w-full">
+            <form [formGroup]="filterFromGroup">
+                <force-input placeholder="filtro" lenght="full" formControlName="filter" [value]="filterFromGroup.controls.filter.value"></force-input>
+            </form>
+        </div>
+    </div>
+    <li class="row xspace ycenter"
+      [id]="'item'+idControl+item.value"
+      *ngFor="let item of items | filter:['text']:[filterFromGroup.controls.filter.value]"
+      selected="false"
+      (click)="selectItem(item.value, item.text)">
+      {{item.text}}
+      <div class="icon" *ngIf="item.value == value">
+        <i class="fi-rr-check"></i>
+      </div>
+    </li>
+</div>

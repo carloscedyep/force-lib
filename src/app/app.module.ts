@@ -37,12 +37,22 @@ import { CodeLabelComponent } from './force-lib/controls/containers/code/code-la
 import { CodeBodyComponent } from './force-lib/controls/containers/code/code-body/code-body.component';
 import { CodeComponent } from './force-lib/controls/containers/code/code/code.component';
 import { CodePipe } from './force-lib/pipes/code.pipe';
+import { AccordionComponent } from './force-lib/controls/containers/accordion/accordion/accordion.component';
+import { AccordionItemComponent } from './force-lib/controls/containers/accordion/accordion-item/accordion-item.component';
+import { AccordionLabelComponent } from './force-lib/controls/containers/accordion/accordion-label/accordion-label.component';
+import { AccordionBodyComponent } from './force-lib/controls/containers/accordion/accordion-body/accordion-body.component';
+import { GridPageComponent } from './pages/controls/commons/grid-page/grid-page.component';
+import { SelectComponent } from './force-lib/controls/inputs/select/select.component';
+import { SelectPageComponent } from './pages/controls/inputs/select-page/select-page.component';
+import { FilterPipe } from './force-lib/pipes/filter.pipe';
+import { AccordionPageComponent } from './pages/controls/containers/accordion-page/accordion-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatePipe,
-    CodePipe,    
+    CodePipe,   
+    FilterPipe, 
     DigitDirective,
     NavbarComponent,
     IndiceComponent,
@@ -74,6 +84,14 @@ import { CodePipe } from './force-lib/pipes/code.pipe';
     CodeItemComponent,
     CodeLabelComponent,
     CodeBodyComponent,
+    AccordionComponent,
+    AccordionItemComponent,
+    AccordionLabelComponent,
+    AccordionBodyComponent,
+    GridPageComponent,
+    SelectComponent,
+    SelectPageComponent,
+    AccordionPageComponent,
   ],
   imports: [
     BrowserModule,

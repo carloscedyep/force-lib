@@ -89,7 +89,7 @@
     font-family: $font-normal;
     padding-right: 0.3rem;
     text-align: right;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .lastLabel {
@@ -97,7 +97,7 @@
     font-family: $font-normal;
     padding-left: 0.3rem;
     text-align: left;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .inline{

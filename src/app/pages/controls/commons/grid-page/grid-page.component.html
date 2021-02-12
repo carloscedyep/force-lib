@@ -1,0 +1,1030 @@
+<div>
+  <div class="row ycenter px">
+    <div class="bigtitle">Grid&nbsp;</div>
+    <div>
+      <force-chip text="layout" color="primary" lenght="tiny"></force-chip>
+    </div>
+  </div>
+  <div class="row pl pr">
+    <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      Maquetación básica, donde se usan los siguientes estilos.
+    </div>
+  </div>
+  <div class="row px">
+    <div class="parrafo pl-large">
+      <div class="pb-small">
+        <span class="bold">row </span>: clase que distribuye los elementos en
+        una fila.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">xstart </span>: alinea los elementos al inicio del
+        eje x.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">xcenter </span>: alinea los elementos al centro del
+        eje x.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">xend </span>: alinea los elementos al final del eje
+        x.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">xspace </span>: alinea los elementos a todo lo largo
+        del row.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">ystart </span>: alinea los elementos al inicio del
+        eje y.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">ycenter </span>: alinea los elementos al centro del
+        eje y.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">yend </span>: alinea los elementos al final del eje
+        y.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">ybaseline </span>: alinea los elementos en base al
+        texto interno de cada elemento.
+      </div>
+      <div class="pl-large pb-small">
+        <span class="bold">column </span>: actualiza la clase row, cambiando la
+        dirección de los elementos de fila a columna.
+      </div>
+      <div class="pb-small">
+        <span class="bold">w-full </span>: clase que alarga el ancho del
+        elemento al 100%.
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Básico</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row grid">row normal</div>
+            <div class="row w-full grid">row full</div>
+            <div class="row w-full px grid">row full con padding x</div>
+            <div class="row w-full py grid">row full con padding y</div>
+            <div class="row w-full pxy grid">row full con padding xy</div>
+            <div class="row w-full gridContainer">
+              <div class="row grid">row xstart</div>
+              <div class="row grid">row xstart</div>
+              <div class="row grid">row xstart</div>
+            </div>
+            <div class="row xcenter w-full gridContainer">
+              <div class="row grid">row xcenter</div>
+              <div class="row grid">row xcenter</div>
+              <div class="row grid">row xcenter</div>
+            </div>
+            <div class="row xend w-full gridContainer">
+              <div class="row grid">row xend</div>
+              <div class="row grid">row xend</div>
+              <div class="row grid">row xend</div>
+            </div>
+            <div class="row xspace w-full gridContainer">
+              <div class="row grid">row xspace</div>
+              <div class="row grid">row xspace</div>
+              <div class="row grid">row xspace</div>
+            </div>
+            <div class="row w-full">
+              <div class="row-item">
+                <div class="row ystart gridContainer" style="height: 200px">
+                  <div class="row ystart grid" style="height: 80px">
+                    row ystart
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ystart
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ystart
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="row ycenter gridContainer" style="height: 200px">
+                  <div class="row ystart grid" style="height: 80px">
+                    row ycenter
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ycenter
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ycenter
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="row yend gridContainer" style="height: 200px">
+                  <div class="row ystart grid" style="height: 80px">
+                    row yend
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row yend
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row yend
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="row ybaseline gridContainer" style="height: 200px">
+                  <div class="row ystart grid" style="height: 80px">
+                    row ybaseline
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ybaseline
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ybaseline
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row w-full">
+              <div class="row-item">
+                <div
+                  class="row xcenter ystart gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ystart
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ystart
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ystart
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xcenter ycenter gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ycenter
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ycenter
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ycenter
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xcenter yend gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row yend
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row yend
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row yend
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xcenter ybaseline gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ybaseline
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ybaseline
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ybaseline
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row w-full">
+              <div class="row-item">
+                <div
+                  class="row xend ystart gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ystart
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ystart
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ystart
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xend ycenter gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ycenter
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ycenter
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ycenter
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div class="row xend yend gridContainer" style="height: 200px">
+                  <div class="row ystart grid" style="height: 80px">
+                    row yend
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row yend
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row yend
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xend ybaseline gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ybaseline
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ybaseline
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ybaseline
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row w-full">
+              <div class="row-item">
+                <div
+                  class="row xspace ystart gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ystart
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ystart
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ystart
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xspace ycenter gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ycenter
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ycenter
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ycenter
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xspace yend gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row yend
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row yend
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row yend
+                  </div>
+                </div>
+              </div>
+              <div class="row-item">
+                <div
+                  class="row xspace ybaseline gridContainer"
+                  style="height: 200px"
+                >
+                  <div class="row ystart grid" style="height: 80px">
+                    row ybaseline
+                  </div>
+                  <div class="row yend grid" style="height: 100px">
+                    row ybaseline
+                  </div>
+                  <div class="row ycenter grid" style="height: 60px">
+                    row ybaseline
+                  </div>
+                </div>
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Básico</span>
+                <force-button
+                  idControl="buttoncopy1"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea1')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea1" rows="3" readonly>
+&#60;div class="row"&#62;
+    &#60;force-button idControl="button1" &#62;&#60;/force-button&#62;
+&#60;/div&#62; | code</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Básico</span>
+                <force-button
+                  idControl="buttoncopy2"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea2')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea2" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+    selector: 'app-button-page',
+    templateUrl: './button-page.component.html',
+    styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+    constructor() &#123; &#125;
+    ngOnInit(): void &#123; &#125;
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
+    </div>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Columna</div>
+  </div>
+  <div class="row px pb-small">
+    <div class="information pb-tiny">
+      Tener en cuenta que cuando se usa la clase
+      <span class="bold">column</span> las direcciones se alternan, es decir,
+      las clases de alineación del eje <span class="bold">"x"</span> cambian y
+      alinean en el eje <span class="bold">"y"</span>.
+    </div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row column gridContainer">
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+            </div>
+            <div class="row column xstart gridContainer" style="height: 200px">
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+            </div>
+            <div class="row column xcenter gridContainer" style="height: 200px">
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+            </div>
+            <div class="row column xend gridContainer" style="height: 200px">
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+              <div class="grid">row column</div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Tamaños</span>
+                <force-button
+                  idControl="buttoncopy3"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea3')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea3" rows="14" readonly>
+&#60;div class="row w-full&#62;
+   &#60;div class="row-item"&#62;
+      &#60;force-button idControl="button2" text="full" lenght="full"&#62;&#60;/force-button&#62;
+   &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row column ystart w-full&#62;
+   &#60;force-button idControl="button3" text="xxlarge" lenght="xxlarge"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button4" text="xlarge" lenght="xlarge"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button5" text="large" lenght="large"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button6" text="medium" lenght="medium"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button7" text="normal" lenght="normal"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button8" text="small" lenght="small"&#62;&#60;/force-button&#62;
+   &#60;force-button idControl="button9" text="tiny" lenght="tiny"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Tamaños</span>
+                <force-button
+                  idControl="buttoncopy4"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea4')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea4" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
+    </div>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Color</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row w-full">
+              <div class="row-item grid">row item</div>
+              <div class="row-item grid">row item</div>
+              <div class="row-item grid">row item</div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Color</span>
+                <force-button
+                  idControl="buttoncopy5"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea5')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea5" rows="6" readonly>
+&#60;div class="row"&#62;
+    &#60;force-button idControl="button10" text = "primary" color="primary"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button11" text = "light" color="light"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button12" text = "warn" color="warn"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button13" text = "outline" color="outline"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">Color</span>
+                <force-button
+                  idControl="buttoncopy6"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea6')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea6" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
+    </div>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Sin borde</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="parrafo">
+      Este efecto debe ser combinado con el color
+      <span class="primary">outline</span>
+    </div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button14"
+              text="botón con borde"
+              color="outline"
+            ></force-button>
+            <force-button
+              idControl="button15"
+              text="botón sin borde"
+              color="outline"
+              [haveBorder]="false"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Sin borde</span>
+              <force-button
+                idControl="buttoncopy7"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea7')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea7" rows="4" readonly>
+&#60;div class="row column ystart"&#62;
+    &#60;force-button idControl="button14" text="botón con borde" color="outline"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button15" text="botón sin borde" color="outline"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Sin borde</span>
+              <force-button
+                idControl="buttoncopy8"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea8')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea8" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Ícono</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button16"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="primary"
+            ></force-button>
+            <force-button
+              idControl="button17"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="light"
+            ></force-button>
+            <force-button
+              idControl="button18"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="warn"
+            ></force-button>
+            <force-button
+              idControl="button19"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="outline"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Ícono</span>
+              <force-button
+                idControl="buttoncopy9"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea9')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea9" rows="6" readonly>
+&#60;div class="row"&#62;
+    &#60;force-button idControl="button16" text="botón con ícono" icon="fi-rr-add" color="primary"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button17" text="botón con ícono" icon="fi-rr-add" color="light"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button18" text="botón con ícono" icon="fi-rr-add" color="warn"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button19" text="botón con ícono" icon="fi-rr-add" color="outline"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Ícono</span>
+              <force-button
+                idControl="buttoncopy10"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea10')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea10" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Tipo ícono</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="parrafo">
+      Este efecto debe ser combinado con el lenght
+      <span class="primary">content</span>
+    </div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button20"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="primary"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button21"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="light"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button22"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="warn"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button23"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="outline"
+              [isTypeIcon]="true"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Tipo ícono</span>
+              <force-button
+                idControl="buttoncopy11"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea11')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea11" rows="6" readonly>
+&#60;div class="row"&#62;
+    &#60;force-button idControl="button20" text="botón con ícono" icon="fi-rr-add" color="primary" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button21" text="botón con ícono" icon="fi-rr-add" color="light" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button22" text="botón con ícono" icon="fi-rr-add" color="warn" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button23" text="botón con ícono" icon="fi-rr-add" color="outline" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Tipo ícono</span>
+              <force-button
+                idControl="buttoncopy12"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea12')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea12" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Badge</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button24"
+              text="botón con badge"
+              color="primary"
+              badge="1"
+            ></force-button>
+            <force-button
+              idControl="button25"
+              text="botón con badge"
+              color="light"
+              badge="20"
+            ></force-button>
+            <force-button
+              idControl="button26"
+              text="botón con badge"
+              color="warn"
+              badge="300"
+            ></force-button>
+            <force-button
+              idControl="button27"
+              text="botón con badge"
+              color="outline"
+              badge="more..."
+            ></force-button>
+            <force-button
+              idControl="button28"
+              icon="fi-rr-asterisk"
+              color="primary"
+              [isTypeIcon]="true"
+              badge="48"
+            ></force-button>
+            <force-button
+              idControl="button29"
+              icon="fi-rr-asterisk"
+              color="light"
+              [isTypeIcon]="true"
+              badge="448"
+            ></force-button>
+            <force-button
+              idControl="button30"
+              icon="fi-rr-asterisk"
+              color="warn"
+              [isTypeIcon]="true"
+              badge="8e"
+            ></force-button>
+            <force-button
+              idControl="button31"
+              icon="fi-rr-asterisk"
+              color="outline"
+              [isTypeIcon]="true"
+              badge="tt..."
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Badge</span>
+              <force-button
+                idControl="buttoncopy13"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea13')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea13" rows="10" readonly>
+&#60;div class="row "&#62;
+    &#60;force-button idControl="button24" text="botón con badge" color="primary" badge="1"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button25" text="botón con badge" color="light" badge="20"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button26" text="botón con badge" color="warn" badge="300"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button27" text="botón con badge" color="outline" badge="more..."&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button28" icon="fi-rr-asterisk" color="primary" [isTypeIcon]="true" badge="48"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button29" icon="fi-rr-asterisk" color="light" [isTypeIcon]="true" badge="448"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button30" icon="fi-rr-asterisk" color="warn" [isTypeIcon]="true" badge="8e"&#62;&#60;/force-button&#62;
+    &#60;force-button idControl="button31" icon="fi-rr-asterisk" color="outline" [isTypeIcon]="true" badge="tt..."&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">Badge</span>
+              <force-button
+                idControl="buttoncopy14"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea14')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea14" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+   selector: 'app-button-page',
+   templateUrl: './button-page.component.html',
+   styleUrls: ['./button-page.component.scss']
+&#125;)
+export class ButtonPageComponent implements OnInit &#123;
+  constructor() &#123; &#125;
+  ngOnInit(): void &#123; &#125;
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+</div>

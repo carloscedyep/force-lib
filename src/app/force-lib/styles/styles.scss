@@ -334,6 +334,7 @@
     flex-direction: column;
     width: 100%;
 }
+
 .codigo {
     display: flex;
     padding-left: $padding-small;
@@ -457,6 +458,28 @@ div.codigo {
     &.tiny{
         width: $width-tiny;
     }
+}
+
+.information{
+    font-size: $font-size;
+    font-family: $font-normal;
+    //height: $height;
+    //width: 100%;
+    padding: $padding-tiny;
+    //padding-top: $height/2;
+    background-color: $backcolor-alert-information;
+    color: inherit;
+    border-radius: 6px;
+}
+
+.gridContainer{
+    background-color: $backcolor-alert-prevent;
+    margin: .1rem;
+}
+
+.grid{
+    background-color: $backcolor-alert-done;
+    margin: .1rem;
 }
 
 a{
