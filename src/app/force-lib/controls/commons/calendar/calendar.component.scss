@@ -1,135 +1,135 @@
-@import '../../../../force-lib/styles/styles.scss';
+@import "../../../../force-lib/styles/styles.scss";
 
 .container {
-    width: 300px;
-    font-size: 12px;
-    font-family: $font-normal;
-  }
+  width: 300px;
+  font-size: 12px;
+  font-family: $font-normal;
+}
 
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
-  
-  .first-day-0 {
-    grid-column-start: 1;
+
+.first-day-0 {
+  grid-column-start: 1;
+}
+
+.first-day-1 {
+  grid-column-start: 2;
+}
+
+.first-day-2 {
+  grid-column-start: 3;
+}
+
+.first-day-3 {
+  grid-column-start: 4;
+}
+
+.first-day-4 {
+  grid-column-start: 5;
+}
+
+.first-day-5 {
+  grid-column-start: 6;
+}
+
+.first-day-6 {
+  grid-column-start: 7;
+}
+
+.month {
+  font-size: 16px;
+  font-weight: bold;
+
+  & .year {
+    color: $backcolor-primary;
   }
-  
-  .first-day-1 {
-    grid-column-start: 2;
-  }
-  
-  .first-day-2 {
-    grid-column-start: 3;
-  }
-  
-  .first-day-3 {
-    grid-column-start: 4;
-  }
-  
-  .first-day-4 {
-    grid-column-start: 5;
+}
+
+.button {
+  background-color: inherit;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.day-name {
+  background-color: inherit;
+  color: $color-medium;
+  padding-bottom: 0.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+h1 {
+  text-align: center;
+}
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  padding: 2px;
+}
+
+.day {
+  position: relative;
+  font-size: 14px;
+  font-family: $font-normal;
+  padding: 2px;
+  background-color: inherit;
+  color: inherit;
+  border: 0;
+  outline: none;
+  border-radius: 6px;
+  align-self: center;
+  justify-self: center;
+  // border-top-right-radius: 45%;
+  // border-bottom-right-radius: 45%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.weekend {
+    color: $backcolor-warn;
   }
 
-  .first-day-5 {
-    grid-column-start: 6;
+  &:not(:empty) {
+    cursor: pointer;
+    &:hover,
+    :active {
+      background-color: $backcolor-hover;
+    }
+
+    &:focus {
+      background-color: $backcolor-primary;
+      color: $color-primary;
+    }
   }
 
-  .first-day-6 {
-    grid-column-start: 7;
-  }
-  
-  .month{
-    font-size: 16px;
+  &.today {
     font-weight: bold;
-
-    & .year{
-        color: $backcolor-primary;
-    }
   }
 
-  .button{
-      background-color: inherit;
-      color: inherit;
-      border: 0;
-      cursor: pointer;
-      outline: none;
+  &.selected {
+    background-color: $backcolor-primary;
+    color: $color-primary;
   }
-  
-  .day-name {
-    background-color: inherit;
-    color: $color-medium;
-    padding-bottom: .5rem;
-    align-self: center;
-    justify-self: center;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+}
 
-  li {
-    padding: 2px;
-  }
-
-  .day {
-    position: relative;
-    font-size: 14px;
-    font-family: $font-normal;
-    padding: 2px;
-    background-color: inherit;
-    color: inherit;
-    border: 0;
-    outline: none;
-    border-radius: 6px;
-    align-self: center;
-    justify-self: center;
-    // border-top-right-radius: 45%;
-    // border-bottom-right-radius: 45%;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.weekend{
-      color: $backcolor-warn;
-    }
-
-    &:not(:empty){
-        cursor: pointer;
-        &:hover,:active{
-            background-color: $backcolor-hover;
-        }
-    
-        &:focus{
-            background-color: $backcolor-primary;
-            color: $color-primary;
-        }
-    }
-
-    &.today{
-        font-weight: bold;
-    }
-
-    &.selected{
-        background-color: $backcolor-primary;
-        color: $color-primary;
-    }
-    
-  }
-
-  .daytoday{
-      position: absolute;
-      border-radius: 50%;
-      background-color: rgb(103, 238, 62);
-      width: 8pX;
-      height: 8px;
-      top:1.6rem;
-  }
+.daytoday {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(103, 238, 62);
+  width: 8px;
+  height: 8px;
+  top: 1.6rem;
+}

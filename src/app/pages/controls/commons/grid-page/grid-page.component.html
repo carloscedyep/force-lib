@@ -363,10 +363,271 @@
                 ></force-button>
               </div>
               <div class="codigo">
-                <textarea id="textarea1" rows="3" readonly>
-&#60;div class="row"&#62;
-    &#60;force-button idControl="button1" &#62;&#60;/force-button&#62;
-&#60;/div&#62; | code</textarea
+                <textarea id="textarea1" rows="20" readonly>
+&#60;div class="row"&#62;row normal&#60;/div&#62;
+&#60;div class="row w-full"&#62;row full&#60;/div&#62;
+&#60;div class="row w-full px"&#62;row full con padding x&#60;/div&#62;
+&#60;div class="row w-full py"&#62;row full con padding y&#60;/div&#62;
+&#60;div class="row w-full pxy"&#62;row full con padding xy&#60;/div&#62;
+&#60;div class="row w-fullContainer"&#62;
+    &#60;div class="row"&#62;row xstart&#60;/div&#62;
+    &#60;div class="row"&#62;row xstart&#60;/div&#62;
+    &#60;div class="row"&#62;row xstart&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row xcenter w-fullContainer"&#62;
+    &#60;div class="row"&#62;row xcenter&#60;/div&#62;
+    &#60;div class="row"&#62;row xcenter&#60;/div&#62;
+    &#60;div class="row"&#62;row xcenter&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row xend w-fullContainer"&#62;
+    &#60;div class="row"&#62;row xend&#60;/div&#62;
+    &#60;div class="row"&#62;row xend&#60;/div&#62;
+    &#60;div class="row"&#62;row xend&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row xspace w-fullContainer"&#62;
+    &#60;div class="row"&#62;row xspace&#60;/div&#62;
+    &#60;div class="row"&#62;row xspace&#60;/div&#62;
+    &#60;div class="row"&#62;row xspace&#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row w-full"&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div class="row ystartContainer" style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ystart
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div class="row ycenterContainer" style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ycenter
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div class="row yendContainer" style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row yend
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div class="row ybaselineContainer" style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row w-full"&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xcenter ystartContainer"
+        style="height: 200px"
+    &#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ystart
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xcenter ycenterContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ycenter
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xcenter yendContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row yend
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xcenter ybaselineContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row w-full"&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xend ystartContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ystart
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xend ycenterContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ycenter
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div class="row xend yendContainer" style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row yend
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xend ybaselineContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="row w-full"&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xspace ystartContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ystart
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ystart
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xspace ycenterContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ycenter
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ycenter
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xspace yendContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row yend
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row yend
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;div class="row-item"&#62;
+    &#60;div
+        class="row xspace ybaselineContainer"
+        style="height: 200px"&#62;
+        &#60;div class="row ystart" style="height: 80px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row yend" style="height: 100px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+        &#60;div class="row ycenter" style="height: 60px"&#62;
+        row ybaseline
+        &#60;/div&#62;
+    &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;</textarea
                 >
               </div>
             </div>

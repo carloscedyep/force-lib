@@ -1,28 +1,49 @@
 <div class="container">
-    <div class="row xspace ycenter">
-        <button class="button" (click)="restMonth()"><i class="fi-rr-angle-left"></i></button>
-        <span class="month">{{monthName}} <span class="year">{{year}}</span></span>
-        <button class="button" (click)="addMonth()"><i class="fi-rr-angle-right"></i></button>
-    </div>
-    <br>
-    <ol class="calendar">
-      <li class="day-name">DO</li>
-      <li class="day-name">LU</li>
-      <li class="day-name">MA</li>
-      <li class="day-name">MI</li>
-      <li class="day-name">JU</li>
-      <li class="day-name">VI</li>
-      <li class="day-name">SA</li>
-      
-      <li class="day first-day-{{weekday}}" 
-        [ngClass]="{'today': isToday('1'),
-                    'selected': isDateSelected('1'),
-                    'weekend': isWeekend('1')}"
-            (click)="selectDay('1')">1<div class="daytoday" *ngIf="isToday('1')"></div></li>
-      <li class="day" *ngFor="let day of calendar"
-        [ngClass]="{'today': isToday(day),
-                    'selected': isDateSelected(day),
-                    'weekend': isWeekend(day)}"
-        (click)="selectDay(day)">{{day}}<div class="daytoday" *ngIf="isToday(day)"></div></li>
-    </ol>
+  <div class="row xspace ycenter">
+    <button class="button" (click)="restMonth()">
+      <i class="fi-rr-angle-left"></i>
+    </button>
+    <span class="month"
+      >{{ monthName }} <span class="year">{{ year }}</span></span
+    >
+    <button class="button" (click)="addMonth()">
+      <i class="fi-rr-angle-right"></i>
+    </button>
   </div>
+  <br />
+  <ol class="calendar">
+    <li class="day-name">DO</li>
+    <li class="day-name">LU</li>
+    <li class="day-name">MA</li>
+    <li class="day-name">MI</li>
+    <li class="day-name">JU</li>
+    <li class="day-name">VI</li>
+    <li class="day-name">SA</li>
+
+    <li
+      class="day first-day-{{ weekday }}"
+      [ngClass]="{
+        today: isToday('1'),
+        selected: isDateSelected('1'),
+        weekend: isWeekend('1')
+      }"
+      (click)="selectDay('1')"
+    >
+      1
+      <div class="daytoday" *ngIf="isToday('1')"></div>
+    </li>
+    <li
+      class="day"
+      *ngFor="let day of calendar"
+      [ngClass]="{
+        today: isToday(day),
+        selected: isDateSelected(day),
+        weekend: isWeekend(day)
+      }"
+      (click)="selectDay(day)"
+    >
+      {{ day }}
+      <div class="daytoday" *ngIf="isToday(day)"></div>
+    </li>
+  </ol>
+</div>

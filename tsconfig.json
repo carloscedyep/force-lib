@@ -4,10 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@force/controls/*":["app/force-lib/controls/*"],
-      "@force/models/*":["app/force-lib/models/*"],
-      "@force/directives/*":["app/force-lib/directives/*"],
-      "@force/services/*":["app/force-lib/services/*"]
+      "@force/controls/*": ["app/force-lib/controls/*"],
+      "@force/models/*": ["app/force-lib/models/*"],
+      "@force/directives/*": ["app/force-lib/directives/*"],
+      "@force/services/*": ["app/force-lib/services/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -18,9 +18,6 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   }
 }

@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'force-separator',
   templateUrl: './separator.component.html',
-  styleUrls: ['./separator.component.scss']
+  styleUrls: ['./separator.component.scss'],
 })
 export class SeparatorComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

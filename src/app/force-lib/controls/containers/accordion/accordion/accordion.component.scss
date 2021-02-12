@@ -1,86 +1,85 @@
-@import '../../../../styles/styles.scss';
+@import "../../../../styles/styles.scss";
 
-.label{ 
-    //Fonts
-    font-size: 14px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    //Color
+.label {
+  //Fonts
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  //Color
+  color: $color-medium;
+  //Size
+  //width: 100%;
+  min-height: 2.25rem;
+  //Margin y Padding
+  padding-left: 1rem;
+  padding-right: 1rem;
+  //padding-left: 1rem;
+  margin: 0px;
+  //Style
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+  //Transition
+
+  &[expanded="true"] {
+    color: inherit;
+  }
+
+  &[expanded="false"] {
     color: $color-medium;
-    //Size
-    //width: 100%;
-    min-height: 2.25rem;
-    //Margin y Padding
-    padding-left: 1rem;
-    padding-right: 1rem;
-    //padding-left: 1rem;
-    margin: 0px;
-    //Style
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    cursor: pointer;
-    //Transition
-
-    &[expanded=true]{
-        color: inherit;
-    }
-
-    &[expanded=false]{
-        color: $color-medium;
-    }
+  }
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    //padding: 4px;
-    width: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding: 4px;
+  width: 100%;
 }
 
-.accordion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 1px solid $border;
-    border-right: 1px solid $border;
-    border-top: 1px solid $border;
-    width: 100%;
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid $border;
+  border-right: 1px solid $border;
+  border-top: 1px solid $border;
+  width: 100%;
 
-    &:first-child{
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-    }
+  &:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
 
-    &:last-child{
-        border-bottom: 1px solid $border;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-    }
-
+  &:last-child {
+    border-bottom: 1px solid $border;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
 }
 
-.body{
-    font-size: 14px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+.body {
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 
-    &:first-child{
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-    }
+  &:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
 
-    &:last-child{
-        border-bottom: 0px;
-    }
+  &:last-child {
+    border-bottom: 0px;
+  }
 
-    & .bodycontainer{
-        border-top: 3px solid $backcolor-primary;
-        padding: 1rem;
-    }
+  & .bodycontainer {
+    border-top: 3px solid $backcolor-primary;
+    padding: 1rem;
+  }
 }

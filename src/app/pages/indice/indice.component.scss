@@ -1,76 +1,76 @@
-@import '../../force-lib/styles/styles.scss';
+@import "../../force-lib/styles/styles.scss";
 
-.header{
-    //Fonts
-    font-size: 14px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    //Color
-    background-color: $backcolor-primary;
-    color: $color-primary;
-    //Size
-    height: 50px;
-    width: 100%;
-    //Margin y Padding
-    //Style
-    position: fixed;
-    display: flex;
-    align-items: center;
-    top:0px;
-    left: 0px;
-    z-index: 3;
-    box-shadow:  0 2px 2px 0 $border-hover-shadow;
-    //Transition
+.header {
+  //Fonts
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  //Color
+  background-color: $backcolor-primary;
+  color: $color-primary;
+  //Size
+  height: 50px;
+  width: 100%;
+  //Margin y Padding
+  //Style
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  box-shadow: 0 2px 2px 0 $border-hover-shadow;
+  //Transition
 }
-.navbar{
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 90%;
-    padding-top: 50px;
-    border-right: 1px solid $border;
-    //padding-right: 14px;
-    flex-grow: 1;
-    width: 300px;
-    max-width: 300px;
-    min-width: 300px;
-}
-
-.context{
-    //position: relative;
-    flex-grow: 5;
-    padding-left: 300px;
-    padding-top: 1rem;
-    background-color: inherit;
-    color: inherit;
+.navbar {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 90%;
+  padding-top: 50px;
+  border-right: 1px solid $border;
+  //padding-right: 14px;
+  flex-grow: 1;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
 }
 
-.container{
-    //position: relative;
-    display: flex; 
-    align-items: stretch;
-    padding-top: 50px;
-    //padding-top: 4px;
-    min-height: 600px;
-    padding-bottom: 2rem;
-    background-color: inherit;
-    color: inherit;
+.context {
+  //position: relative;
+  flex-grow: 5;
+  padding-left: 300px;
+  padding-top: 1rem;
+  background-color: inherit;
+  color: inherit;
 }
 
-.footer{
-    //position: relative;
-    display: flex; 
-    top: 50px;
-    padding-top: 4px;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100px;
-    background-color: $backcolor-primary;
-    color: $color-primary;
-    z-index: 3;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: 14px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+.container {
+  //position: relative;
+  display: flex;
+  align-items: stretch;
+  padding-top: 50px;
+  //padding-top: 4px;
+  min-height: 600px;
+  padding-bottom: 2rem;
+  background-color: inherit;
+  color: inherit;
+}
+
+.footer {
+  //position: relative;
+  display: flex;
+  top: 50px;
+  padding-top: 4px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100px;
+  background-color: $backcolor-primary;
+  color: $color-primary;
+  z-index: 3;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 14px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

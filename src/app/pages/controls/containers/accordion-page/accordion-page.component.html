@@ -1,106 +1,162 @@
 <div>
-    <div class="row ycenter">
-        <div class="sub-title">
-            Accordion
-        </div>
-        <div>
-            <force-chip text="container" color="primary" lenght="tiny"></force-chip>
-        </div>
+  <div class="row ycenter">
+    <div class="sub-title">Accordion</div>
+    <div>
+      <force-chip text="container" color="primary" lenght="tiny"></force-chip>
     </div>
-    <br>
-    <div class="row">
-        <div class="parrafo pb-1rem">
-            Es un contenedor, que maneja la siguiente estructura:
-        </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="parrafo pb-1rem">
+      Es un contenedor, que maneja la siguiente estructura:
     </div>
+  </div>
+  <div class="parrafo pl-6rem pb-1rem">
+    <div class="pl-6rem pb-1rem">
+      <div class="pb-0e5rem">
+        <span class="bold">&#60;force-accordion&#62; </span
+        ><span class="primary">(etiqueta)</span>: etiqueta contenedora del
+        componente.
+      </div>
+      <div class="pb-0e5rem">
+        <span class="bold">&#60;force-accordion-item&#62; </span
+        ><span class="primary">(etiqueta)</span>: etiqueta contenedora de cada
+        item del componente. Debe estar dentro de la etiqueta
+        <span class="bold">&#60;force-accordion&#62; </span>.
+      </div>
+      <div class="pb-0e5rem">
+        <span class="bold">&#60;force-accordion-label&#62; </span
+        ><span class="primary">(etiqueta)</span>: etiqueta de cabecera para cada
+        item, donde se pueden colocar todo tipo de componentes. Debe estar
+        dentro de la etiqueta
+        <span class="bold">&#60;force-accordion-item&#62; </span>.
+      </div>
+      <div class="pb-0e5rem">
+        <span class="bold">&#60;force-accordion-body&#62; </span
+        ><span class="primary">(etiqueta)</span>: etiqueta para el contenido de
+        cada item, donde se pueden colocar todo tipo de componentes. Debe estar
+        dentro de la etiqueta
+        <span class="bold">&#60;force-accordion-item&#62; </span>.
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="parrafo pl-6rem pb-1rem">
-        <div class="pl-6rem pb-1rem">
-            <div class="pb-0e5rem">
-                <span class="bold">&#60;force-accordion&#62; </span><span class="primary">(etiqueta)</span>: etiqueta contenedora del componente.
-            </div>
-            <div class="pb-0e5rem">
-                <span class="bold">&#60;force-accordion-item&#62; </span><span class="primary">(etiqueta)</span>: etiqueta contenedora de cada item del componente. Debe estar dentro de la etiqueta <span class="bold">&#60;force-accordion&#62; </span>.
-            </div>
-            <div class="pb-0e5rem">
-                <span class="bold">&#60;force-accordion-label&#62; </span><span class="primary">(etiqueta)</span>: etiqueta de cabecera para cada item, donde se pueden colocar todo tipo de componentes. Debe estar dentro de la etiqueta <span class="bold">&#60;force-accordion-item&#62; </span>.
-            </div>
-            <div class="pb-0e5rem">
-                <span class="bold">&#60;force-accordion-body&#62; </span><span class="primary">(etiqueta)</span>: etiqueta para el contenido de cada item, donde se pueden colocar todo tipo de componentes. Debe estar dentro de la etiqueta <span class="bold">&#60;force-accordion-item&#62; </span>.
-            </div>
-        </div>
+      Al inicio todos los items están ocultos, y cuando se hace click en cada
+      <span class="bold">&#60;force-accordion-label&#62; </span>, se despliega
+      el contenido correspondiente, ocultandose los demás contenidos que puedan
+      están visibles.
     </div>
-    <div class="row">
-        <div class="parrafo pl-6rem pb-1rem">
-            Al inicio todos los items están ocultos, y cuando se hace click en cada <span class="bold">&#60;force-accordion-label&#62; </span>, se despliega el contenido correspondiente, ocultandose los demás contenidos que puedan están visibles.
-        </div>
-    </div>
-    <div class="row">
-        <div class="title">
-            Básico
-        </div>
-    </div>
-    <div class="row">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row w-full">
-                        <force-accordion class="w-full">
-                            <force-accordion-item [label]="'accordion1'">
-                                <force-accordion-label>
-                                    Panel 1
-                                </force-accordion-label>
-                                <force-accordion-body>
-                                    <div class="row">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit tincidunt dui. Quisque luctus sapien et lacus volutpat ullamcorper. Quisque nec pellentesque libero. Vivamus lobortis non est at ultricies. Nulla hendrerit, lectus vel dictum commodo, erat leo convallis lorem, ut porttitor risus mauris ut neque. Morbi ac mi non ipsum sollicitudin elementum non et enim. Nunc ullamcorper, justo nec suscipit venenatis, nisi eros gravida est, in tincidunt felis eros quis tortor. Sed at dolor convallis, euismod diam et, porta nulla.
-                                    </div>
-                                </force-accordion-body>
-                            </force-accordion-item>
-                            <force-accordion-item [label]="'accordion2'">
-                                <force-accordion-label>
-                                    Panel 2
-                                </force-accordion-label>
-                                <force-accordion-body>
-                                    <div class="row">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit tincidunt dui. Quisque luctus sapien et lacus volutpat ullamcorper. Quisque nec pellentesque libero. Vivamus lobortis non est at ultricies. Nulla hendrerit, lectus vel dictum commodo, erat leo convallis lorem, ut porttitor risus mauris ut neque. Morbi ac mi non ipsum sollicitudin elementum non et enim. Nunc ullamcorper, justo nec suscipit venenatis, nisi eros gravida est, in tincidunt felis eros quis tortor. Sed at dolor convallis, euismod diam et, porta nulla.
-                                    </div>
-                                </force-accordion-body>
-                            </force-accordion-item>
-                            <force-accordion-item [label]="'accordion3'">
-                                <force-accordion-label>
-                                    Panel 3
-                                </force-accordion-label>
-                                <force-accordion-body>
-                                    <div class="row">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit tincidunt dui. Quisque luctus sapien et lacus volutpat ullamcorper. Quisque nec pellentesque libero. Vivamus lobortis non est at ultricies. Nulla hendrerit, lectus vel dictum commodo, erat leo convallis lorem, ut porttitor risus mauris ut neque. Morbi ac mi non ipsum sollicitudin elementum non et enim. Nunc ullamcorper, justo nec suscipit venenatis, nisi eros gravida est, in tincidunt felis eros quis tortor. Sed at dolor convallis, euismod diam et, porta nulla.
-                                    </div>
-                                </force-accordion-body>
-                            </force-accordion-item>
-                        </force-accordion>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-input [config]="inputNormal"&#62;&#60;/force-input&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>inputNormal: ForceInput = new ForceInput();</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>ngOnInit(): void&#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   this.inputNormal.placeholder = 'input normal';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div>
+  </div>
+  <div class="row">
+    <div class="title">Básico</div>
+  </div>
+  <div class="row">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row w-full">
+            <force-accordion class="w-full">
+              <force-accordion-item [label]="'accordion1'">
+                <force-accordion-label> Panel 1 </force-accordion-label>
+                <force-accordion-body>
+                  <div class="row">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent blandit tincidunt dui. Quisque luctus sapien et
+                    lacus volutpat ullamcorper. Quisque nec pellentesque libero.
+                    Vivamus lobortis non est at ultricies. Nulla hendrerit,
+                    lectus vel dictum commodo, erat leo convallis lorem, ut
+                    porttitor risus mauris ut neque. Morbi ac mi non ipsum
+                    sollicitudin elementum non et enim. Nunc ullamcorper, justo
+                    nec suscipit venenatis, nisi eros gravida est, in tincidunt
+                    felis eros quis tortor. Sed at dolor convallis, euismod diam
+                    et, porta nulla.
+                  </div>
+                </force-accordion-body>
+              </force-accordion-item>
+              <force-accordion-item [label]="'accordion2'">
+                <force-accordion-label> Panel 2 </force-accordion-label>
+                <force-accordion-body>
+                  <div class="row">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent blandit tincidunt dui. Quisque luctus sapien et
+                    lacus volutpat ullamcorper. Quisque nec pellentesque libero.
+                    Vivamus lobortis non est at ultricies. Nulla hendrerit,
+                    lectus vel dictum commodo, erat leo convallis lorem, ut
+                    porttitor risus mauris ut neque. Morbi ac mi non ipsum
+                    sollicitudin elementum non et enim. Nunc ullamcorper, justo
+                    nec suscipit venenatis, nisi eros gravida est, in tincidunt
+                    felis eros quis tortor. Sed at dolor convallis, euismod diam
+                    et, porta nulla.
+                  </div>
+                </force-accordion-body>
+              </force-accordion-item>
+              <force-accordion-item [label]="'accordion3'">
+                <force-accordion-label> Panel 3 </force-accordion-label>
+                <force-accordion-body>
+                  <div class="row">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent blandit tincidunt dui. Quisque luctus sapien et
+                    lacus volutpat ullamcorper. Quisque nec pellentesque libero.
+                    Vivamus lobortis non est at ultricies. Nulla hendrerit,
+                    lectus vel dictum commodo, erat leo convallis lorem, ut
+                    porttitor risus mauris ut neque. Morbi ac mi non ipsum
+                    sollicitudin elementum non et enim. Nunc ullamcorper, justo
+                    nec suscipit venenatis, nisi eros gravida est, in tincidunt
+                    felis eros quis tortor. Sed at dolor convallis, euismod diam
+                    et, porta nulla.
+                  </div>
+                </force-accordion-body>
+              </force-accordion-item>
+            </force-accordion>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-input [config]="inputNormal"&#62;&#60;/force-input&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>inputNormal: ForceInput = new ForceInput();</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>ngOnInit(): void&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   this.inputNormal.placeholder = 'input normal';</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
 </div>

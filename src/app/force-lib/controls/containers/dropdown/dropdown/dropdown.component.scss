@@ -1,79 +1,79 @@
-@import '../../../../styles/styles.scss';
+@import "../../../../styles/styles.scss";
 
-.button{ 
-    //position:relative;
-    display: flex;
+.button {
+  //position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+}
+
+.label {
+  //font
+  font-size: $font-size;
+  font-family: $font-normal;
+  //style
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  //padding and margin
+  //size
+  min-height: $height;
+}
+
+.menu {
+  //display: none;
+  position: absolute;
+  top: -10000%;
+  left: -10000%;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  outline: none;
+  min-width: 0;
+  min-height: 0;
+  z-index: -1;
+
+  &[expanded="true"] {
+    //display: flex;
+    opacity: 1;
     align-items: center;
     justify-content: center;
-    padding: 0px;
-    margin: 0px;
-}
-
-.container{
-    width: 100%;
-}
-
-.label{
-    //font
-    font-size: $font-size;
-    font-family: $font-normal;
-    //style
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    //padding and margin
-    //size
-    min-height: $height;
-}
-
-.menu{
-    //display: none;
     position: absolute;
-    top:-10000%;
+    top: 100%;
+    left: 0%;
+    z-index: 2;
+    //padding: 1rem;
+    background-color: $color-primary;
+    box-shadow: 0 0 0 2px $border-menu-shadow;
+    color: $color;
+    border: 1px solid $border;
+    border-radius: 6px;
+    min-width: $width-tiny;
+    min-height: $width-tiny;
+    max-width: $width-large;
+    max-height: $width-large;
+    height: auto;
+    width: auto;
+    overflow-y: auto;
+  }
+
+  &[expanded="false"] {
+    //display: flex;
+    position: absolute;
+    top: -10000%;
     left: -10000%;
     opacity: 0;
-    transition: opacity .3s ease-out;
+    transition: opacity 0.3s ease-out;
     outline: none;
     min-width: 0;
     min-height: 0;
     z-index: -1;
-    
-    &[expanded=true]{
-        //display: flex;
-        opacity: 1;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 100%;
-        left: 0%;
-        z-index: 2;
-        //padding: 1rem;
-        background-color: $color-primary;
-        box-shadow: 0 0 0 2px $border-menu-shadow;
-        color: $color;
-        border: 1px solid $border;
-        border-radius: 6px;
-        min-width: $width-tiny;
-        min-height: $width-tiny;
-        max-width: $width-large;
-        max-height: $width-large;
-        height: auto;
-        width: auto;
-        overflow-y: auto;
-    }
-
-    &[expanded=false]{
-        //display: flex;
-        position: absolute;
-        top:-10000%;
-        left: -10000%;
-        opacity: 0;
-        transition: opacity .3s ease-out;
-        outline: none;
-        min-width: 0;
-        min-height: 0;
-        z-index: -1;
-    }
+  }
 }

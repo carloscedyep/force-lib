@@ -1,75 +1,112 @@
 <div>
-    <div class="row px">
-        <div class="bigtitle">
-            Instalación
-        </div>
+  <div class="row px">
+    <div class="bigtitle">Instalación</div>
+  </div>
+  <div class="row px">
+    <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      Para utilizar esta librería se tiene que copiar la carpeta
+      <force-link
+        text="force-lib"
+        link="../../../../assets/force-lib.rar"
+        target="_blank"
+      ></force-link
+      >dentro de la carpeta <span class="background">scr</span> de tu proyecto.
     </div>
-    <div class="row px">
-        <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      También se debe copiar los archivos
+      <force-link
+        text="iconos"
+        link="../../../../assets/iconos.rar"
+        target="_blank"
+      ></force-link
+      >dentro de la carpeta <span class="background">assets</span> de tu
+      proyecto.
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            Para utilizar esta librería se tiene que copiar la carpeta <force-link text="force-lib" link="../../../../assets/force-lib.rar" target="_blank"></force-link>dentro de la carpeta <span class="background">scr</span> de tu proyecto.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      Luego se debe agregar las siguientes lineas en el archivo
+      <span class="primary">angular.json</span>.
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            También se debe copiar los archivos <force-link text="iconos" link="../../../../assets/iconos.rar" target="_blank"></force-link>dentro de la carpeta <span class="background">assets</span> de tu proyecto.
-        </div>
-    </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            Luego se debe agregar las siguientes lineas en el archivo <span class="primary">angular.json</span>.
-        </div>
-    </div>
-    <div class="row px pb-small">
-        <div class="codigoContainer">
-            <div class="row xspace ycenter codigo">
-                <span class="primary">angular.json</span>
-                <force-button idControl="buttoncope1" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea1')"></force-button>
-            </div>
-            <div class="codigo">
-                <textarea id="textarea1" rows="7" readonly>
+  </div>
+  <div class="row px pb-small">
+    <div class="codigoContainer">
+      <div class="row xspace ycenter codigo">
+        <span class="primary">angular.json</span>
+        <force-button
+          idControl="buttoncope1"
+          icon="fi-rr-copy"
+          [isTypeIcon]="true"
+          [haveBorder]="false"
+          color="outline"
+          (clickEvent)="copy('textarea1')"
+        ></force-button>
+      </div>
+      <div class="codigo">
+        <textarea id="textarea1" rows="7" readonly>
 ...
 "styles": [
     ...
     "src/assets/css/uicons-regular-rounded.css",
     "src/assets/css/uicons-solid-rounded.css"
 ],
-...</textarea>
-            </div>
-        </div>
+...</textarea
+        >
+      </div>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            También se debe actualizar el archivo <span class="primary">styles.scss</span>.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      También se debe actualizar el archivo
+      <span class="primary">styles.scss</span>.
     </div>
-    <div class="row px pb-small">
-        <div class="codigoContainer">
-            <div class="row xspace ycenter codigo">
-                <span class="primary">styles.scss</span>
-                <force-button idControl="buttoncope2" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea2')"></force-button>
-            </div>
-            <div class="codigo">
-                <textarea id="textarea2" rows="1" readonly>
-@import 'app/force-lib/styles/styles.scss';</textarea>
-            </div>
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="codigoContainer">
+      <div class="row xspace ycenter codigo">
+        <span class="primary">styles.scss</span>
+        <force-button
+          idControl="buttoncope2"
+          icon="fi-rr-copy"
+          [isTypeIcon]="true"
+          [haveBorder]="false"
+          color="outline"
+          (clickEvent)="copy('textarea2')"
+        ></force-button>
+      </div>
+      <div class="codigo">
+        <textarea id="textarea2" rows="1" readonly>
+@import 'app/force-lib/styles/styles.scss';</textarea
+        >
+      </div>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            Finalmente se deben agregar las siguientes lineas en el archivo <span class="primary">tsconfig.json</span>.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      Finalmente se deben agregar las siguientes lineas en el archivo
+      <span class="primary">tsconfig.json</span>.
     </div>
-    <div class="row px pb-small">
-        <div class="codigoContainer">
-            <div class="row xspace ycenter codigo">
-                <span class="primary">tsconfig.json</span>
-                <force-button idControl="buttoncope3" icon="fi-rr-copy" [isTypeIcon]="true" [haveBorder]="false" color="outline" (clickEvent)="copy('textarea3')"></force-button>
-            </div>
-            <div class="codigo">
-                <textarea id="textarea3" rows="9" readonly>
+  </div>
+  <div class="row px pb-small">
+    <div class="codigoContainer">
+      <div class="row xspace ycenter codigo">
+        <span class="primary">tsconfig.json</span>
+        <force-button
+          idControl="buttoncope3"
+          icon="fi-rr-copy"
+          [isTypeIcon]="true"
+          [haveBorder]="false"
+          color="outline"
+          (clickEvent)="copy('textarea3')"
+        ></force-button>
+      </div>
+      <div class="codigo">
+        <textarea id="textarea3" rows="9" readonly>
 ...
 "paths":{
     ...
@@ -78,14 +115,15 @@
     "@;force/directives/*":["app/force-lib/directives/*"],
     "@force/services/*":["app/force-lib/services/*"]
 }
-...</textarea>
-            </div>
-        </div>
+...</textarea
+        >
+      </div>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo ">
-            Con todas estas configuraciones el proyecto está listo para usar la librería.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">
+      Con todas estas configuraciones el proyecto está listo para usar la
+      librería.
     </div>
+  </div>
 </div>
-

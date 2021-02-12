@@ -3,10 +3,9 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'force-link',
   templateUrl: './link.component.html',
-  styleUrls: ['./link.component.scss']
+  styleUrls: ['./link.component.scss'],
 })
 export class LinkComponent implements OnInit {
-
   @Input()
   icon: string = '';
 
@@ -19,9 +18,7 @@ export class LinkComponent implements OnInit {
   @Input()
   target: string = '_self';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

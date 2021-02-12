@@ -1,15 +1,14 @@
 import { Component, ContentChildren, OnInit, QueryList } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TabItemComponent } from '../tab-item/tab-item.component';
-import { startWith, map, delay } from "rxjs/operators";
+import { startWith, map, delay } from 'rxjs/operators';
 
 @Component({
   selector: 'force-tabs',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.scss']
+  styleUrls: ['./tab.component.scss'],
 })
 export class TabComponent implements OnInit {
-
   @ContentChildren(TabItemComponent)
   tabs: QueryList<TabItemComponent>;
 
@@ -19,12 +18,11 @@ export class TabComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngAfterContentInit(): void {
     this.tabItems$ = this.tabs.changes
-      .pipe(startWith(""))
+      .pipe(startWith(''))
       .pipe(delay(0))
       .pipe(map(() => this.tabs.toArray()));
   }
@@ -50,5 +48,4 @@ export class TabComponent implements OnInit {
 
     tabItem.isActive = true;
   }
-
 }

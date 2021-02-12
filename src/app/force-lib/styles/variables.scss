@@ -1,5 +1,5 @@
 /*#region font*/
-$font-normal: 'Ubuntu', sans-serif;
+$font-normal: "Ubuntu", sans-serif;
 $font-normal: Roboto, sans-serif;
 $font-size: 14px;
 $font-size-small: 12px;
@@ -13,7 +13,7 @@ $padding-large: 3rem;
 $padding-medium: 2.5rem;
 $padding: 2rem;
 $padding-small: 1rem;
-$padding-tiny: .5rem;
+$padding-tiny: 0.5rem;
 /*endregion font*/
 
 /*#region sizes*/
@@ -21,7 +21,6 @@ $height-full: 100%;
 $height: 2.25rem;
 
 $height-header: 50px;
-
 
 $width-full: 100%;
 $width-xxlarge: 750px;
@@ -33,55 +32,53 @@ $width-small: 250px;
 $width-tiny: 150px;
 /*#region sizes*/
 
-
-
 /*#region colors*/
 $color: #000000;
 $color-medium: #808080;
-$backcolor: #FFFFFF;
-$backcolor-hover:#80808080;
-$border:#a1a1a180;
+$backcolor: #ffffff;
+$backcolor-hover: #80808080;
+$border: #a1a1a180;
 $border-hover: #80808070;
-$border-hover-shadow:#808080ad;
+$border-hover-shadow: #808080ad;
 
-$color-error: #E42A36;
+$color-error: #e42a36;
 
-$color-primary: #FFFFFF;
+$color-primary: #ffffff;
 $backcolor-primary: #444dd4;
-$border-primary-hover: #01087C;
-$border-primary-hover-shadow:#020A96;
+$border-primary-hover: #01087c;
+$border-primary-hover-shadow: #020a96;
 
 $color-light: #000000;
 $backcolor-light: #dadada;
-$border-light-hover: #807D7D;
-$border-light-hover-shadow:#acacac;
+$border-light-hover: #807d7d;
+$border-light-hover-shadow: #acacac;
 
-$color-warn: #FFFFFF;
-$backcolor-warn: #E42A36;
-$border-warn-hover: #8C0F26;
-$border-warn-hover-shadow:#941e1e;
+$color-warn: #ffffff;
+$backcolor-warn: #e42a36;
+$border-warn-hover: #8c0f26;
+$border-warn-hover-shadow: #941e1e;
 
 $color-label: #808080;
 
-$backcolor-alert-prevent:#fde5bc;
-$border-alert-prevent:#fab077;
-$border-hover-alert-prevent:#E37738;
-$border-hover-shadow-alert-prevent:#fde5bc;
+$backcolor-alert-prevent: #fde5bc;
+$border-alert-prevent: #fab077;
+$border-hover-alert-prevent: #e37738;
+$border-hover-shadow-alert-prevent: #fde5bc;
 
-$backcolor-alert-information:#c7e4ff;
-$border-alert-information:#6db8fd;
-$border-hover-alert-information:#53a1eb;
-$border-hover-shadow-alert-information:#c7e4ff;
+$backcolor-alert-information: #c7e4ff;
+$border-alert-information: #6db8fd;
+$border-hover-alert-information: #53a1eb;
+$border-hover-shadow-alert-information: #c7e4ff;
 
-$backcolor-alert-done:#bef8d5;
-$border-alert-done:#6ce49c;
-$border-hover-alert-done:#2ab862;
-$border-hover-shadow-alert-done:#bef8d5;
+$backcolor-alert-done: #bef8d5;
+$border-alert-done: #6ce49c;
+$border-hover-alert-done: #2ab862;
+$border-hover-shadow-alert-done: #bef8d5;
 
-$backcolor-alert-warn:#fcb2ae;
-$border-alert-warn:#f37e77;
-$border-hover-alert-warn:#cc4d46;
-$border-hover-shadow-alert-warn:#fcb2ae;
+$backcolor-alert-warn: #fcb2ae;
+$border-alert-warn: #f37e77;
+$border-hover-alert-warn: #cc4d46;
+$border-hover-shadow-alert-warn: #fcb2ae;
 
-$border-menu-shadow:#eeeeee;
+$border-menu-shadow: #eeeeee;
 /*#endregion colors*/

@@ -4,10 +4,9 @@ import { ControlValueAccessor, NgControl } from '@angular/forms';
 @Component({
   selector: 'force-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  styleUrls: ['./checkbox.component.scss'],
 })
 export class CheckboxComponent implements OnInit, ControlValueAccessor {
-
   @Input()
   idControl: string = '';
 
@@ -22,29 +21,31 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
 
   @Input()
   color: string = 'light';
-  
+
   @Input()
   isReadonly: boolean = false;
 
-  constructor(@Self()
-              @Optional()
-              private ngControl: NgControl) { 
-                if (this.ngControl) {
-                  this.ngControl.valueAccessor = this;
-                }
-              }
+  constructor(
+    @Self()
+    @Optional()
+    private ngControl: NgControl
+  ) {
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
+  }
 
   ngOnInit(): void {
-    if (this.value != undefined){
+    if (this.value != undefined) {
       this.value = this.value;
     }
   }
 
-  checked(){
-    if (!this.isReadonly){
+  checked() {
+    if (!this.isReadonly) {
       this.value = !this.value;
-      this.onChange(this.value)
-    }  
+      this.onChange(this.value);
+    }
   }
 
   writeValue(value: any) {
@@ -58,5 +59,4 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
   registerOnTouched() {}
 
   public onChange(value: any) {}
-
 }

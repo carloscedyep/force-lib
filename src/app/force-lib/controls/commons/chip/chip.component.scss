@@ -1,4 +1,4 @@
-@import '../../../styles/styles.scss';
+@import "../../../styles/styles.scss";
 
 *,
 *::before,
@@ -7,148 +7,148 @@
 }
 
 .chip {
-    //font
-    font-size: 14px;
-    font-family: $font-normal;
-    //style
-    border: 1px solid $border;
-    border-radius: 6rem;
-    transition: 180ms box-shadow ease-in-out;
-    color: $color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //cursor: pointer;
-    //padding and margin
-    padding-left:1em;
-    padding-right:1em;
-    //size
-    width: 100%;
-    height: 2.25rem;
+  //font
+  font-size: 14px;
+  font-family: $font-normal;
+  //style
+  border: 1px solid $border;
+  border-radius: 6rem;
+  transition: 180ms box-shadow ease-in-out;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //cursor: pointer;
+  //padding and margin
+  padding-left: 1em;
+  padding-right: 1em;
+  //size
+  width: 100%;
+  height: 2.25rem;
+
+  // &:hover{
+  //     border: 1px solid $border-hover;
+  //     box-shadow: 0 0 0 2px $border-hover-shadow;
+  //     outline: 3px solid transparent;
+  // }
+
+  // &:focus {
+  //     border-color: $border-hover;
+  //     box-shadow: 0 0 0 2px $border-hover-shadow;
+  //     outline: 3px solid transparent;
+  // }
+
+  &.primary {
+    background-color: $backcolor-primary;
+    color: $color-primary;
 
     // &:hover{
-    //     border: 1px solid $border-hover;
-    //     box-shadow: 0 0 0 2px $border-hover-shadow;
+    //     border: 1px solid $border-primary-hover;
+    //     box-shadow: 0 0 0 2px $border-primary-hover-shadow;
     //     outline: 3px solid transparent;
     // }
 
     // &:focus {
-    //     border-color: $border-hover;
-    //     box-shadow: 0 0 0 2px $border-hover-shadow;
+    //     border-color: $border-primary-hover;
+    //     box-shadow: 0 0 0 2px $border-primary-hover-shadow;
+    //     outline: 3px solid transparent;
+    // }
+  }
+
+  &.light {
+    background-color: $backcolor-light;
+    color: $color-light;
+
+    // &:hover{
+    //     border: 1px solid $border-light-hover;
+    //     box-shadow: 0 0 0 2px $border-light-hover-shadow;
     //     outline: 3px solid transparent;
     // }
 
-    &.primary{
-        background-color: $backcolor-primary;
-        color: $color-primary;
-
-        // &:hover{
-        //     border: 1px solid $border-primary-hover;
-        //     box-shadow: 0 0 0 2px $border-primary-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-
-        // &:focus {
-        //     border-color: $border-primary-hover;
-        //     box-shadow: 0 0 0 2px $border-primary-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-    }
-
-    &.light{
-        background-color: $backcolor-light;
-        color: $color-light;
-
-        // &:hover{
-        //     border: 1px solid $border-light-hover;
-        //     box-shadow: 0 0 0 2px $border-light-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-
-        // &:focus {
-        //     border-color: $border-light-hover;
-        //     box-shadow: 0 0 0 2px $border-light-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-    }
-
-    &.warn{
-        background-color: $backcolor-warn;
-        color: $color-warn;
-
-        // &:hover{
-        //     border: 1px solid $border-warn-hover;
-        //     box-shadow: 0 0 0 2px $border-warn-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-
-        // &:focus {
-        //     border-color: $border-warn-hover;
-        //     box-shadow: 0 0 0 2px $border-warn-hover-shadow;
-        //     outline: 3px solid transparent;
-        // }
-    }
-
-    &.right{
-        text-align: end;
-    }
-
-    &.large{
-        width: 800px;
-    }
-
-    &.medium{
-        width: 400px;
-    }
-
-    &.small{
-        width: 200px;
-    }
-
-    &.tiny{
-        font-size: 12px;
-        height: 1.5rem;
-    }
-}
-
-.badge{
-    font-size: 12px;
-    font-family: $font-normal;
-    font-weight: 2px;
-    position: relative;
-    top:-2.5rem;
-    left:0.5rem;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $border;
-    border-radius: 6rem;
-    padding: 2px 4px 2px 4px;
-    background-color: $backcolor;
-    color: $color;
-  
-    &.primary{
-      background-color: $backcolor-primary;
-      color: $color-primary;
-      border: 1px solid $border-primary-hover;
-    }
-  
-    &.light{
-      background-color: $backcolor-light;
-      color: $color-light;
-      border: 1px solid $border-light-hover;
-    }
-  
-    &.warn{
-      background-color: $backcolor-warn;
-      color: $color-warn;
-      border: 1px solid $border-warn-hover;
-    }
+    // &:focus {
+    //     border-color: $border-light-hover;
+    //     box-shadow: 0 0 0 2px $border-light-hover-shadow;
+    //     outline: 3px solid transparent;
+    // }
   }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 4px;
+  &.warn {
+    background-color: $backcolor-warn;
+    color: $color-warn;
+
+    // &:hover{
+    //     border: 1px solid $border-warn-hover;
+    //     box-shadow: 0 0 0 2px $border-warn-hover-shadow;
+    //     outline: 3px solid transparent;
+    // }
+
+    // &:focus {
+    //     border-color: $border-warn-hover;
+    //     box-shadow: 0 0 0 2px $border-warn-hover-shadow;
+    //     outline: 3px solid transparent;
+    // }
+  }
+
+  &.right {
+    text-align: end;
+  }
+
+  &.large {
+    width: 800px;
+  }
+
+  &.medium {
+    width: 400px;
+  }
+
+  &.small {
+    width: 200px;
+  }
+
+  &.tiny {
+    font-size: 12px;
+    height: 1.5rem;
+  }
+}
+
+.badge {
+  font-size: 12px;
+  font-family: $font-normal;
+  font-weight: 2px;
+  position: relative;
+  top: -2.5rem;
+  left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $border;
+  border-radius: 6rem;
+  padding: 2px 4px 2px 4px;
+  background-color: $backcolor;
+  color: $color;
+
+  &.primary {
+    background-color: $backcolor-primary;
+    color: $color-primary;
+    border: 1px solid $border-primary-hover;
+  }
+
+  &.light {
+    background-color: $backcolor-light;
+    color: $color-light;
+    border: 1px solid $border-light-hover;
+  }
+
+  &.warn {
+    background-color: $backcolor-warn;
+    color: $color-warn;
+    border: 1px solid $border-warn-hover;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 4px;
 }

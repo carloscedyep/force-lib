@@ -5,10 +5,9 @@ import { AccordionLabelComponent } from '../accordion-label/accordion-label.comp
 @Component({
   selector: 'force-accordion-item',
   templateUrl: './accordion-item.component.html',
-  styleUrls: ['./accordion-item.component.scss']
+  styleUrls: ['./accordion-item.component.scss'],
 })
 export class AccordionItemComponent implements OnInit {
-
   @Input()
   label: string;
 
@@ -17,10 +16,8 @@ export class AccordionItemComponent implements OnInit {
 
   @ContentChild(AccordionBodyComponent)
   bodyComponent: AccordionBodyComponent;
-  
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

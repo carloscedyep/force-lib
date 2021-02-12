@@ -4,10 +4,9 @@ import { NgControl } from '@angular/forms';
 @Component({
   selector: 'force-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
 })
 export class InputComponent implements OnInit {
-
   @Input()
   idControl: string = '';
 
@@ -47,16 +46,18 @@ export class InputComponent implements OnInit {
   @Input()
   isInvalid: boolean = false;
 
-  constructor(@Self()
-              @Optional()
-              private ngControl: NgControl) { 
-                if (this.ngControl) {
-                  this.ngControl.valueAccessor = this;
-                }
-              }
+  constructor(
+    @Self()
+    @Optional()
+    private ngControl: NgControl
+  ) {
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
+  }
 
   ngOnInit(): void {
-    if (this.value != undefined && this.value.length > 0){
+    if (this.value != undefined && this.value.length > 0) {
       this.value = this.value;
     }
   }
@@ -72,5 +73,4 @@ export class InputComponent implements OnInit {
   registerOnTouched() {}
 
   public onChange(value: any) {}
-
 }

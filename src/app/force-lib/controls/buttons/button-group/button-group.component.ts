@@ -3,10 +3,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'force-button-group',
   templateUrl: './button-group.component.html',
-  styleUrls: ['./button-group.component.scss']
+  styleUrls: ['./button-group.component.scss'],
 })
 export class ButtonGroupComponent implements OnInit {
-
   @Input()
   lenght: string = 'content';
 
@@ -19,13 +18,11 @@ export class ButtonGroupComponent implements OnInit {
   @Output()
   clickEvent = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  clicked(id: string) {
+    this.clickEvent.emit(id);
   }
-
-  clicked(id: string){
-      this.clickEvent.emit(id);
-  }
-
 }

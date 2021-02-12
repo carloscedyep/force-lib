@@ -3,10 +3,9 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'force-chip',
   templateUrl: './chip.component.html',
-  styleUrls: ['./chip.component.scss']
+  styleUrls: ['./chip.component.scss'],
 })
 export class ChipComponent implements OnInit {
-
   @Input()
   text: string = '';
 
@@ -22,9 +21,7 @@ export class ChipComponent implements OnInit {
   @Input()
   badge: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

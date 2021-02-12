@@ -1,110 +1,144 @@
 <div>
-    <div class="row px">
-        <div class="bigtitle">
-            Button&nbsp;
-        </div>
-        <div>
-            <force-chip text="control" color="primary" lenght="tiny"></force-chip>
-        </div>
+  <div class="row px">
+    <div class="bigtitle">Button&nbsp;</div>
+    <div>
+      <force-chip text="control" color="primary" lenght="tiny"></force-chip>
     </div>
-    <div class="row pl pr">
-        <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row pl pr">
+    <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo">Botón customizable que emite un evento de click.</div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo pb-1rem">El control tiene las siguientes entradas.</div>
+  </div>
+  <div class="row px">
+    <div class="parrafo pl-large">
+      <div class="pb-small">
+        <span class="bold">badge </span><span class="primary">(string)</span>:
+        cadena de texto que se muestra como una notificación.
+      </div>
+      <div class="pb-small">
+        <span class="bold">color </span><span class="primary">(string)</span>:
+        color del botón (<span class="primary">primary, light, warn</span> y
+        <span class="primary">outline</span>). Por defecto es
+        <span class="primary">primary</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">haveBorder </span
+        ><span class="primary">(boolean)</span>: indica si el botón tiene borde.
+        Por defecto es <span class="primary">true</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">icon </span><span class="primary">(string)</span>:
+        ícono a mostrar en el botón.
+      </div>
+      <div class="pb-small">
+        <span class="bold">idControl </span
+        ><span class="primary">(string)</span>: identificador del botón.
+      </div>
+      <div class="pb-small">
+        <span class="bold">isInvalid </span
+        ><span class="primary">(boolean)</span>: indica si el estado del botón
+        es inválido. Por defecto es <span class="primary">false</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">isReadonly </span
+        ><span class="primary">(boolean)</span>: indica si el botón es de solo
+        lectura. Por defecto es <span class="primary">false</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">isTypeIcon </span
+        ><span class="primary">(boolean)</span>: indica si el botón de tipo
+        ícono. Por defecto es <span class="primary">false</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">lenght </span><span class="primary">(string)</span>:
+        indica el tamaño del input (<span class="primary"
+          >content, full, xxlarge, xlarge, large, medium, normal, small</span
+        >
+        y <span class="primary">tiny</span>). Por defecto es
+        <span class="primary">content</span>
+      </div>
+      <div class="pb-small">
+        <span class="bold">text </span><span class="primary">(string)</span>:
+        texto a mostrar en el botón.
+      </div>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo">
-            Botón customizable que emite un evento de click.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="information pb-1rem">
+      Se recomienda el uso de un <span class="bold">idControl</span> único para
+      asegurarse un buen funcionamiento de la página. Mas información en
+      <force-link
+        text="este link."
+        link="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools"
+        target="_blank"
+      ></force-link>
     </div>
-    <div class="row px pb-small">
-        <div class="parrafo pb-1rem">
-            El control tiene las siguientes entradas.
-        </div>
-    </div>
-    <div class="row px">
-        <div class="parrafo pl-large">
-            <div class="pb-small">
-                <span class="bold">badge </span><span class="primary">(string)</span>: cadena de texto que se muestra como una notificación.
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Básico</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row">
+              <force-button
+                idControl="button1"
+                text="boton normal"
+              ></force-button>
             </div>
-            <div class="pb-small">
-                <span class="bold">color </span><span class="primary">(string)</span>: color del botón (<span class="primary">primary, light, warn</span> y <span class="primary">outline</span>). Por defecto es <span class="primary">primary</span>.
-            </div>
-            <div class="pb-small">
-                <span class="bold">haveBorder </span><span class="primary">(boolean)</span>: indica si el botón tiene borde. Por defecto es <span class="primary">true</span>.
-            </div>
-            <div class="pb-small">
-                <span class="bold">icon </span><span class="primary">(string)</span>: ícono a mostrar en el botón.
-            </div>
-            <div class="pb-small">
-                <span class="bold">idControl </span><span class="primary">(string)</span>: identificador del botón.
-            </div>
-            <div class="pb-small">
-                <span class="bold">isInvalid </span><span class="primary">(boolean)</span>: indica si el estado del botón es inválido. Por defecto es <span class="primary">false</span>.
-            </div>
-            <div class="pb-small">
-                <span class="bold">isReadonly </span><span class="primary">(boolean)</span>: indica si el botón es de solo lectura. Por defecto es <span class="primary">false</span>.
-            </div>
-            <div class="pb-small">
-                <span class="bold">isTypeIcon </span><span class="primary">(boolean)</span>: indica si el botón de tipo ícono. Por defecto es <span class="primary">false</span>.
-            </div>
-            <div class="pb-small">
-                <span class="bold">lenght </span><span class="primary">(string)</span>: indica el tamaño del input (<span class="primary">content, full, xxlarge, xlarge, large, medium, normal, small</span> y <span class="primary">tiny</span>). Por defecto es <span class="primary">content</span>
-            </div>
-            <div class="pb-small">
-                <span class="bold">text </span><span class="primary">(string)</span>: texto a mostrar en el botón.
-            </div> 
-        </div>
-    </div>
-    <div class="row px pb-small">
-        <div class="information pb-1rem">
-            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <force-link text="este link." link="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank"></force-link>
-        </div>
-    </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Básico
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <div class="row-item">
-            <force-tabs>
-                <force-tab-item>
-                    <force-tab-label>Resultado</force-tab-label>
-                    <force-tab-body>
-                        <div class="row">
-                            <force-button idControl="button1" text="boton normal"></force-button>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>HTML</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.html</span>
-                                <force-button idControl="buttoncopy1" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea1')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea1" rows="3" readonly>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.html</span>
+                <force-button
+                  idControl="buttoncopy1"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea1')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea1" rows="3" readonly>
 &#60;div class="row"&#62;
-    &#60;force-button idControl="button1" &#62;&#60;/force-button&#62;
-&#60;/div&#62; | code</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>TypeScript</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.ts</span>
-                                <force-button idControl="buttoncopy2" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea2')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea2" rows="10" readonly>
+    &#60;force-button idControl="button1"&#62;&#60;/force-button&#62;
+&#60;/div&#62;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.ts</span>
+                <force-button
+                  idControl="buttoncopy2"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea2')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea2" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
     selector: 'app-button-page',
@@ -114,53 +148,90 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
     constructor() &#123; &#125;
     ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-            </force-tabs>
-        </div>
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
     </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Tamaños
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <div class="row-item">
-            <force-tabs>
-                <force-tab-item>
-                    <force-tab-label>Resultado</force-tab-label>
-                    <force-tab-body>
-                        <div class="row w-full">
-                            <div class="row-item">
-                                <force-button idControl="button2" text="full" lenght="full"></force-button>
-                            </div>
-                        </div>
-                        <div class="row column ystart w-full">   
-                            <force-button idControl="button3" text="xxlarge" lenght="xxlarge"></force-button>
-                            <force-button idControl="button4" text="xlarge" lenght="xlarge"></force-button>
-                            <force-button idControl="button5" text="large" lenght="large"></force-button>
-                            <force-button idControl="button6" text="medium" lenght="medium"></force-button>
-                            <force-button idControl="button7" text="normal" lenght="normal"></force-button>
-                            <force-button idControl="button8" text="small" lenght="small"></force-button>
-                            <force-button idControl="button9" text="tiny" lenght="tiny"></force-button>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>HTML</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.html</span>
-                                <force-button idControl="buttoncopy3" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea3')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea3" rows="14" readonly>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Tamaños</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row w-full">
+              <div class="row-item">
+                <force-button
+                  idControl="button2"
+                  text="full"
+                  lenght="full"
+                ></force-button>
+              </div>
+            </div>
+            <div class="row column ystart w-full">
+              <force-button
+                idControl="button3"
+                text="xxlarge"
+                lenght="xxlarge"
+              ></force-button>
+              <force-button
+                idControl="button4"
+                text="xlarge"
+                lenght="xlarge"
+              ></force-button>
+              <force-button
+                idControl="button5"
+                text="large"
+                lenght="large"
+              ></force-button>
+              <force-button
+                idControl="button6"
+                text="medium"
+                lenght="medium"
+              ></force-button>
+              <force-button
+                idControl="button7"
+                text="normal"
+                lenght="normal"
+              ></force-button>
+              <force-button
+                idControl="button8"
+                text="small"
+                lenght="small"
+              ></force-button>
+              <force-button
+                idControl="button9"
+                text="tiny"
+                lenght="tiny"
+              ></force-button>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.html</span>
+                <force-button
+                  idControl="buttoncopy3"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea3')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea3" rows="14" readonly>
 &#60;div class="row w-full&#62;
    &#60;div class="row-item"&#62;
       &#60;force-button idControl="button2" text="full" lenght="full"&#62;&#60;/force-button&#62;
@@ -174,22 +245,29 @@ export class ButtonPageComponent implements OnInit &#123;
    &#60;force-button idControl="button7" text="normal" lenght="normal"&#62;&#60;/force-button&#62;
    &#60;force-button idControl="button8" text="small" lenght="small"&#62;&#60;/force-button&#62;
    &#60;force-button idControl="button9" text="tiny" lenght="tiny"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>TypeScript</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.ts</span>
-                                <force-button idControl="buttoncopy4" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea4')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea4" rows="10" readonly>
+&#60;/div&#62;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.ts</span>
+                <force-button
+                  idControl="buttoncopy4"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea4')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea4" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -199,66 +277,94 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-            </force-tabs>
-        </div>
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
     </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Color
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <div class="row-item">
-            <force-tabs>
-                <force-tab-item>
-                    <force-tab-label>Resultado</force-tab-label>
-                    <force-tab-body>
-                        <div class="row">
-                            <force-button idControl="button10" text = "botón primary" color="primary"></force-button>
-                            <force-button idControl="button11" text = "botón light" color="light"></force-button>
-                            <force-button idControl="button12" text = "botón warn" color="warn"></force-button>
-                            <force-button idControl="button13" text = "botón outline" color="outline"></force-button>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>HTML</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.html</span>
-                                <force-button idControl="buttoncopy5" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea5')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea5" rows="6" readonly>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Color</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="row-item">
+      <force-tabs>
+        <force-tab-item>
+          <force-tab-label>Resultado</force-tab-label>
+          <force-tab-body>
+            <div class="row">
+              <force-button
+                idControl="button10"
+                text="botón primary"
+                color="primary"
+              ></force-button>
+              <force-button
+                idControl="button11"
+                text="botón light"
+                color="light"
+              ></force-button>
+              <force-button
+                idControl="button12"
+                text="botón warn"
+                color="warn"
+              ></force-button>
+              <force-button
+                idControl="button13"
+                text="botón outline"
+                color="outline"
+              ></force-button>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>HTML</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.html</span>
+                <force-button
+                  idControl="buttoncopy5"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea5')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea5" rows="6" readonly>
 &#60;div class="row"&#62;
     &#60;force-button idControl="button10" text = "primary" color="primary"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button11" text = "light" color="light"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button12" text = "warn" color="warn"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button13" text = "outline" color="outline"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-                <force-tab-item>
-                    <force-tab-label>TypeScript</force-tab-label>
-                    <force-tab-body>
-                        <div class="codigoContainer">
-                            <div class="row xspace ycenter codigo">
-                                <span class="primary">button-page.component.ts</span>
-                                <force-button idControl="buttoncopy6" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                    [haveBorder]="false" color="outline" (clickEvent)="copy('textarea6')"></force-button>
-                            </div>
-                            <div class="codigo">
-                                <textarea id="textarea6" rows="10" readonly>
+&#60;/div&#62;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+        <force-tab-item>
+          <force-tab-label>TypeScript</force-tab-label>
+          <force-tab-body>
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.ts</span>
+                <force-button
+                  idControl="buttoncopy6"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea6')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea6" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -268,66 +374,88 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                            </div>
-                        </div>
-                    </force-tab-body>
-                </force-tab-item>
-            </force-tabs>
-        </div>
+&#125;</textarea
+                >
+              </div>
+            </div>
+          </force-tab-body>
+        </force-tab-item>
+      </force-tabs>
     </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Sin borde
-        </div>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Sin borde</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="parrafo">
+      Este efecto debe ser combinado con el color
+      <span class="primary">outline</span>
     </div>
-    <div class="row px pb-tiny">
-        <div class="parrafo">
-            Este efecto debe ser combinado con el color <span class="primary">outline</span>
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                        <force-button idControl="button14" text="botón con borde" color="outline"></force-button>
-                        <force-button idControl="button15" text="botón sin borde" color="outline" [haveBorder]="false"></force-button>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy7" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea7')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea7" rows="4" readonly>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button14"
+              text="botón con borde"
+              color="outline"
+            ></force-button>
+            <force-button
+              idControl="button15"
+              text="botón sin borde"
+              color="outline"
+              [haveBorder]="false"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy7"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea7')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea7" rows="4" readonly>
 &#60;div class="row column ystart"&#62;
     &#60;force-button idControl="button14" text="botón con borde" color="outline"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button15" text="botón sin borde" color="outline"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy8" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea8')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea8" rows="10" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy8"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea8')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea8" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -337,64 +465,96 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Ícono
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                        <force-button idControl="button16" text="botón con ícono" icon="fi-rr-add" color="primary"></force-button>
-                        <force-button idControl="button17" text="botón con ícono" icon="fi-rr-add" color="light"></force-button>
-                        <force-button idControl="button18" text="botón con ícono" icon="fi-rr-add" color="warn"></force-button>
-                        <force-button idControl="button19" text="botón con ícono" icon="fi-rr-add" color="outline"></force-button>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy9" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea9')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea9" rows="6" readonly>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Ícono</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button16"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="primary"
+            ></force-button>
+            <force-button
+              idControl="button17"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="light"
+            ></force-button>
+            <force-button
+              idControl="button18"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="warn"
+            ></force-button>
+            <force-button
+              idControl="button19"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="outline"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy9"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea9')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea9" rows="6" readonly>
 &#60;div class="row"&#62;
     &#60;force-button idControl="button16" text="botón con ícono" icon="fi-rr-add" color="primary"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button17" text="botón con ícono" icon="fi-rr-add" color="light"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button18" text="botón con ícono" icon="fi-rr-add" color="warn"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button19" text="botón con ícono" icon="fi-rr-add" color="outline"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy10" icon="fi-rr-copy" [isTypeIcon]="true"   
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea10')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea10" rows="10" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy10"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea10')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea10" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -404,69 +564,106 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Tipo ícono</div>
+  </div>
+  <div class="row px pb-tiny">
+    <div class="parrafo">
+      Este efecto debe ser combinado con el lenght
+      <span class="primary">content</span>
     </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Tipo ícono
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <div class="parrafo">
-            Este efecto debe ser combinado con el lenght <span class="primary">content</span>
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                        <force-button idControl="button20" text="botón con ícono" icon="fi-rr-add" color="primary" [isTypeIcon]="true"></force-button>
-                        <force-button idControl="button21" text="botón con ícono" icon="fi-rr-add" color="light" [isTypeIcon]="true"></force-button>
-                        <force-button idControl="button22" text="botón con ícono" icon="fi-rr-add" color="warn" [isTypeIcon]="true"></force-button>
-                        <force-button idControl="button23" text="botón con ícono" icon="fi-rr-add" color="outline" [isTypeIcon]="true"></force-button>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy11" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea11')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea11" rows="6" readonly>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button20"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="primary"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button21"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="light"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button22"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="warn"
+              [isTypeIcon]="true"
+            ></force-button>
+            <force-button
+              idControl="button23"
+              text="botón con ícono"
+              icon="fi-rr-add"
+              color="outline"
+              [isTypeIcon]="true"
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy11"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea11')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea11" rows="6" readonly>
 &#60;div class="row"&#62;
     &#60;force-button idControl="button20" text="botón con ícono" icon="fi-rr-add" color="primary" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button21" text="botón con ícono" icon="fi-rr-add" color="light" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button22" text="botón con ícono" icon="fi-rr-add" color="warn" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button23" text="botón con ícono" icon="fi-rr-add" color="outline" [isTypeIcon]="true"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy12" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea12')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea12" rows="10" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy12"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea12')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea12" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -476,46 +673,96 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Badge
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                            <force-button idControl="button24" text="botón con badge" color="primary" badge="1"></force-button>
-                            <force-button idControl="button25" text="botón con badge" color="light" badge="20"></force-button>
-                            <force-button idControl="button26" text="botón con badge" color="warn" badge="300"></force-button>
-                            <force-button idControl="button27" text="botón con badge" color="outline" badge="more..."></force-button>
-                            <force-button idControl="button28" icon="fi-rr-asterisk" color="primary" [isTypeIcon]="true" badge="48"></force-button>
-                            <force-button idControl="button29" icon="fi-rr-asterisk" color="light" [isTypeIcon]="true" badge="448"></force-button>
-                            <force-button idControl="button30" icon="fi-rr-asterisk" color="warn" [isTypeIcon]="true" badge="8e"></force-button>
-                            <force-button idControl="button31" icon="fi-rr-asterisk" color="outline" [isTypeIcon]="true" badge="tt..."></force-button>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy13" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea13')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea13" rows="10" readonly>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Badge</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button24"
+              text="botón con badge"
+              color="primary"
+              badge="1"
+            ></force-button>
+            <force-button
+              idControl="button25"
+              text="botón con badge"
+              color="light"
+              badge="20"
+            ></force-button>
+            <force-button
+              idControl="button26"
+              text="botón con badge"
+              color="warn"
+              badge="300"
+            ></force-button>
+            <force-button
+              idControl="button27"
+              text="botón con badge"
+              color="outline"
+              badge="more..."
+            ></force-button>
+            <force-button
+              idControl="button28"
+              icon="fi-rr-asterisk"
+              color="primary"
+              [isTypeIcon]="true"
+              badge="48"
+            ></force-button>
+            <force-button
+              idControl="button29"
+              icon="fi-rr-asterisk"
+              color="light"
+              [isTypeIcon]="true"
+              badge="448"
+            ></force-button>
+            <force-button
+              idControl="button30"
+              icon="fi-rr-asterisk"
+              color="warn"
+              [isTypeIcon]="true"
+              badge="8e"
+            ></force-button>
+            <force-button
+              idControl="button31"
+              icon="fi-rr-asterisk"
+              color="outline"
+              [isTypeIcon]="true"
+              badge="tt..."
+            ></force-button>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy13"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea13')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea13" rows="10" readonly>
 &#60;div class="row "&#62;
     &#60;force-button idControl="button24" text="botón con badge" color="primary" badge="1"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button25" text="botón con badge" color="light" badge="20"&#62;&#60;/force-button&#62;
@@ -525,22 +772,29 @@ export class ButtonPageComponent implements OnInit &#123;
     &#60;force-button idControl="button29" icon="fi-rr-asterisk" color="light" [isTypeIcon]="true" badge="448"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button30" icon="fi-rr-asterisk" color="warn" [isTypeIcon]="true" badge="8e"&#62;&#60;/force-button&#62;
     &#60;force-button idControl="button31" icon="fi-rr-asterisk" color="outline" [isTypeIcon]="true" badge="tt..."&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy14" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea14')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea14" rows="10" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy14"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea14')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea14" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -550,63 +804,81 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Evento click
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                        <force-button idControl="button32" text="botón con evento" (clickEvent)="clickCount=clickCount+1"></force-button>
-                    </div>
-                    <div class="row w-full">
-                        <force-separator></force-separator>
-                    </div>
-                    <div class="row">
-                        <span class="primary">contador de clicks:&nbsp;</span>{{clickCount}}
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy15" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea15')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea15" rows="3" readonly>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Evento click</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <force-button
+              idControl="button32"
+              text="botón con evento"
+              (clickEvent)="clickCount = clickCount + 1"
+            ></force-button>
+          </div>
+          <div class="row w-full">
+            <force-separator></force-separator>
+          </div>
+          <div class="row">
+            <span class="primary">contador de clicks:&nbsp;</span
+            >{{ clickCount }}
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy15"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea15')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea15" rows="3" readonly>
 &#60;div class="row"&#62;
    &#60;force-button idControl="button32" text="botón con evento" (clickEvent)="clickCount=clickCount+1"&#62;&#60;/force-button&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy16" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea16')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea16" rows="10" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy16"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea16')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea16" rows="10" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 &#64;Component(&#123;
    selector: 'app-button-page',
@@ -616,76 +888,97 @@ import &#123; Component, OnInit &#125; from '&#64;angular/core';
 export class ButtonPageComponent implements OnInit &#123;
   constructor() &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Con formulario
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row">
-                        <form [formGroup]="buttonFormGroup">
-                            <force-checkbox idControl="checkbox1" sufixText="check" formControlName="check"></force-checkbox>
-                            <force-button idControl="button33" text="boton check" [isInvalid]="buttonFormGroup.invalid"></force-button>
-                        </form>
-                    </div>
-                    <div class="row w-full">
-                        <force-separator class="w-full"></force-separator>
-                    </div>
-                    <div class="row column ystart">
-                        <div class="row-item">
-                            <span class="primary">form values: </span>
-                            {{buttonFormGroup.value | json}} 
-                        </div>
-                        <div class="row-item">
-                            <span class="primary">form state: </span>
-                            {{buttonFormGroup.valid | json}}
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.html</span>
-                            <force-button idControl="buttoncopy17" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea17')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea17" rows="6" readonly>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Con formulario</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row">
+            <form [formGroup]="buttonFormGroup">
+              <force-checkbox
+                idControl="checkbox1"
+                sufixText="check"
+                formControlName="check"
+              ></force-checkbox>
+              <force-button
+                idControl="button33"
+                text="boton check"
+                [isInvalid]="buttonFormGroup.invalid"
+              ></force-button>
+            </form>
+          </div>
+          <div class="row w-full">
+            <force-separator class="w-full"></force-separator>
+          </div>
+          <div class="row column ystart">
+            <div class="row-item">
+              <span class="primary">form values: </span>
+              {{ buttonFormGroup.value | json }}
+            </div>
+            <div class="row-item">
+              <span class="primary">form state: </span>
+              {{ buttonFormGroup.valid | json }}
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.html</span>
+              <force-button
+                idControl="buttoncopy17"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea17')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea17" rows="6" readonly>
 &#60;div class="row column ystart"&#62;
    &#60;form [formGroup]="buttonFormGroup"&#62;
       &#60;force-checkbox idControl="checkbox1" sufixText="check" formControlName="check"&#62;&#60;/force-checkbox&#62;
       &#60;force-button idControl="button33" text="boton check" [isInvalid]="buttonFormGroup.invalid"&#62;&#60;/force-button&#62;
    &#60;/form&#62;
-&#60;/div&#62;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigoContainer">
-                        <div class="row xspace ycenter codigo">
-                            <span class="primary">button-page.component.ts</span>
-                            <force-button idControl="buttoncopy18" icon="fi-rr-copy" [isTypeIcon]="true" 
-                                [haveBorder]="false" color="outline" (clickEvent)="copy('textarea18')"></force-button>
-                        </div>
-                        <div class="codigo">
-                            <textarea id="textarea18" rows="14" readonly>
+&#60;/div&#62;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigoContainer">
+            <div class="row xspace ycenter codigo">
+              <span class="primary">button-page.component.ts</span>
+              <force-button
+                idControl="buttoncopy18"
+                icon="fi-rr-copy"
+                [isTypeIcon]="true"
+                [haveBorder]="false"
+                color="outline"
+                (clickEvent)="copy('textarea18')"
+              ></force-button>
+            </div>
+            <div class="codigo">
+              <textarea id="textarea18" rows="14" readonly>
 import &#123; Component, OnInit &#125; from '&#64;angular/core';
 import &#123; FormBuilder, Validators &#125; from '&#64;angular/forms';
 &#64;Component(&#123;
@@ -699,11 +992,12 @@ export class ButtonPageComponent implements OnInit &#123;
   &#125;)
   constructor(private formBuilder: FormBuilder) &#123; &#125;
   ngOnInit(): void &#123; &#125;
-&#125;</textarea>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div>
+&#125;</textarea
+              >
+            </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
 </div>

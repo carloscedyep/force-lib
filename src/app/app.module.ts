@@ -51,8 +51,8 @@ import { AccordionPageComponent } from './pages/controls/containers/accordion-pa
   declarations: [
     AppComponent,
     DatePipe,
-    CodePipe,   
-    FilterPipe, 
+    CodePipe,
+    FilterPipe,
     DigitDirective,
     NavbarComponent,
     IndiceComponent,
@@ -93,12 +93,8 @@ import { AccordionPageComponent } from './pages/controls/containers/accordion-pa
     SelectPageComponent,
     AccordionPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

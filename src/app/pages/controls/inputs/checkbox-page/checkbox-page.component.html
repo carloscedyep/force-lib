@@ -1,385 +1,771 @@
 <div>
-    <div class="row ycenter px">
-        <div class="bigtitle">
-            Checkbox&nbsp;
-        </div>
-        <div>
-            <force-chip text="control" color="primary" lenght="tiny"></force-chip>
-        </div>
+  <div class="row ycenter px">
+    <div class="bigtitle">Checkbox&nbsp;</div>
+    <div>
+      <force-chip text="control" color="primary" lenght="tiny"></force-chip>
     </div>
-    <div class="row pl pr">
-        <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row pl pr">
+    <force-separator class="w-full"></force-separator>
+  </div>
+  <div class="row pl pr pb-small">
+    <div class="parrafo">
+      Control clickeable que establece dos estados:
+      <span class="primary">checkeado</span> y
+      <span class="primary">no checkeado</span>.
     </div>
-    <div class="row pl pr pb-small">
-        <div class="parrafo">
-            Control clickeable que establece dos estados: <span class="primary">checkeado</span> y <span class="primary">no checkeado</span>.
-        </div>
+  </div>
+  <div class="row pl pr pb-small">
+    <div class="parrafo pb-1rem">El control tiene las siguientes entradas.</div>
+  </div>
+  <div class="row pl pr">
+    <div class="parrafo pl-large">
+      <div class="pb-small">
+        <span class="bold">color </span><span class="primary">(string)</span>:
+        color del checkbox (<span class="primary">primary, light</span> y
+        <span class="primary">warn</span>). Por defecto es
+        <span class="primary">light</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">idControl </span
+        ><span class="primary">(string)</span>: identificador del control.
+      </div>
+      <div class="pb-small">
+        <span class="bold">isReadonly </span
+        ><span class="primary">(boolean)</span>: indica si el checkbox es de
+        solo lectura. Por defecto es <span class="primary">false</span>.
+      </div>
+      <div class="pb-small">
+        <span class="bold">prefixText </span
+        ><span class="primary">(string)</span>: etiqueta izquierda del checkbox.
+      </div>
+      <div class="pb-small">
+        <span class="bold">sufixText </span
+        ><span class="primary">(string)</span>: etiqueta derecha del checkbox.
+      </div>
+      <div class="pb-small">
+        <span class="bold">value </span><span class="primary">(string)</span>:
+        valor a mostrar en el checkbox.
+      </div>
     </div>
-    <div class="row pl pr pb-small">
-        <div class="parrafo pb-1rem">
-            El control tiene las siguientes entradas.
-        </div>
+  </div>
+  <div class="row px pb-small">
+    <div class="parrafo pb-1rem">
+      Se recomienda el uso de un <span class="bold">idControl</span> único para
+      asegurarse un buen funcionamiento de la página. Mas información en
+      <a
+        href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools"
+        target="_blank"
+        >este link</a
+      >.
     </div>
-    <div class="row pl pr">
-        <div class="parrafo pl-large">
-            <div class="pb-small">
-                <span class="bold">color </span><span class="primary">(string)</span>: color del checkbox (<span class="primary">primary, light</span> y <span class="primary">warn</span>). Por defecto es <span class="primary">light</span>.
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Básico</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row w-full">
+            <force-checkbox sufixText="checkbox"></force-checkbox>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox sufixText="checkbox"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Con label delante y detrás.</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row column ystart w-full">
+            <force-checkbox sufixText="sufix"></force-checkbox>
+            <force-checkbox prefixText="prefix"></force-checkbox>
+            <force-checkbox
+              prefixText="prefix"
+              sufixText="sufix"
+            ></force-checkbox>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row column ystart w-full"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox sufixText="sufix"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox prefixText="prefix"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox prefixText="prefix" sufixText="sufix"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Sin label</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row w-full">
+            <force-checkbox></force-checkbox>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   &#60;force-checkbox&#62;&#60;/force-checkbox&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Color</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row w-full">
+            <div class="row-item">
+              <force-checkbox
+                sufixText="checkbox primary"
+                color="primary"
+              ></force-checkbox>
             </div>
-            <div class="pb-small">
-                <span class="bold">idControl </span><span class="primary">(string)</span>: identificador del control.
+            <div class="row-item">
+              <force-checkbox
+                sufixText="checkbox light"
+                color="light"
+              ></force-checkbox>
             </div>
-            <div class="pb-small">
-                <span class="bold">isReadonly </span><span class="primary">(boolean)</span>: indica si el checkbox es de solo lectura. Por defecto es <span class="primary">false</span>.
+            <div class="row-item">
+              <force-checkbox
+                sufixText="checkbox warn"
+                color="warn"
+              ></force-checkbox>
             </div>
-            <div class="pb-small">
-                <span class="bold">prefixText </span><span class="primary">(string)</span>: etiqueta izquierda del checkbox.
-            </div>
-            <div class="pb-small">
-                <span class="bold">sufixText </span><span class="primary">(string)</span>: etiqueta derecha del checkbox.
-            </div>
-            <div class="pb-small">
-                <span class="bold">value </span><span class="primary">(string)</span>: valor a mostrar en el checkbox.
-            </div>
-        </div>
-    </div>
-    <div class="row px pb-small">
-        <div class="parrafo pb-1rem">
-            Se recomienda el uso de un <span class="bold">idControl</span> único para asegurarse un buen funcionamiento de la página. Mas información en <a href="https://web.dev/duplicate-id-active/?utm_source=lighthouse&utm_medium=devtools" target="_blank">este link</a>.
-        </div>
-    </div>
-    <br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Básico
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row w-full">
-                        <force-checkbox sufixText="checkbox"></force-checkbox>
-                    </div>  
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox sufixText="checkbox"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Con label delante y detrás.
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row column ystart w-full">
-                        <force-checkbox sufixText="sufix"></force-checkbox>
-                        <force-checkbox prefixText="prefix"></force-checkbox>
-                        <force-checkbox prefixText="prefix" sufixText="sufix"></force-checkbox>
-                    </div>  
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row column ystart w-full"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox sufixText="sufix"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox prefixText="prefix"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox prefixText="prefix" sufixText="sufix"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Sin label
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row w-full">
-                        <force-checkbox></force-checkbox>
-                    </div>  
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                            <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Color
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row w-full">
-                        <div class="row-item">
-                            <force-checkbox sufixText="checkbox primary" color="primary"></force-checkbox>
-                        </div>
-                        <div class="row-item">
-                            <force-checkbox sufixText="checkbox light" color="light"></force-checkbox>
-                        </div>
-                        <div class="row-item">
-                            <force-checkbox sufixText="checkbox warn" color="warn"></force-checkbox>
-                        </div>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row w-full"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;div class="row-item"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-checkbox sufixText="checkbox primary" color="primary"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-checkbox sufixText="checkbox light" color="light"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-checkbox sufixText="checkbox warn" color="warn"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/div&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Valor por defecto
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <force-checkbox sufixText="checkbox" [value]="true"></force-checkbox>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox sufixText="checkbox" [value]="true"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Readonly
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <force-checkbox sufixText="checkbox" [value]="true" [isReadonly]="true"></force-checkbox>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;force-checkbox sufixText="checkbox" [value]="true" [isReadonly]="true"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor() &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div><br>
-    <div class="row px pb-tiny">
-        <div class="title">
-            Con formulario
-        </div>
-    </div>
-    <div class="row px pb-tiny">
-        <force-tabs class="w-full">
-            <force-tab-item>
-                <force-tab-label>Resultado</force-tab-label>
-                <force-tab-body>
-                    <div class="row w-full">
-                        <form [formGroup]="checkboxFormGroup">
-                            <force-checkbox sufixText="checkbox" formControlName="checkbox"></force-checkbox>
-                        </form>
-                    </div>
-                    <div class="row w-full">
-                        <force-separator class="w-full"></force-separator>
-                    </div>
-                    <div class="row">
-                        <span class="primary">form values: </span>{{checkboxFormGroup.value | json}}
-                    </div>     
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>HTML</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;div class="row w-full"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;form [formGroup]="checkboxFormGroup"&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      &#60;force-checkbox sufixText="checkbox" formControlName="checkbox"&#62;&#60;/force-checkbox&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   &#60;/form&#62;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#60;/div&#62;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-            <force-tab-item>
-                <force-tab-label>TypeScript</force-tab-label>
-                <force-tab-body>
-                    <div class="codigo">
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>import &#123; FormBuilder, Validators &#125; from '&#64;angular/forms';</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#64;Component(&#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   selector: 'app-checkbox-page',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   templateUrl: './checkbox-page.component.html',</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>   styleUrls: ['./checkbox-page.component.scss']</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;)</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>export class CheckboxPageComponent implements OnInit &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  checkboxFormGroup = this.formBuilder.group( &#123;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>      checkbox: [false, Validators.required]</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  &#125;)</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  constructor(private formBuilder: FormBuilder) &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>  ngOnInit(): void &#123; &#125;</pre></span>
-                        <span class="row ycenter"><span class="rowNumber"></span><pre>&#125;</pre></span>
-                    </div>
-                </force-tab-body>
-            </force-tab-item>
-        </force-tabs>
-    </div>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row w-full"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   &#60;div class="row-item"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+      &#60;force-checkbox sufixText="checkbox primary" color="primary"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+      &#60;force-checkbox sufixText="checkbox light" color="light"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+      &#60;force-checkbox sufixText="checkbox warn" color="warn"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   &#60;/div&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Valor por defecto</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <force-checkbox sufixText="checkbox" [value]="true"></force-checkbox>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox sufixText="checkbox" [value]="true"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Readonly</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <force-checkbox
+            sufixText="checkbox"
+            [value]="true"
+            [isReadonly]="true"
+          ></force-checkbox>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+   &#60;force-checkbox sufixText="checkbox" [value]="true" [isReadonly]="true"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  constructor() &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
+  <br />
+  <div class="row px pb-tiny">
+    <div class="title">Con formulario</div>
+  </div>
+  <div class="row px pb-tiny">
+    <force-tabs class="w-full">
+      <force-tab-item>
+        <force-tab-label>Resultado</force-tab-label>
+        <force-tab-body>
+          <div class="row w-full">
+            <form [formGroup]="checkboxFormGroup">
+              <force-checkbox
+                sufixText="checkbox"
+                formControlName="checkbox"
+              ></force-checkbox>
+            </form>
+          </div>
+          <div class="row w-full">
+            <force-separator class="w-full"></force-separator>
+          </div>
+          <div class="row">
+            <span class="primary">form values: </span
+            >{{ checkboxFormGroup.value | json }}
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>HTML</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;div class="row w-full"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   &#60;form [formGroup]="checkboxFormGroup"&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+      &#60;force-checkbox sufixText="checkbox" formControlName="checkbox"&#62;&#60;/force-checkbox&#62;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   &#60;/form&#62;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#60;/div&#62;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+      <force-tab-item>
+        <force-tab-label>TypeScript</force-tab-label>
+        <force-tab-body>
+          <div class="codigo">
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+import &#123; FormBuilder, Validators &#125; from '&#64;angular/forms';</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#64;Component(&#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   selector: 'app-checkbox-page',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   templateUrl: './checkbox-page.component.html',</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>   styleUrls: ['./checkbox-page.component.scss']</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+export class CheckboxPageComponent implements OnInit &#123;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  checkboxFormGroup = this.formBuilder.group( &#123;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>      checkbox: [false, Validators.required]</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  &#125;)</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>
+  constructor(private formBuilder: FormBuilder) &#123; &#125;</pre
+              >
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>  ngOnInit(): void &#123; &#125;</pre>
+            </span>
+            <span class="row ycenter"
+              ><span class="rowNumber"></span>
+              <pre>&#125;</pre>
+            </span>
+          </div>
+        </force-tab-body>
+      </force-tab-item>
+    </force-tabs>
+  </div>
 </div>

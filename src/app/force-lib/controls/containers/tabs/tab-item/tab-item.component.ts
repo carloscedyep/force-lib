@@ -5,10 +5,9 @@ import { TabLabelComponent } from '../tab-label/tab-label.component';
 @Component({
   selector: 'force-tab-item',
   templateUrl: './tab-item.component.html',
-  styleUrls: ['./tab-item.component.scss']
+  styleUrls: ['./tab-item.component.scss'],
 })
 export class TabItemComponent implements OnInit {
-
   @Input()
   label: string;
 
@@ -20,10 +19,8 @@ export class TabItemComponent implements OnInit {
 
   @ContentChild(TabLabelComponent)
   labelComponent: TabLabelComponent;
-  
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

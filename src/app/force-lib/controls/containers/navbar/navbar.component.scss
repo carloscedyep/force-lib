@@ -1,83 +1,82 @@
-@import '../../../styles/styles.scss';
+@import "../../../styles/styles.scss";
 
-.body{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s ease-out;
+.body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
-.label{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.label {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.container{
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .arrow {
-    padding-top: 3px;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.noicon,
+.icon {
+  //Fonts
+  font-size: 14px;
+  font-family: $font-normal;
+  //Color
+
+  //Size
+  height: 1rem;
+  width: 100%;
+  //Margin y Padding
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  //Style
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: 0;
+  //Transition
+
+  &:hover,
+  :active {
+    background-color: $backcolor-hover;
+    color: inherit;
+    border: 0px;
+  }
+
+  &[expanded="false"] .arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-}
+    transform: rotateZ(90deg);
+    //transform-origin: center;
+    transition: transform 0.3s ease-out;
+  }
 
-.noicon, .icon{
-    //Fonts
-    font-size: 14px;
-    font-family: $font-normal;
-    //Color
-
-    //Size
-    height: 1rem;
-    width: 100%;
-    //Margin y Padding
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    //Style
-    cursor: pointer;
+  &[expanded="true"] .arrow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    outline: 0;
-    //Transition
-
-    &:hover,:active{
-        background-color: $backcolor-hover;
-        color:inherit;
-        border: 0px;
-    }
-    
-    &[expanded=false] .arrow{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotateZ(90deg);
-        //transform-origin: center;
-        transition: transform .3s ease-out;
-    }
-
-    &[expanded=true] .arrow{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotateZ(0deg);
-        //transform-origin: center;
-        transition: transform .3s ease-out;
-    }
+    justify-content: center;
+    transform: rotateZ(0deg);
+    //transform-origin: center;
+    transition: transform 0.3s ease-out;
+  }
 }
 
-.noicon{
-    color: $color-medium;
-    padding-left: 1rem;
+.noicon {
+  color: $color-medium;
+  padding-left: 1rem;
 }
-
-
-

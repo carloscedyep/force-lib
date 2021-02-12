@@ -1,4 +1,4 @@
-@import '../../../styles/styles.scss';
+@import "../../../styles/styles.scss";
 
 *,
 *::before,
@@ -7,214 +7,215 @@
 }
 
 .input {
-    //Fonts
-    font-size: $font-size;
-    font-family: $font-normal;
-    //Color
-    background-color: inherit;
-    color: inherit;
-    //Size
-    height: $height;
-    width: $width-full;
-    //Margin y Padding
-    margin: 0;
-    padding-left:$padding-small;
-    padding-right:$padding-small;
-    //Style
-    appearance: none;
-    border: 1px solid $border;
-    border-radius: 6px;
-    //Transition
-    transition: 180ms box-shadow ease-in-out;
+  //Fonts
+  font-size: $font-size;
+  font-family: $font-normal;
+  //Color
+  background-color: inherit;
+  color: inherit;
+  //Size
+  height: $height;
+  width: $width-full;
+  //Margin y Padding
+  margin: 0;
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+  //Style
+  appearance: none;
+  border: 1px solid $border;
+  border-radius: 6px;
+  //Transition
+  transition: 180ms box-shadow ease-in-out;
 
-    &:hover{
-        border: 1px solid transparent;
-        box-shadow: 0 0 0 2px $border-hover-shadow;
-        outline: 3px solid transparent;
+  &:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px $border-hover-shadow;
+    outline: 3px solid transparent;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px $border-hover-shadow;
+    outline: 3px solid transparent;
+  }
+
+  &.primary {
+    &:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $backcolor-primary;
+      outline: 3px solid transparent;
     }
 
     &:focus {
-        border: 1px solid transparent;
-        box-shadow: 0 0 0 2px $border-hover-shadow;
-        outline: 3px solid transparent;
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $backcolor-primary;
+      outline: 3px solid transparent;
+    }
+  }
+
+  &.light {
+    &:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $border-light-hover-shadow;
+      outline: 3px solid transparent;
     }
 
-    &.primary{
-        &:hover{
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $backcolor-primary;
-            outline: 3px solid transparent;
-        }
+    &:focus {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $border-light-hover-shadow;
+      outline: 3px solid transparent;
+    }
+  }
 
-        &:focus {
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $backcolor-primary;
-            outline: 3px solid transparent;
-        }
+  &.warn {
+    &:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $backcolor-warn;
+      outline: 3px solid transparent;
     }
 
-    &.light{
-        &:hover{
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $border-light-hover-shadow;
-            outline: 3px solid transparent;
-        }
-
-        &:focus {
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $border-light-hover-shadow;
-            outline: 3px solid transparent;
-        }
+    &:focus {
+      border: 1px solid transparent;
+      box-shadow: 0 0 0 2px $backcolor-warn;
+      outline: 3px solid transparent;
     }
+  }
 
-    &.warn{
-        &:hover{
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $backcolor-warn;
-            outline: 3px solid transparent;
-        }
+  &.left {
+    text-align: start;
+  }
 
-        &:focus {
-            border: 1px solid transparent;
-            box-shadow: 0 0 0 2px $backcolor-warn;
-            outline: 3px solid transparent;
-        }
-    }
+  &.right {
+    text-align: end;
+  }
 
-    &.left{
-        text-align: start;
-    }
+  &.center {
+    text-align: center;
+  }
 
-    &.right{
-        text-align: end;
-    }
+  &.isufix {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 
-    &.center{
-        text-align: center;
-    }
-
-    &.isufix{
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-
-    &.iprefix{
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
+  &.iprefix {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
 }
 
 .label {
-    font-size: $font-size-small;
-    font-family: $font-normal;
-    padding-bottom: $padding-tiny;
-    //Fonts
-    
-    //Color
+  font-size: $font-size-small;
+  font-family: $font-normal;
+  padding-bottom: $padding-tiny;
+  //Fonts
 
-    //Size
+  //Color
 
-    //Margin y Padding
+  //Size
 
-    //Style
+  //Margin y Padding
 
-    //Transition
+  //Style
+
+  //Transition
 }
 
-.prefix, .sufix{
-    //Fonts
-    font-size: $font-size-small;
-    font-family: $font-normal;
-    //Color
+.prefix,
+.sufix {
+  //Fonts
+  font-size: $font-size-small;
+  font-family: $font-normal;
+  //Color
 
-    //Size
-    height: $height;
-    //Margin y Padding
-    padding-left: $padding-small;
-    padding-right: $padding-small;
-    //Style
-    display: flex;
-    align-items: center;
-    border: 1px solid $border;
-    //Transition
+  //Size
+  height: $height;
+  //Margin y Padding
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+  //Style
+  display: flex;
+  align-items: center;
+  border: 1px solid $border;
+  //Transition
 }
 
-.prefix{
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-right: 0px;
+.prefix {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: 0px;
 }
-.sufix{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-left: 0px;
-}
-
-.hint{
-    font-size: $font-size-small;
-    font-family: $font-normal;
-    padding-left: 0.3rem;
-    color: $color-error;
+.sufix {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: 0px;
 }
 
-.hidden{
-    display: none ;
+.hint {
+  font-size: $font-size-small;
+  font-family: $font-normal;
+  padding-left: 0.3rem;
+  color: $color-error;
 }
 
-.inline{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.hidden {
+  display: none;
 }
-.container{
-    //Fonts
-    
-    //Color
 
-    //Size
+.inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container {
+  //Fonts
 
-    //Margin y Padding
-    padding: $padding-tiny;
-    //Style
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    //Transition
+  //Color
 
-    &.full{
-        width: $width-full;
-    }
+  //Size
 
-    &.xxlarge{
-        width: $width-xxlarge;
-    }
+  //Margin y Padding
+  padding: $padding-tiny;
+  //Style
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  //Transition
 
-    &.xlarge{
-        width: $width-xlarge;
-    }
+  &.full {
+    width: $width-full;
+  }
 
-    &.large{
-        width: $width-large;
-    }
+  &.xxlarge {
+    width: $width-xxlarge;
+  }
 
-    &.medium{
-        width: $width-medium;
-    }
+  &.xlarge {
+    width: $width-xlarge;
+  }
 
-    &.normal{
-        width: $width-normal;
-    }
+  &.large {
+    width: $width-large;
+  }
 
-    &.small{
-        width: $width-small;
-    }
+  &.medium {
+    width: $width-medium;
+  }
 
-    &.tiny{
-        width: $width-tiny;
-    }
+  &.normal {
+    width: $width-normal;
+  }
+
+  &.small {
+    width: $width-small;
+  }
+
+  &.tiny {
+    width: $width-tiny;
+  }
 }

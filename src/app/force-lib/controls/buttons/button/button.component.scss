@@ -1,4 +1,4 @@
-@import '../../../styles/styles.scss';
+@import "../../../styles/styles.scss";
 
 *,
 *::before,
@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-
-button{
+button {
   margin: 0px;
   padding: 0px;
 }
@@ -46,10 +45,10 @@ button{
     outline: 3px solid transparent;
   }
 
-  &.outline{
+  &.outline {
     background-color: inherit;
     color: inherit;
-    
+
     &:hover,
     &:active {
       border-color: transparent;
@@ -64,7 +63,7 @@ button{
     }
   }
 
-  &.primary{
+  &.primary {
     background-color: $backcolor-primary;
     color: $color-primary;
 
@@ -82,7 +81,7 @@ button{
     }
   }
 
-  &.light{
+  &.light {
     background-color: $backcolor-light;
     color: $color-light;
 
@@ -100,7 +99,7 @@ button{
     }
   }
 
-  &.warn{
+  &.warn {
     background-color: $backcolor-warn;
     color: $color-warn;
 
@@ -118,7 +117,7 @@ button{
     }
   }
 
-  &.disabled{
+  &.disabled {
     background-color: $backcolor-light;
     color: $color-light;
     cursor: auto;
@@ -133,78 +132,78 @@ button{
     }
   }
 
-  &.icon{
+  &.icon {
     width: $height;
     border-radius: 50%;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
 
-  &.withoutborder{
+  &.withoutborder {
     border: 0px;
   }
 }
 
-.image{
+.image {
   padding-top: 0.25rem;
 }
 
-.inline{
+.inline {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   padding: $padding-tiny;
   position: relative;
 
-  &.content{
+  &.content {
     width: auto;
   }
 
-  &.full{
+  &.full {
     width: $width-full;
   }
 
-  &.xxlarge{
+  &.xxlarge {
     width: $width-xxlarge;
   }
 
-  &.xlarge{
+  &.xlarge {
     width: $width-xlarge;
   }
 
-  &.large{
+  &.large {
     width: $width-large;
   }
 
-  &.medium{
+  &.medium {
     width: $width-medium;
   }
 
-  &.normal{
+  &.normal {
     width: $width-normal;
   }
 
-  &.small{
+  &.small {
     width: $width-small;
   }
 
-  &.tiny{
+  &.tiny {
     width: $width-tiny;
   }
 }
 
-.badge{
+.badge {
   font-size: 12px;
   font-family: $font-normal;
   font-weight: 2px;
   position: absolute;
-  top:0;
+  top: 0;
   right: $padding-tiny/4;
   display: flex;
   justify-content: center;
@@ -213,27 +212,27 @@ button{
   padding: 2px 4px 2px 4px;
   background-color: $backcolor;
   color: $color;
-  margin:0;
+  margin: 0;
 
-  &.primary{
+  &.primary {
     background-color: $border-hover-alert-done;
     color: $color-primary;
     border: 1px solid $border-hover-alert-done;
   }
 
-  &.light{
+  &.light {
     background-color: $border-hover-alert-done;
     color: $color-primary;
     border: 1px solid $border-hover-alert-done;
   }
 
-  &.warn{
+  &.warn {
     background-color: $border-hover-alert-done;
     color: $color-warn;
     border: 1px solid $border-hover-alert-done;
   }
 
-  &.outline{
+  &.outline {
     background-color: $border-hover-alert-done;
     color: $color-warn;
     border: 1px solid $border-hover-alert-done;

@@ -1,10 +1,15 @@
-import { Directive, ElementRef, HostListener, Input, SimpleChanges } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostListener,
+  Input,
+  SimpleChanges,
+} from '@angular/core';
 
 @Directive({
-  selector: '[appDigit]'
+  selector: '[appDigit]',
 })
 export class DigitDirective {
-
   private hasDecimalPoint = false;
   private navigationKeys = [
     'Backspace',
@@ -101,9 +106,11 @@ export class DigitDirective {
       e.preventDefault();
     }
 
-    const decimalNumber = Number(newNumber.toString().replace(/^[^\.]+/,'0'));
-    const countDecimalNumber = decimalNumber * (Math.pow(10,this.countDecimal))
-    const restDecimalNumber = Number(countDecimalNumber.toString().replace(/^[^\.]+/,'0'));
+    const decimalNumber = Number(newNumber.toString().replace(/^[^\.]+/, '0'));
+    const countDecimalNumber = decimalNumber * Math.pow(10, this.countDecimal);
+    const restDecimalNumber = Number(
+      countDecimalNumber.toString().replace(/^[^\.]+/, '0')
+    );
     if (restDecimalNumber > 0) {
       e.preventDefault();
     }
@@ -132,8 +139,6 @@ export class DigitDirective {
     event.preventDefault();
   }
 
-  
-
   private pasteData(pastedContent: string): void {
     const sanitizedContent = this.sanitizeInput(pastedContent);
     const pasted = document.execCommand('insertText', false, sanitizedContent);
@@ -144,7 +149,9 @@ export class DigitDirective {
         // Angular's Reactive Form relies on "input" event, but on Firefox, the setRangeText method doesn't trigger it
         // so we have to trigger it ourself.
         if (typeof window['InstallTrigger'] !== 'undefined') {
-          this.inputElement.dispatchEvent(new Event('input', { cancelable: true }));
+          this.inputElement.dispatchEvent(
+            new Event('input', { cancelable: true })
+          );
         }
       } else {
         // Browser does not support setRangeText, e.g. IE
@@ -232,8 +239,7 @@ export class DigitDirective {
     return selection
       ? oldValue.replace(selection, key)
       : oldValue.substring(0, selectionStart) +
-      key +
-      oldValue.substring(selectionStart);
+          key +
+          oldValue.substring(selectionStart);
   }
-
 }

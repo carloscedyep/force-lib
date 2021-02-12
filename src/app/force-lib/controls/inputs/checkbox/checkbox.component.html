@@ -1,20 +1,28 @@
 <div class="container">
-    <div class="inline">
-        <label [for]="idControl" *ngIf="prefixText" class="firstLabel">
-            {{prefixText}}
-        </label>
-        <i *ngIf="!value" class="input solid fi-rr-square" (click)="checked()"></i>
-        <i *ngIf="value" 
-            [ngClass]="{'primary': color === 'primary',
-                        'light': color === 'light',
-                        'warn': color === 'warn'}" 
-            class="input true fi-sr-checkbox" (click)="checked()"></i>
-        <label [for]="idControl" *ngIf="sufixText" class="lastLabel">
-            {{sufixText}}
-        </label>
-    </div>
-    <input type="checkbox" class="hidden"
-            [value]="value"
-            [id]="idControl"
-            (input)="onChange($event.target.value)">
+  <div class="inline">
+    <label [for]="idControl" *ngIf="prefixText" class="firstLabel">
+      {{ prefixText }}
+    </label>
+    <i *ngIf="!value" class="input solid fi-rr-square" (click)="checked()"></i>
+    <i
+      *ngIf="value"
+      [ngClass]="{
+        primary: color === 'primary',
+        light: color === 'light',
+        warn: color === 'warn'
+      }"
+      class="input true fi-sr-checkbox"
+      (click)="checked()"
+    ></i>
+    <label [for]="idControl" *ngIf="sufixText" class="lastLabel">
+      {{ sufixText }}
+    </label>
+  </div>
+  <input
+    type="checkbox"
+    class="hidden"
+    [value]="value"
+    [id]="idControl"
+    (input)="onChange($event.target.value)"
+  />
 </div>

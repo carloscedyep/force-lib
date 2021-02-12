@@ -3,13 +3,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'force-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-
   @Input()
   idControl: string = '';
-  
+
   @Input()
   text: string = '';
 
@@ -21,10 +20,10 @@ export class ButtonComponent implements OnInit {
 
   @Input()
   isReadonly: boolean = false;
-  
+
   @Input()
   haveBorder: boolean = true;
-  
+
   @Input()
   lenght: string = 'content';
 
@@ -40,15 +39,13 @@ export class ButtonComponent implements OnInit {
   @Output()
   clickEvent = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  clicked(id: string){
-    if (!this.isReadonly && !this.isInvalid){
+  clicked(id: string) {
+    if (!this.isReadonly && !this.isInvalid) {
       this.clickEvent.emit(id);
     }
   }
-
 }

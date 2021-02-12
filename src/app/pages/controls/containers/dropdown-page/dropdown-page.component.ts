@@ -4,25 +4,25 @@ import { Validators, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-dropdown-page',
   templateUrl: './dropdown-page.component.html',
-  styleUrls: ['./dropdown-page.component.scss']
+  styleUrls: ['./dropdown-page.component.scss'],
 })
 export class DropdownPageComponent implements OnInit {
-
   buttonName: string = '';
 
   buttonFormGroup = this.formBuilder.group({
-    check: [false, [Validators.required,Validators.requiredTrue]]
-  })
+    check: [false, [Validators.required, Validators.requiredTrue]],
+  });
 
-  buttonsgroup1: any[] = [{idControl:'button1',text:'botón 1'},{idControl:'button2',text:'botón 2'}]
+  buttonsgroup1: any[] = [
+    { idControl: 'button1', text: 'botón 1' },
+    { idControl: 'button2', text: 'botón 2' },
+  ];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  clickBoton(id: string){
+  clickBoton(id: string) {
     this.buttonName = 'click en boton ' + id;
   }
-
 }
