@@ -5,6 +5,7 @@ import {
   Input,
   OnInit,
   Optional,
+  Renderer2,
   Self,
 } from '@angular/core';
 import { FormBuilder, NgControl } from '@angular/forms';
@@ -64,6 +65,7 @@ export class SelectComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private positionService: PositionService,
+    private render: Renderer2,
     private elRef: ElementRef,
     @Self()
     @Optional()
@@ -150,7 +152,10 @@ export class SelectComponent implements OnInit {
             button.getBoundingClientRect().width;
           const heightText = text.getBoundingClientRect().height;
 
+          this.render.setStyle(menu, 'width', widthText + 'px');
+
           menu.setAttribute('expanded', 'true');
+
           this.positionService.setPosition(
             menu,
             leftText,

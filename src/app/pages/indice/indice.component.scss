@@ -16,21 +16,24 @@
   display: flex;
   align-items: center;
   top: 0px;
-  left: 0px;
+  //left: 20%;
   z-index: 3;
   box-shadow: 0 2px 2px 0 $border-hover-shadow;
   //Transition
 }
+
 .navbar {
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 90%;
-  padding-top: 50px;
+  height: 100%;
+  //padding-top: 50px;
   border-right: 1px solid $border;
+  background-color: inherit;
+  z-index: 4;
   //padding-right: 14px;
   flex-grow: 1;
-  width: 300px;
+  //width: 20%;
   max-width: 300px;
   min-width: 300px;
 }
@@ -38,7 +41,7 @@
 .context {
   //position: relative;
   flex-grow: 5;
-  padding-left: 300px;
+  //margin-left: 20%;
   padding-top: 1rem;
   background-color: inherit;
   color: inherit;

@@ -1,0 +1,31 @@
+<div class="container">
+  <force-button
+    [idControl]="'button' + idControl"
+    [isTypeIcon]="true"
+    [haveBorder]="false"
+    icon="fi-rr-align-justify"
+    (clickEvent)="abrirMenu()"
+  ></force-button>
+  <div class="button" *ngFor="let item of buttonItems$ | async">
+    <div tabindex="0" [id]="'menu' + idControl" class="menu" expanded="false">
+      <div class="row w-full ycenter">
+        <force-button
+          [idControl]="'buttonHidde' + idControl"
+          [isTypeIcon]="true"
+          [haveBorder]="false"
+          lenght="full"
+          color="outline"
+          icon="fi-rr-angle-double-left"
+          (clickEvent)="abrirMenu()"
+        ></force-button>
+        &nbsp;&nbsp;&nbsp;Powered by FORCE LIB &#169; 2021
+      </div>
+      <div class="row w-full">
+        <ng-container>
+          <ng-container *ngTemplateOutlet="item.bodyComponent.bodyContent">
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

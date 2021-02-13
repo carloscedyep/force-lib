@@ -418,6 +418,8 @@ div.codigo {
   }
 
   &.flat {
+    cursor: auto;
+
     &:hover,
     &:focus {
       background-color: transparent;

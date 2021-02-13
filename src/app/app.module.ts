@@ -46,6 +46,9 @@ import { SelectComponent } from './force-lib/controls/inputs/select/select.compo
 import { SelectPageComponent } from './pages/controls/inputs/select-page/select-page.component';
 import { FilterPipe } from './force-lib/pipes/filter.pipe';
 import { AccordionPageComponent } from './pages/controls/containers/accordion-page/accordion-page.component';
+import { SidebarComponent } from './force-lib/controls/containers/sidebar/sidebar/sidebar.component';
+import { SidebarItemComponent } from './force-lib/controls/containers/sidebar/sidebar-item/sidebar-item.component';
+import { SidebarBodyComponent } from './force-lib/controls/containers/sidebar/sidebar-body/sidebar-body.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +95,9 @@ import { AccordionPageComponent } from './pages/controls/containers/accordion-pa
     SelectComponent,
     SelectPageComponent,
     AccordionPageComponent,
+    SidebarComponent,
+    SidebarItemComponent,
+    SidebarBodyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
