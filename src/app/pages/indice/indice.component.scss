@@ -45,6 +45,11 @@
   padding-top: 1rem;
   background-color: inherit;
   color: inherit;
+
+  &.compress{
+    padding-left: $padding-large * 4;
+    padding-right: $padding-large * 4;
+  }
 }
 
 .container {

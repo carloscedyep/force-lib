@@ -21,6 +21,24 @@
       <div class="row-item">
         <div class="row xend ybaseline">
           <force-button
+            *ngIf="compress"
+            idControl="compress"
+            icon="fi-rr-expand"
+            [isTypeIcon]="true"
+            color="primary"
+            [haveBorder]="false"
+            (clickEvent)="changeWidth()"
+          ></force-button>
+          <force-button
+            *ngIf="!compress"
+            idControl="expand"
+            icon="fi-rr-compress"
+            [isTypeIcon]="true"
+            color="primary"
+            [haveBorder]="false"
+            (clickEvent)="changeWidth()"
+          ></force-button>
+          <force-button
             *ngIf="darkTheme"
             idControl="darkTheme"
             icon="fi-rr-spinner-alt"
@@ -49,7 +67,7 @@
     </div>
   </div> -->
   <div class="container">
-    <div class="context">
+    <div class="context" [ngClass]="{'compress': compress}">
       <router-outlet></router-outlet>
     </div>
   </div>

@@ -9,6 +9,7 @@ import { NavbarService } from 'src/app/force-lib/services/navbar.service';
 })
 export class IndiceComponent implements OnInit {
   darkTheme: boolean = false;
+  compress: boolean = true;
 
   navItems: any[] = [
     { id: 'config', text: 'Configuraciones', parentId: '', routeLink: '' },
@@ -129,6 +130,7 @@ export class IndiceComponent implements OnInit {
 
   constructor(private navbarService: NavbarService) {
     this.darkTheme = localStorage.getItem('theme') === 'Dark' ? true : false;
+    this.compress = localStorage.getItem('width') === 'Compress' ? true : false;
   }
 
   ngOnInit(): void {
@@ -138,5 +140,10 @@ export class IndiceComponent implements OnInit {
   changeTheme() {
     this.darkTheme = !this.darkTheme;
     localStorage.setItem('theme', this.darkTheme ? 'Dark' : 'Light');
+  }
+
+  changeWidth() {
+    this.compress = !this.compress;
+    localStorage.setItem('width', this.compress ? 'Compress' : 'Expanse');
   }
 }

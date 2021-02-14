@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -18,11 +18,19 @@ export class ButtongroupPageComponent implements OnInit {
     { idControl: 'button2', text: 'botón 2' },
   ];
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private elRef: ElementRef) {}
 
   ngOnInit(): void {}
 
   clickBoton(id: string) {
     this.buttonName = 'click en boton ' + id;
+  }
+
+  copy(id: string) {
+    const textarea = this.elRef.nativeElement.querySelector('#' + id);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.setSelectionRange(0, 0);
+    console.log(textarea.value);
   }
 }

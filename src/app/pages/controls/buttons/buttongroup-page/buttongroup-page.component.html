@@ -20,16 +20,16 @@
     <div class="parrafo pl-large">
       <div class="pb-small">
         <span class="bold">color </span><span class="primary">(string)</span>:
-        color del botón (<span class="primary">primary, light, warn</span> y
-        <span class="primary">outline</span>). Por defecto es
+        color del botón: <span class="primary">primary, light, warn</span> y
+        <span class="primary">outline</span>. Por defecto es
         <span class="primary">primary</span>.
       </div>
       <div class="pb-small">
         <span class="bold">lenght </span><span class="primary">(string)</span>:
-        indica el tamaño del input (<span class="primary"
+        indica el tamaño del input: <span class="primary"
           >content, full, xxlarge, xlarge, large, medium, normal, small</span
         >
-        y <span class="primary">tiny</span>). Por defecto es
+        y <span class="primary">tiny</span>. Por defecto es
         <span class="primary">content</span>
       </div>
       <div class="pb-small">
@@ -54,7 +54,7 @@
     </div>
   </div>
   <div class="row px pb-small">
-    <div class="parrafo pb-1rem">
+    <div class="information pb-tiny">
       Se recomienda el uso de un <span class="bold">idControl</span> único para
       asegurarse un buen funcionamiento de la página. Mas información en
       <a
@@ -88,84 +88,63 @@
         <force-tab-item>
           <force-tab-label>HTML</force-tab-label>
           <force-tab-body>
-            <div class="codigo">
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>&#60;div class="row"&#62;</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>
-   &#60;force-button-group [items]=&#34;[&#123;idControl:'button1',text:'botón 1'&#125;,&#62;&#60;/force-button-group&#62;</pre
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-group-page.component.html</span>
+                <force-button
+                  idControl="buttoncopy1"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea1')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea1" rows="9" readonly>
+&#60;div class="row"&#62;
+  &#60;force-button-group
+    [items]="[
+      &#123; idControl: 'button1', text: 'botón 1' &#125;,
+      &#123; idControl: 'button2', text: 'botón 2' &#125;,
+      &#123; idControl: 'button3', text: 'botón 3' &#125;
+    ]"
+  >&#60;/force-button-group&#62;
+&#60;/div&#62;</textarea
                 >
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>
-                                 &#123;idControl:'button2',text:'botón 2'&#125;,</pre
-                >
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>
-                                 &#123;idControl:'button3',text:'botón 3'&#125;]&#62;&#60;/force-button-group&#62;</pre
-                >
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>&#60;/div&#62;</pre>
-              </span>
+              </div>
             </div>
           </force-tab-body>
         </force-tab-item>
         <force-tab-item>
           <force-tab-label>TypeScript</force-tab-label>
           <force-tab-body>
-            <div class="codigo">
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>
-import &#123; Component, OnInit &#125; from '&#64;angular/core';</pre
+            <div class="codigoContainer">
+              <div class="row xspace ycenter codigo">
+                <span class="primary">button-page.component.ts</span>
+                <force-button
+                  idControl="buttoncopy2"
+                  icon="fi-rr-copy"
+                  [isTypeIcon]="true"
+                  [haveBorder]="false"
+                  color="outline"
+                  (clickEvent)="copy('textarea2')"
+                ></force-button>
+              </div>
+              <div class="codigo">
+                <textarea id="textarea2" rows="10" readonly>
+import &#123; Component, OnInit &#125; from '&#64;angular/core';
+&#64;Component(&#123;
+    selector: 'app-button-group-page',
+    templateUrl: './button-group-page.component.html',
+    styleUrls: ['./button-group-page.component.scss']
+&#125;)
+export class ButtonGroupPageComponent implements OnInit &#123;
+    constructor() &#123; &#125;
+    ngOnInit(): void &#123; &#125;
+&#125;</textarea
                 >
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>&#64;Component(&#123;</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>   selector: 'app-button-group-page',</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>   templateUrl: './button-group-page.component.html',</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>   styleUrls: ['./button-group-page.component.scss']</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>&#125;)</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>
-export class ButtonGroupPageComponent implements OnInit &#123;</pre
-                >
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>  constructor() &#123; &#125;</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>  ngOnInit(): void &#123; &#125;</pre>
-              </span>
-              <span class="row ycenter"
-                ><span class="rowNumber"></span>
-                <pre>&#125;</pre>
-              </span>
+              </div>
             </div>
           </force-tab-body>
         </force-tab-item>

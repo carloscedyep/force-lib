@@ -10,7 +10,7 @@ export class ButtonGroupComponent implements OnInit {
   lenght: string = 'content';
 
   @Input()
-  color: string = 'primary';
+  color: string = 'outline';
 
   @Input()
   items: any[] = [];
